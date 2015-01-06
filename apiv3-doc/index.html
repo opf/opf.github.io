@@ -174,7 +174,36 @@ like the Angular-Client built into OpenProject.</p>
 <li><p><code>PATCH</code> - Update a resource</p></li>
 <li><p><code>DELETE</code> - Delete a resource</p></li>
 </ul>
-</div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="basic-objects">Basic Objects&nbsp;<a href="#basic-objects"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h1>Errors</h1>
+</div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="basic-objects">Basic Objects&nbsp;<a href="#basic-objects"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h1>Links</h1>
+<p>Links to other resources in the API are represented uniformly by so called link objects.</p>
+<h2>Properties</h2>
+<table>
+<thead>
+<tr><th style="text-align:center">Property</th><th>Description</th><th>Type</th><th style="text-align:center">Required</th><th style="text-align:center">Nullable</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">href</td><td>URL to the referenced resource (might be relative)</td><td>String</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td></td></tr>
+<tr><td style="text-align:center">title</td><td>Representative label for the resource</td><td>String</td><td style="text-align:center"></td><td style="text-align:center"></td><td></td></tr>
+<tr><td style="text-align:center">templated</td><td>If true the <code>href</code> contains parts that need to be replaced by the client</td><td>Boolean</td><td style="text-align:center"></td><td style="text-align:center"></td><td>false</td></tr>
+<tr><td style="text-align:center">method</td><td>The HTTP verb to use when requesting the resource</td><td>String</td><td style="text-align:center"></td><td style="text-align:center"></td><td>GET</td></tr>
+</tbody>
+</table>
+<p>All link objects <em>must</em> contain the <code>href</code> property, though it might be <code>null</code>. Thus the following is a valid
+link object:</p>
+<pre><code>{
+    &quot;href&quot;: null
+}
+</code></pre>
+<p>whereas <code>{ }</code> is not a valid link object. The meaning of <code>&quot;href&quot;: null</code> is that <strong>no</strong> resource is referenced.
+For example a work package without an assignee will still have an assignee link, but its <code>href</code> will be <code>null</code>.</p>
+<p>If a <code>title</code> is present, the client can display the title to the user when referring to the resource.</p>
+<p>Templated links are links that contain client replacable parts. Replaceable parts are enclosed in braces. For example
+the link <code>api/v3/example/{id}</code> is not complete in itself, but the client needs to replace the string <code>{id}</code> itself.
+As of now the API does not indicate the valid replacement values.</p>
+<p>The <code>method</code> indicates which HTTP verb the client <em>must</em> use when following the link for the intended purpose.</p>
+<p>Note: When writing links (e.g. during a <code>PATCH</code> operation) only changes to <code>href</code> are accepted.
+Changes to all other properties will be <strong>silently ignored</strong>.</p>
+<h1>Errors</h1>
 <p>In case of an error, the API will respond with an apropriate HTTP status code.
 For responses with an HTTP status of <code>4xx</code> and <code>5xx</code> the body will always contain a single error object.
 Error objects shall give the client additional details about the cause of an errorneous response.</p>
@@ -190,7 +219,7 @@ Error objects shall give the client additional details about the cause of an err
 <li><p>The <code>message</code> contains a human readable concise message describing the error</p>
 <ul>
 <li>It <em>optionally</em> includes specific information, for example which permission would have been needed to perform an action</li>
-<li>It it localized depending on the users preferences</li>
+<li>It is localized depending on the users preferences</li>
 <li>It <em>must not</em> include HTML or other kind of markup</li>
 <li>Error messages form complete sentences including punctuation</li>
 </ul></li>
@@ -732,7 +761,7 @@ and objects describing the corresponding property as values. The values are call
 </table>
 <p><strong>Remarks</strong></p>
 <p>The <code>allowedValues</code> can either contain a list of canonical links or just a single link to a collection resource.
-This is an optimization to allow efficient handling of both small resource lists (that be be enumerated inline) and large
+This is an optimization to allow efficient handling of both small resource lists (that can be enumerated inline) and large
 resource lists (requiring one or more separate requests).</p>
 <p>A call to <strong>validate</strong> and <strong>commit</strong> does not need to include all properties that were defined in the <code>payload</code> section.
 It is only necessary to include the properties that you want to change and the properties that are defined as <strong>required</strong>
@@ -2607,7 +2636,7 @@ updated activity.</p>
     "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
     "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to see the users available as responsible for this project."</span>
 </span>}
-</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 05 Jan 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
+</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 06 Jan 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
 
 </div></body><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script>(function() {
   if (location.protocol === 'file:') {
