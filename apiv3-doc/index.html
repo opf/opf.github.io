@@ -766,7 +766,7 @@ the current value of another property B might become invalid. If the client did 
 contain a default value for that property. Nevertheless the client will also receive an apropriate validation error for value B.</p>
 <p>The content of this element <em>can</em> be used as a template for the request body of a call to <strong>validate</strong> or <strong>commit</strong>.</p>
 <p>A call to <strong>validate</strong> and <strong>commit</strong> does not need to include all properties that were defined in the <code>payload</code> section.
-It is only necessary to include the properties that you want to change, as well as the <code>_type</code> and a <code>lockVersion</code> if one is present.
+It is only necessary to include the properties that you want to change, as well as the <code>lockVersion</code> if one is present.
 However you <em>may</em> include all the properties sent in the <code>payload</code> section.</p>
 <h3>Schema</h3>
 <p>The schema embedded in a form is a normal <a href="#schema">schema describing the underlying resource</a>.
@@ -786,7 +786,7 @@ That is because the main purpose of a form is helping the client to sort out val
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Example"</span></span>,
     "<span class="hljs-attribute">subject</span>": <span class="hljs-value"><span class="hljs-string">"An example title"</span>
 </span>}
-</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#d1dad3c6621232344ed91b336a1b408a" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="d1dad3c6621232344ed91b336a1b408a" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#6f9bd13678e6713e75244071f1b04ee4" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="6f9bd13678e6713e75244071f1b04ee4" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{ "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/example/form"</span> </span>}</span>,
         "<span class="hljs-attribute">validate</span>": <span class="hljs-value">{
@@ -822,10 +822,6 @@ That is because the main purpose of a form is helping the client to sort out val
 
             "<span class="hljs-attribute">lockVersion</span>": <span class="hljs-value">{
                 "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
-                "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">_type</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"MetaType"</span></span>,
                 "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
             </span>}</span>,
             "<span class="hljs-attribute">subject</span>": <span class="hljs-value">{
@@ -1386,7 +1382,7 @@ resource lists (requiring one or more separate requests).</p>
 For properties that have a default value, the client can assume the default value, if the property is missing.</p>
 <p>Note that regular expressions used in the API follow the rules of <a href="http://www.ruby-doc.org/core-2.1.5/Regexp.html">Ruby Regular Expressions</a>.</p>
 <h4 id="schemas-example-schema">Example Schema&nbsp;<a href="#schemas-example-schema"><i class="fa fa-link"></i></a></h4><section id="schemas-example-schema-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">view the schema</span></div><div style="float:left"><a href="#schemas-example-schema-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/api/v3/example/schema</code></div></div><div class="panel-body"><p>This is an example of how a schema might look like. Note that this endpoint does not exist in the actual implementation.</p>
-</div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#954e27aa5f98221d6b551d252dd03f4b" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="954e27aa5f98221d6b551d252dd03f4b" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#fbb1349c76835872d161aec92b7d01fd" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="fbb1349c76835872d161aec92b7d01fd" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Schema"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{ "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/example/schema"</span> </span>}
@@ -1395,11 +1391,6 @@ For properties that have a default value, the client can assume the default valu
     "<span class="hljs-attribute">lockVersion</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Resource Version"</span></span>,
         "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
-        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">_type</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Resource Type"</span></span>,
-        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"MetaType"</span></span>,
         "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
     </span>}</span>,
     "<span class="hljs-attribute">subject</span>": <span class="hljs-value">{
@@ -2357,22 +2348,18 @@ the human readable name of custom fields.</em></p>
 </span>}
 </code></pre></li></ul></section><section id="work-packages-workpackage-patch" class="panel panel-warning"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Edit WorkPackage</span></div><div style="float:left"><a href="#work-packages-workpackage-patch" class="btn btn-xs btn-warning">PATCH</a></div><div style="overflow:hidden"><code>/api/v3/work_packages/{id}{?notify}</code></div></div><div class="panel-body"><p>When calling this endpoint the client provides a single object, containing the properties and links that it wants to change, in the body.
 Note that it is only allowed to provide properties or links supporting the <strong>write</strong> operation.</p>
-<p>Additionally to the fields the client wants to change, it is mandatory to provide:</p>
-<ul>
-<li><p>The <code>_type</code> which should as of now always be <code>WorkPackage</code></p></li>
-<li><p>The value of <code>lockVersion</code> which was received by the <code>GET</code> request this change originates from</p></li>
-</ul>
+<p>Additionally to the fields the client wants to change, it is mandatory to provide the value of <code>lockVersion</code> which was received
+by the <code>GET</code> request this change originates from.</p>
 <p>The value of <code>lockVersion</code> is used to implement <a href="http://en.wikipedia.org/wiki/Optimistic_concurrency_control">optimistic locking</a>.</p>
 </div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Work package id</p>
 </dd><dt>notify</dt><dd><code>boolean</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>true</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>false</span></span><p>Indicates whether change notifications (e.g. via E-Mail) should be sent.
 Note that this controls notifications for all users interested in changes to the work package (e.g. watchers, author and assignee),
 not just the current user.</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#4f54ed0d04f62a155efefda822401ba3" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="4f54ed0d04f62a155efefda822401ba3" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
-    "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
-    "<span class="hljs-attribute">lockVersion</span>": <span class="hljs-value"><span class="hljs-number">13</span></span>,
-    "<span class="hljs-attribute">subject</span>": <span class="hljs-value"><span class="hljs-string">"Lorem"</span>
-    <span class="hljs-string">"parentId"</span>: <span class="hljs-string">"42"</span>
-</span>}
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#9c91a02d8f494ddcb6ab9aac9600afff" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="9c91a02d8f494ddcb6ab9aac9600afff" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "lockVersion": <span class="hljs-number">13</span>,
+    "subject": "Lo<span class="hljs-comment">rem"</span>
+    "parentId": "<span class="hljs-number">42</span>"
+}
 </code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#a486b16ee6310a93ed0227775c8231fe" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="a486b16ee6310a93ed0227775c8231fe" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
@@ -2547,7 +2534,7 @@ not just the current user.</p>
     </span>}
 </span>}
 </code></pre></li></ul></section><h4 id="work-packages-work-package-schema">Work Package Schema&nbsp;<a href="#work-packages-work-package-schema"><i class="fa fa-link"></i></a></h4><section id="work-packages-work-package-schema-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View Work Package Schema</span></div><div style="float:left"><a href="#work-packages-work-package-schema-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/api/v3/work_packages/schemas/{identifier}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>identifier</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>12-13</span></span><p>Identifier of the schema</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#0da533e26a9def086f312a411eefdd11" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="0da533e26a9def086f312a411eefdd11" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#07a8a686de496c85c37e145dc3657626" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="07a8a686de496c85c37e145dc3657626" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Schema"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{ "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/example/schema"</span> </span>}
@@ -2556,11 +2543,6 @@ not just the current user.</p>
     "<span class="hljs-attribute">lockVersion</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Resource Version"</span></span>,
         "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
-        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
-    </span>}</span>,
-    "<span class="hljs-attribute">_type</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Resource Type"</span></span>,
-        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"MetaType"</span></span>,
         "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
     </span>}</span>,
     "<span class="hljs-attribute">subject</span>": <span class="hljs-value">{
@@ -2628,7 +2610,7 @@ Thatswhy a 404 is returned here, even if a 403 might be more appropriate.</em></
 </code></pre></li></ul></section><h4 id="work-packages-work-package-edit-form">Work Package Edit Form&nbsp;<a href="#work-packages-work-package-edit-form"><i class="fa fa-link"></i></a></h4><p>This endpoint returns a form to allow a guided modification of an existing work package.</p>
 <p>For more details and all possible responses see the general specification of <a href="#forms">Forms</a>.</p>
 <section id="work-packages-work-package-edit-form-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">WorkPackage Edit Form</span></div><div style="float:left"><a href="#work-packages-work-package-edit-form-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden"><code>/api/v3/work_packages/{id}/form</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID of the work package being modified</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#23b59a1334e047efb018def9ed1735ae" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="23b59a1334e047efb018def9ed1735ae" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#4effcadebf8ab54749cbbc47600d95e3" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="4effcadebf8ab54749cbbc47600d95e3" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{ "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/example/form"</span> </span>}</span>,
         "<span class="hljs-attribute">validate</span>": <span class="hljs-value">{
@@ -2664,10 +2646,6 @@ Thatswhy a 404 is returned here, even if a 403 might be more appropriate.</em></
 
             "<span class="hljs-attribute">lockVersion</span>": <span class="hljs-value">{
                 "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
-                "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
-            </span>}</span>,
-            "<span class="hljs-attribute">_type</span>": <span class="hljs-value">{
-                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"MetaType"</span></span>,
                 "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
             </span>}</span>,
             "<span class="hljs-attribute">subject</span>": <span class="hljs-value">{
@@ -3051,7 +3029,7 @@ updated activity.</p>
     "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
     "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to see the users available as responsible for this project."</span>
 </span>}
-</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 16 Mar 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
+</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 17 Mar 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
 
 </div></body><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script>(function() {
   if (location.protocol === 'file:') {
