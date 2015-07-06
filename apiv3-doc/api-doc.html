@@ -94,6 +94,7 @@ by the link object. A payload might also be templated slightly. If the <code>tem
 in its strings (e.g. <code>{ &quot;href&quot;: &quot;/api/v3/examples/{example_id}&quot; }</code>).</p>
 <p>Note: When writing links (e.g. during a <code>PATCH</code> operation) only changes to <code>href</code> are accepted.
 Changes to all other properties will be <strong>silently ignored</strong>.</p>
+<p> Also, all linked properties should be enclosed within <code> &quot;_links&quot;:{}<code> during a write operation.</p>
 <h1>Errors</h1>
 <p>In case of an error, the API will respond with an apropriate HTTP status code.
 For responses with an HTTP status of <code>4xx</code> and <code>5xx</code> the body will always contain a single error object.
