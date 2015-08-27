@@ -1442,13 +1442,12 @@ is not allowed to see the context resource (e.g. limited work package visibility
 <tr><td style="text-align:center">identifier</td><td></td><td>String</td><td></td><td>READ</td></tr>
 <tr><td style="text-align:center">name</td><td></td><td>String</td><td></td><td>READ</td></tr>
 <tr><td style="text-align:center">description</td><td></td><td>String</td><td></td><td>READ</td></tr>
-<tr><td style="text-align:center">homepage</td><td></td><td>String</td><td></td><td>READ</td></tr>
 <tr><td style="text-align:center">createdAt</td><td>Time of creation</td><td>DateTime</td><td></td><td>READ</td></tr>
 <tr><td style="text-align:center">updatedAt</td><td>Time of the most recent change to the project</td><td>DateTime</td><td></td><td>READ</td></tr>
 </tbody>
 </table>
 <h4 id="projects-project">Project&nbsp;<a href="#projects-project"><i class="fa fa-link"></i></a></h4><section id="projects-project-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View project</span></div><div style="float:left"><a href="#projects-project-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/api/v3/projects/{id}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Project id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#409f7d3dd6fdaee1f7f9d9e282b4f52d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="409f7d3dd6fdaee1f7f9d9e282b4f52d" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#8b4531713e618f876b423cd6821bc4bb" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="8b4531713e618f876b423cd6821bc4bb" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Project"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -1472,7 +1471,6 @@ is not allowed to see the context resource (e.g. limited work package visibility
     "<span class="hljs-attribute">identifier</span>": <span class="hljs-value"><span class="hljs-string">"project_identifier"</span></span>,
     "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Project example"</span></span>,
     "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Lorem ipsum dolor sit amet"</span></span>,
-    "<span class="hljs-attribute">homepage</span>": <span class="hljs-value"><span class="hljs-string">"http://openproject.com"</span></span>,
     "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
     "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
 </span>}
@@ -1490,7 +1488,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <p>The projects returned depend on the sharing settings of the given version,
 but are also limited to the projects that the current user is allowed to see.</p>
 </div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Version id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#73c836d26c9fa56e88d58ca325718c85" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="73c836d26c9fa56e88d58ca325718c85" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#03c94ea9991635564458346a4cbb8aa5" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="03c94ea9991635564458346a4cbb8aa5" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_links</span>":
     <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>":
@@ -1518,7 +1516,6 @@ but are also limited to the projects that the current user is allowed to see.</p
                 "<span class="hljs-attribute">identifier</span>": <span class="hljs-value"><span class="hljs-string">"project_identifier"</span></span>,
                 "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Project example"</span></span>,
                 "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Lorem ipsum dolor sit amet"</span></span>,
-                "<span class="hljs-attribute">homepage</span>": <span class="hljs-value"><span class="hljs-string">"http://openproject.com"</span></span>,
                 "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
                 "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
             </span>}
@@ -4197,7 +4194,7 @@ updated activity.</p>
     "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
     "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
 </span>}
-</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 26 Aug 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
+</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 27 Aug 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
 
 </div></body><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script>(function() {
   if (location.protocol === 'file:') {
