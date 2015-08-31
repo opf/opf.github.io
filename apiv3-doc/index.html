@@ -767,7 +767,7 @@ container (e.g. a work package or a board message).</p>
 </tbody>
 </table>
 <h4 id="attachments-attachment">Attachment&nbsp;<a href="#attachments-attachment"><i class="fa fa-link"></i></a></h4><section id="attachments-attachment-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View attachment</span></div><div style="float:left"><a href="#attachments-attachment-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/api/v3/attachments/{id}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Attachment id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#081367c63369b0beee68675c9a72b0d0" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="081367c63369b0beee68675c9a72b0d0" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#c5945812e31d117b7e89a2122e5acd6e" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="c5945812e31d117b7e89a2122e5acd6e" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
     <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Attachment"</span>,
     <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
         <span class="hljs-string">"self"</span>: <span class="hljs-collection">{
@@ -780,7 +780,7 @@ container (e.g. a work package or a board message).</p>
             <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/1"</span>
         }</span>,
         <span class="hljs-string">"downloadLocation"</span>: <span class="hljs-collection">{
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1"</span>
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1/download"</span>
         }</span>
     }</span>,
     <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
@@ -810,9 +810,9 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 </span>}
 </code></pre></li></ul></section><section id="attachments-attachment-delete" class="panel panel-danger"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Delete attachment</span></div><div style="float:left"><a href="#attachments-attachment-delete" class="btn btn-xs btn-danger">DELETE</a></div><div style="overflow:hidden"><code>/api/v3/attachments/{id}</code></div></div><div class="panel-body"><p>Permanently deletes the specified attachment.</p>
 </div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Attachment id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>202</code></strong><a data-toggle="collapse" data-target="#58d326ea9b4d3a8ffcae4ce32c1d6244" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="58d326ea9b4d3a8ffcae4ce32c1d6244" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the attachment was deleted successfully.</p>
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>204</code></strong><a data-toggle="collapse" data-target="#3152dd72364537e6a16c2e9fcf72f3c6" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3152dd72364537e6a16c2e9fcf72f3c6" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the attachment was deleted successfully.</p>
 <p>Note that the response body is empty as of now. In future versions of the API a body
-<em>might</em> be returned.</p>
+<em>might</em> be returned along with an appropriate HTTP status.</p>
 </div></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#280dc3a67c3f431d85a81eb09a9b2c81" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="280dc3a67c3f431d85a81eb09a9b2c81" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
 <p><strong>Required permission:</strong> edit permission for the container of the attachment</p>
 <p><em>Note that you will only receive this error, if you are at least allowed to see the attachment.</em></p>
@@ -832,7 +832,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
     "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified attachment does not exist."</span>
 </span>}
 </code></pre></li></ul></section><h4 id="attachments-attachments-by-work-package">Attachments by work package&nbsp;<a href="#attachments-attachments-by-work-package"><i class="fa fa-link"></i></a></h4><section id="attachments-attachments-by-work-package-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">List attachments</span></div><div style="float:left"><a href="#attachments-attachments-by-work-package-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/api/v3/work_packages/{id}/attachments</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID of the work package whose attachments will be listed</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#618d8e8e07b026dc540bf1ffe4d1b8d3" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="618d8e8e07b026dc540bf1ffe4d1b8d3" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#5177f8b7ea0667bbd05255240d34c6ba" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="5177f8b7ea0667bbd05255240d34c6ba" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
     <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
         <span class="hljs-string">"self"</span>: <span class="hljs-collection">{ <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/work_packages/1/attachments"</span> }</span>
     }</span>,
@@ -855,7 +855,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
                         <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/1"</span>
                     }</span>,
                     <span class="hljs-string">"downloadLocation"</span>: <span class="hljs-collection">{
-                        <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1"</span>
+                        <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1/download"</span>
                     }</span>
                 }</span>,
                 <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
@@ -886,7 +886,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
                         <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/1"</span>
                     }</span>,
                     <span class="hljs-string">"downloadLocation"</span>: <span class="hljs-collection">{
-                        <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/2"</span>
+                        <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/2/download"</span>
                     }</span>
                 }</span>,
                 <span class="hljs-string">"id"</span>: <span class="hljs-number">2</span>,
@@ -943,7 +943,7 @@ Content-Type: image/png
 
 PNG <span class="hljs-type">file</span> data
 <span class="hljs-comment">--boundary-delimiter--</span>
-</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#dc6c4d33069ef747f4b9062ebd1a4d35" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="dc6c4d33069ef747f4b9062ebd1a4d35" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
+</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#4e5c2962fc6fe3ddf554f04522c73163" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="4e5c2962fc6fe3ddf554f04522c73163" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
     <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Attachment"</span>,
     <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
         <span class="hljs-string">"self"</span>: <span class="hljs-collection">{
@@ -956,7 +956,7 @@ PNG <span class="hljs-type">file</span> data
             <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/1"</span>
         }</span>,
         <span class="hljs-string">"downloadLocation"</span>: <span class="hljs-collection">{
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1"</span>
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1/download"</span>
         }</span>
     }</span>,
     <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
@@ -4443,7 +4443,7 @@ updated activity.</p>
     "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
     "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
 </span>}
-</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 28 Aug 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
+</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 31 Aug 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
 
 </div></body><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script>(function() {
   if (location.protocol === 'file:') {
