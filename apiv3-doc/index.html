@@ -2975,7 +2975,7 @@ the human readable name of custom fields.</em></p>
 </ul>
 <p><em>Start date can also not be earlier than a due date of any predecessor.</em></p>
 <h4 id="work-packages-work-package">Work Package&nbsp;<a href="#work-packages-work-package"><i class="fa fa-link"></i></a></h4><section id="work-packages-work-package-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View Work Package</span></div><div style="float:left"><a href="#work-packages-work-package-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden"><code>/api/v3/work_packages/{id}{?notify}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Work package id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#73d3531ba8da5bf201bac38aaf5f5be3" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="73d3531ba8da5bf201bac38aaf5f5be3" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#bc98040161ded243b0844e7b4453e468" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="bc98040161ded243b0844e7b4453e468" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -2997,11 +2997,6 @@ the human readable name of custom fields.</em></p>
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/work_packages/1528/time_entries/new"</span></span>,
             "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"text/html"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Log time on Develop API"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">duplicate</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/projects/seeded_project/work_packages/new?copy_from=1528"</span></span>,
-            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"text/html"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Duplicate Develop API"</span>
         </span>}</span>,
         "<span class="hljs-attribute">move</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/work_packages/1528/move/new"</span></span>,
@@ -3152,7 +3147,7 @@ not just the current user.</p>
     "subject": "Lo<span class="hljs-comment">rem"</span>
     "parentId": "<span class="hljs-number">42</span>"
 }
-</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#e25886e472e218109a142d75814c9010" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="e25886e472e218109a142d75814c9010" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#3a6ed01100f5da1c24bf62692fe3c16a" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3a6ed01100f5da1c24bf62692fe3c16a" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -3174,11 +3169,6 @@ not just the current user.</p>
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/work_packages/1528/time_entries/new"</span></span>,
             "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"text/html"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Log time on Develop API"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">duplicate</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/projects/seeded_project/work_packages/new?copy_from=1528"</span></span>,
-            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"text/html"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Duplicate Develop API"</span>
         </span>}</span>,
         "<span class="hljs-attribute">move</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/work_packages/1528/move/new"</span></span>,
@@ -3674,7 +3664,7 @@ Note that it is only allowed to provide properties or links supporting the write
 </dd><dt>notify</dt><dd><code>boolean</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>true</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>false</span></span><p>Indicates whether change notifications (e.g. via E-Mail) should be sent.
 Note that this controls notifications for all users interested in changes to the work package (e.g. watchers, author and assignee),
 not just the current user.</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#96250ffa54a41223b9b0a05b0c862e38" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="96250ffa54a41223b9b0a05b0c862e38" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#699d3b55de0e9329edec47ebe099dd47" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="699d3b55de0e9329edec47ebe099dd47" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -3696,11 +3686,6 @@ not just the current user.</p>
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/work_packages/1528/time_entries/new"</span></span>,
             "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"text/html"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Log time on Develop API"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">duplicate</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/projects/seeded_project/work_packages/new?copy_from=1528"</span></span>,
-            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"text/html"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Duplicate Develop API"</span>
         </span>}</span>,
         "<span class="hljs-attribute">move</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/work_packages/1528/move/new"</span></span>,
@@ -4621,7 +4606,7 @@ not just the current user.</p>
     "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
     "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
 </span>}
-</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 17 Nov 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
+</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 18 Nov 2015</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
 
 </div></body><script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script>(function() {
   if (location.protocol === 'file:') {
