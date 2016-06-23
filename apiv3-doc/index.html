@@ -3394,6 +3394,11 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td>not locked; <strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
+<td style="text-align:center">showUser</td>
+<td>Link to the OpenProject user page (HTML)</td>
+<td></td>
+</tr>
+<tr>
 <td style="text-align:center">unlock</td>
 <td>Allow a locked user to login and act again</td>
 <td>locked; <strong>Permission</strong>: Administrator</td>
@@ -3541,6 +3546,10 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
         </span>}</span>,
+        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
+        </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
@@ -3590,6 +3599,10 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
         </span>}</span>,
+        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
+        </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
@@ -3634,6 +3647,10 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
         </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
@@ -5761,6 +5778,10 @@ The returned form will be pre-filled with default values for every property, if 
                     "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
                     "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
                 </span>}</span>,
+                "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
+                </span>}</span>,
                 "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
                     "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
                     "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
@@ -5842,6 +5863,10 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
         </span>}</span>,
+        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
+        </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
@@ -5868,6 +5893,10 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
         </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
@@ -6476,7 +6505,7 @@ not just the current user.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 22 Jun 2016</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 23 Jun 2016</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
