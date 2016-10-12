@@ -1,7 +1,7 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>OpenProject API v3</title><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200"><style>/* Highlight.js Theme Tomorrow */
 .hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}
 
-</style></head><body><div class="container"><div class="row"><div class="col-md-3"><ul id="op-api-menu" class="menu"><li id="menu-item-eace7b23" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-eace7b23"><a href="#general" class="menu-item-link">General</a></li><li id="menu-item-3c9a6959" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3c9a6959"><a href="#basic-objects" class="menu-item-link">Basic Objects</a></li><li id="menu-item-edd28af7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-edd28af7 menu-item-has-children"><a href="#collections" class="menu-item-link">Collections<a href="#collections" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6b772abc" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6b772abc"><a href="#collections-offset-based-pagination" class="menu-item-link">Offset based pagination</a></li><li id="menu-item-fb66958" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fb66958"><a href="#collections-cursor-based-pagination" class="menu-item-link">Cursor based pagination</a></li><li id="menu-item-a99c699b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a99c699b"><a href="#collections-aggregations" class="menu-item-link">Aggregations</a></li></ul></a></li><li id="menu-item-ce34d4e8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ce34d4e8 menu-item-has-children"><a href="#root" class="menu-item-link">Root<a href="#root" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-bcfe0eba" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bcfe0eba"><a href="#root-root" class="menu-item-link">Root</a></li></ul></a></li><li id="menu-item-47bc2264" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-47bc2264 menu-item-has-children"><a href="#activities" class="menu-item-link">Activities<a href="#activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-86ee6353" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-86ee6353"><a href="#activities-activity" class="menu-item-link">Activity<a href="#activities-activity" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-362e8071" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-362e8071"><a href="#activities-activity-get" class="menu-item-link">View activity</a></li><li id="menu-item-6f0d766" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6f0d766"><a href="#activities-activity-patch" class="menu-item-link">Update activity</a></li></ul></a></li></ul></a></li><li id="menu-item-be08d5d4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-be08d5d4 menu-item-has-children"><a href="#attachments" class="menu-item-link">Attachments<a href="#attachments" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-57fe36ba" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-57fe36ba"><a href="#attachments-attachment" class="menu-item-link">Attachment<a href="#attachments-attachment" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-fe3a8ae9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fe3a8ae9"><a href="#attachments-attachment-get" class="menu-item-link">View attachment</a></li><li id="menu-item-8282287" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8282287"><a href="#attachments-attachment-delete" class="menu-item-link">Delete attachment</a></li></ul></a></li><li id="menu-item-c824e44c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c824e44c"><a href="#attachments-attachments-by-work-package" class="menu-item-link">Attachments by work package<a href="#attachments-attachments-by-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f60779fb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f60779fb"><a href="#attachments-attachments-by-work-package-get" class="menu-item-link">List attachments</a></li><li id="menu-item-6174b8bb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6174b8bb"><a href="#attachments-attachments-by-work-package-post" class="menu-item-link">Add attachment</a></li></ul></a></li></ul></a></li><li id="menu-item-5d8d3982" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5d8d3982 menu-item-has-children"><a href="#categories" class="menu-item-link">Categories<a href="#categories" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-a8991e87" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a8991e87"><a href="#categories-categories-by-project" class="menu-item-link">Categories by Project</a></li><li id="menu-item-6b0e95d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6b0e95d"><a href="#categories-category" class="menu-item-link">Category</a></li></ul></a></li><li id="menu-item-a1508388" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a1508388 menu-item-has-children"><a href="#configuration" class="menu-item-link">Configuration<a href="#configuration" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6d29c74a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6d29c74a"><a href="#configuration-configuration" class="menu-item-link">Configuration</a></li></ul></a></li><li id="menu-item-e883a78c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e883a78c menu-item-has-children"><a href="#forms" class="menu-item-link">Forms<a href="#forms" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-8d12e8d7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8d12e8d7"><a href="#forms-example-form" class="menu-item-link">Example Form</a></li></ul></a></li><li id="menu-item-b2a6ceb2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b2a6ceb2 menu-item-has-children"><a href="#previewing" class="menu-item-link">Previewing<a href="#previewing" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e23b6a5a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e23b6a5a"><a href="#previewing-textile" class="menu-item-link">Textile</a></li><li id="menu-item-472ab383" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-472ab383"><a href="#previewing-plain-text" class="menu-item-link">Plain Text</a></li></ul></a></li><li id="menu-item-dbfe8cb9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-dbfe8cb9 menu-item-has-children"><a href="#priorities" class="menu-item-link">Priorities<a href="#priorities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e1152d24" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e1152d24"><a href="#priorities-priorities" class="menu-item-link">Priorities</a></li><li id="menu-item-594b1326" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-594b1326"><a href="#priorities-priority" class="menu-item-link">Priority</a></li></ul></a></li><li id="menu-item-e12d540d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e12d540d menu-item-has-children"><a href="#projects" class="menu-item-link">Projects<a href="#projects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e5f2d422" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e5f2d422"><a href="#projects-project" class="menu-item-link">Project</a></li><li id="menu-item-7d7a515b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7d7a515b"><a href="#projects-projects-by-version" class="menu-item-link">Projects by version</a></li><li id="menu-item-a15705fd" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a15705fd"><a href="#projects-work-package-columns" class="menu-item-link">Work Package Columns</a></li></ul></a></li><li id="menu-item-65f3f2aa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-65f3f2aa menu-item-has-children"><a href="#queries" class="menu-item-link">Queries<a href="#queries" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-330f2b1a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-330f2b1a"><a href="#queries-query" class="menu-item-link">Query</a></li><li id="menu-item-9e1cd68d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9e1cd68d"><a href="#queries-star-query" class="menu-item-link">Star Query</a></li><li id="menu-item-bad86825" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bad86825"><a href="#queries-unstar-query" class="menu-item-link">Unstar Query</a></li></ul></a></li><li id="menu-item-dfed0034" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-dfed0034 menu-item-has-children"><a href="#revisions" class="menu-item-link">Revisions<a href="#revisions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-c7e59014" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c7e59014"><a href="#revisions-revision" class="menu-item-link">Revision</a></li></ul></a></li><li id="menu-item-7f345851" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7f345851 menu-item-has-children"><a href="#schemas" class="menu-item-link">Schemas<a href="#schemas" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d6701a7f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d6701a7f"><a href="#schemas-example-schema" class="menu-item-link">Example Schema</a></li></ul></a></li><li id="menu-item-73e77fe9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-73e77fe9 menu-item-has-children"><a href="#statuses" class="menu-item-link">Statuses<a href="#statuses" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-37519583" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-37519583"><a href="#statuses-statuses" class="menu-item-link">Statuses</a></li><li id="menu-item-8d024ae2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8d024ae2"><a href="#statuses-status" class="menu-item-link">Status</a></li></ul></a></li><li id="menu-item-0b2e2b09" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0b2e2b09 menu-item-has-children"><a href="#string-objects" class="menu-item-link">String Objects<a href="#string-objects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-25bfe0ef" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-25bfe0ef"><a href="#string-objects-string-object" class="menu-item-link">String Object</a></li></ul></a></li><li id="menu-item-497dca4d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-497dca4d menu-item-has-children"><a href="#types" class="menu-item-link">Types<a href="#types" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-8de3c877" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8de3c877"><a href="#types-types" class="menu-item-link">Types</a></li><li id="menu-item-cc809aed" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cc809aed"><a href="#types-types-by-project" class="menu-item-link">Types by Project</a></li><li id="menu-item-240f4c4a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-240f4c4a"><a href="#types-type" class="menu-item-link">Type</a></li></ul></a></li><li id="menu-item-0bb441bf" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0bb441bf menu-item-has-children"><a href="#users" class="menu-item-link">Users<a href="#users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6542926" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6542926"><a href="#users-user" class="menu-item-link">User<a href="#users-user" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-af452e76" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-af452e76"><a href="#users-user-get" class="menu-item-link">View user</a></li><li id="menu-item-a860c0f8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a860c0f8"><a href="#users-user-delete" class="menu-item-link">Delete user</a></li></ul></a></li><li id="menu-item-9d3ebfed" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9d3ebfed"><a href="#users-user-account-locking" class="menu-item-link">User Account Locking<a href="#users-user-account-locking" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f570750f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f570750f"><a href="#users-user-account-locking-post" class="menu-item-link">Set Lock</a></li><li id="menu-item-3b47df6b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3b47df6b"><a href="#users-user-account-locking-delete" class="menu-item-link">Remove Lock</a></li></ul></a></li></ul></a></li><li id="menu-item-6b5614eb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6b5614eb menu-item-has-children"><a href="#userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-961d426b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-961d426b"><a href="#userpreferences-userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences-userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-09ea79b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-09ea79b"><a href="#userpreferences-userpreferences-get" class="menu-item-link">Show my preferences</a></li><li id="menu-item-d1850ea7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d1850ea7"><a href="#userpreferences-userpreferences-patch" class="menu-item-link">Update UserPreferences</a></li></ul></a></li></ul></a></li><li id="menu-item-49283724" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-49283724 menu-item-has-children"><a href="#versions" class="menu-item-link">Versions<a href="#versions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0a93e608" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0a93e608"><a href="#versions-versions-by-project" class="menu-item-link">Versions by Project</a></li><li id="menu-item-db19f862" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-db19f862"><a href="#versions-version" class="menu-item-link">Version</a></li></ul></a></li><li id="menu-item-f66b81f4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f66b81f4 menu-item-has-children"><a href="#work-packages" class="menu-item-link">Work Packages<a href="#work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-48a11931" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-48a11931"><a href="#work-packages-work-package" class="menu-item-link">Work Package<a href="#work-packages-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-70b62e68" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-70b62e68"><a href="#work-packages-work-package-get" class="menu-item-link">View Work Package</a></li><li id="menu-item-433696de" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-433696de"><a href="#work-packages-work-package-patch" class="menu-item-link">Edit Work Package</a></li><li id="menu-item-90e3db3b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-90e3db3b"><a href="#work-packages-work-package-delete" class="menu-item-link">Delete Work Package</a></li></ul></a></li><li id="menu-item-edc0704d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-edc0704d"><a href="#work-packages-work-package-schema" class="menu-item-link">Work Package Schema</a></li><li id="menu-item-7e25db4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7e25db4"><a href="#work-packages-work-package-edit-form" class="menu-item-link">Work Package Edit Form</a></li><li id="menu-item-514f2c99" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-514f2c99"><a href="#work-packages-work-packages" class="menu-item-link">Work Packages<a href="#work-packages-work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-db1bd66f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-db1bd66f"><a href="#work-packages-work-packages-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-98e67caf" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-98e67caf"><a href="#work-packages-work-packages-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-f63d0cbd" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f63d0cbd"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-62becfdb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-62becfdb"><a href="#work-packages-work-packages-by-project" class="menu-item-link">Work Packages by Project<a href="#work-packages-work-packages-by-project" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-60a67802" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-60a67802"><a href="#work-packages-work-packages-by-project-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-c46ece12" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c46ece12"><a href="#work-packages-work-packages-by-project-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-0aa0e914" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0aa0e914"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-9d654d72" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9d654d72"><a href="#work-packages-watchers" class="menu-item-link">Watchers<a href="#work-packages-watchers" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-a93b673d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a93b673d"><a href="#work-packages-watchers-get" class="menu-item-link">List watchers</a></li><li id="menu-item-a83dd3b5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a83dd3b5"><a href="#work-packages-watchers-post" class="menu-item-link">Add watcher</a></li></ul></a></li><li id="menu-item-d94cdf79" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d94cdf79"><a href="#work-packages-remove-watcher" class="menu-item-link">Remove Watcher</a></li><li id="menu-item-98b4300d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-98b4300d"><a href="#work-packages-available-watchers" class="menu-item-link">Available Watchers</a></li><li id="menu-item-04ca8365" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-04ca8365"><a href="#work-packages-available-projects" class="menu-item-link">Available Projects</a></li><li id="menu-item-011ecf88" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-011ecf88"><a href="#work-packages-revisions" class="menu-item-link">Revisions</a></li><li id="menu-item-bfb4e8e6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bfb4e8e6"><a href="#work-packages-work-package-activities" class="menu-item-link">Work Package activities<a href="#work-packages-work-package-activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-8f835b67" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8f835b67"><a href="#work-packages-work-package-activities-get" class="menu-item-link">List work package activities</a></li><li id="menu-item-eb16f0a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-eb16f0a"><a href="#work-packages-work-package-activities-post" class="menu-item-link">Comment work package</a></li></ul></a></li><li id="menu-item-5559e52f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5559e52f"><a href="#work-packages-available-assignees" class="menu-item-link">Available Assignees</a></li><li id="menu-item-4745f803" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4745f803"><a href="#work-packages-available-responsibles" class="menu-item-link">Available Responsibles</a></li></ul></a></li></ul></div><div class="col-md-8"><div id="op-api-content"><div><header><div class="page-header"><h1 id="top">OpenProject API v3</h1></div></header><div class="description"></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="general">General&nbsp;<a href="#general"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>This is the current <strong>DRAFT</strong> of the specification for OpenProject APIv3.</p>
+</style></head><body><div class="container"><div class="row"><div class="col-md-3"><ul id="op-api-menu" class="menu"><li id="menu-item-421793ff" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-421793ff"><a href="#general" class="menu-item-link">General</a></li><li id="menu-item-98209cbb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-98209cbb"><a href="#basic-objects" class="menu-item-link">Basic Objects</a></li><li id="menu-item-968dcc2f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-968dcc2f menu-item-has-children"><a href="#collections" class="menu-item-link">Collections<a href="#collections" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-50d787b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-50d787b"><a href="#collections-offset-based-pagination" class="menu-item-link">Offset based pagination</a></li><li id="menu-item-6c711a5e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6c711a5e"><a href="#collections-cursor-based-pagination" class="menu-item-link">Cursor based pagination</a></li><li id="menu-item-845bfd19" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-845bfd19"><a href="#collections-aggregations" class="menu-item-link">Aggregations</a></li></ul></a></li><li id="menu-item-81b7ee2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-81b7ee2 menu-item-has-children"><a href="#root" class="menu-item-link">Root<a href="#root" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0c3e39e5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0c3e39e5"><a href="#root-root" class="menu-item-link">Root</a></li></ul></a></li><li id="menu-item-f9a91541" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f9a91541 menu-item-has-children"><a href="#activities" class="menu-item-link">Activities<a href="#activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-7b726852" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7b726852"><a href="#activities-activity" class="menu-item-link">Activity<a href="#activities-activity" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-a9cef59f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a9cef59f"><a href="#activities-activity-get" class="menu-item-link">View activity</a></li><li id="menu-item-9b79690f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9b79690f"><a href="#activities-activity-patch" class="menu-item-link">Update activity</a></li></ul></a></li></ul></a></li><li id="menu-item-a73111b5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a73111b5 menu-item-has-children"><a href="#attachments" class="menu-item-link">Attachments<a href="#attachments" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-1bea4e81" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1bea4e81"><a href="#attachments-attachment" class="menu-item-link">Attachment<a href="#attachments-attachment" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-a848cce6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a848cce6"><a href="#attachments-attachment-get" class="menu-item-link">View attachment</a></li><li id="menu-item-c310969e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c310969e"><a href="#attachments-attachment-delete" class="menu-item-link">Delete attachment</a></li></ul></a></li><li id="menu-item-87fb1a63" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-87fb1a63"><a href="#attachments-attachments-by-work-package" class="menu-item-link">Attachments by work package<a href="#attachments-attachments-by-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-597ed792" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-597ed792"><a href="#attachments-attachments-by-work-package-get" class="menu-item-link">List attachments</a></li><li id="menu-item-00a899c4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-00a899c4"><a href="#attachments-attachments-by-work-package-post" class="menu-item-link">Add attachment</a></li></ul></a></li></ul></a></li><li id="menu-item-f09ccafe" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f09ccafe menu-item-has-children"><a href="#categories" class="menu-item-link">Categories<a href="#categories" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6f4a78eb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6f4a78eb"><a href="#categories-categories-by-project" class="menu-item-link">Categories by Project</a></li><li id="menu-item-f4203ae5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f4203ae5"><a href="#categories-category" class="menu-item-link">Category</a></li></ul></a></li><li id="menu-item-7f273c23" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7f273c23 menu-item-has-children"><a href="#configuration" class="menu-item-link">Configuration<a href="#configuration" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-42d87b94" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-42d87b94"><a href="#configuration-configuration" class="menu-item-link">Configuration</a></li></ul></a></li><li id="menu-item-5f4c11a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5f4c11a menu-item-has-children"><a href="#forms" class="menu-item-link">Forms<a href="#forms" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-426f8056" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-426f8056"><a href="#forms-example-form" class="menu-item-link">Example Form</a></li></ul></a></li><li id="menu-item-0fa10d37" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0fa10d37 menu-item-has-children"><a href="#previewing" class="menu-item-link">Previewing<a href="#previewing" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-a587a3f4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a587a3f4"><a href="#previewing-textile" class="menu-item-link">Textile</a></li><li id="menu-item-2d828688" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2d828688"><a href="#previewing-plain-text" class="menu-item-link">Plain Text</a></li></ul></a></li><li id="menu-item-7a690a44" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7a690a44 menu-item-has-children"><a href="#priorities" class="menu-item-link">Priorities<a href="#priorities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-8d79c1c8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8d79c1c8"><a href="#priorities-priorities" class="menu-item-link">Priorities</a></li><li id="menu-item-4bfa00d2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4bfa00d2"><a href="#priorities-priority" class="menu-item-link">Priority</a></li></ul></a></li><li id="menu-item-472ce372" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-472ce372 menu-item-has-children"><a href="#projects" class="menu-item-link">Projects<a href="#projects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-40db6a38" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-40db6a38"><a href="#projects-project" class="menu-item-link">Project</a></li><li id="menu-item-63d39145" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-63d39145"><a href="#projects-projects-by-version" class="menu-item-link">Projects by version</a></li><li id="menu-item-6a08a138" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6a08a138"><a href="#projects-work-package-columns" class="menu-item-link">Work Package Columns</a></li></ul></a></li><li id="menu-item-80ddf1ea" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-80ddf1ea menu-item-has-children"><a href="#queries" class="menu-item-link">Queries<a href="#queries" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3c4d33eb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3c4d33eb"><a href="#queries-query" class="menu-item-link">Query</a></li><li id="menu-item-581b03da" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-581b03da"><a href="#queries-star-query" class="menu-item-link">Star Query</a></li><li id="menu-item-f00b51b4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f00b51b4"><a href="#queries-unstar-query" class="menu-item-link">Unstar Query</a></li></ul></a></li><li id="menu-item-19bbc5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-19bbc5 menu-item-has-children"><a href="#revisions" class="menu-item-link">Revisions<a href="#revisions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-dfc9fb16" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-dfc9fb16"><a href="#revisions-revision" class="menu-item-link">Revision</a></li></ul></a></li><li id="menu-item-9155cb26" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9155cb26 menu-item-has-children"><a href="#schemas" class="menu-item-link">Schemas<a href="#schemas" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e29a4039" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e29a4039"><a href="#schemas-example-schema" class="menu-item-link">Example Schema</a></li></ul></a></li><li id="menu-item-badfd9fa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-badfd9fa menu-item-has-children"><a href="#statuses" class="menu-item-link">Statuses<a href="#statuses" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e6ad2bc4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e6ad2bc4"><a href="#statuses-statuses" class="menu-item-link">Statuses</a></li><li id="menu-item-96a7ae5a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-96a7ae5a"><a href="#statuses-status" class="menu-item-link">Status</a></li></ul></a></li><li id="menu-item-a6983b9a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a6983b9a menu-item-has-children"><a href="#string-objects" class="menu-item-link">String Objects<a href="#string-objects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-71997484" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-71997484"><a href="#string-objects-string-object" class="menu-item-link">String Object</a></li></ul></a></li><li id="menu-item-a86c2bc3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a86c2bc3 menu-item-has-children"><a href="#types" class="menu-item-link">Types<a href="#types" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e498e4b5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e498e4b5"><a href="#types-types" class="menu-item-link">Types</a></li><li id="menu-item-f48db6ec" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f48db6ec"><a href="#types-types-by-project" class="menu-item-link">Types by Project</a></li><li id="menu-item-042947cf" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-042947cf"><a href="#types-type" class="menu-item-link">Type</a></li></ul></a></li><li id="menu-item-36b94b17" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-36b94b17 menu-item-has-children"><a href="#users" class="menu-item-link">Users<a href="#users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0c42e4f1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0c42e4f1"><a href="#users-user" class="menu-item-link">User<a href="#users-user" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0244a134" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0244a134"><a href="#users-user-get" class="menu-item-link">View user</a></li><li id="menu-item-bb2fdf79" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bb2fdf79"><a href="#users-user-patch" class="menu-item-link">Update user</a></li><li id="menu-item-f670139" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f670139"><a href="#users-user-delete" class="menu-item-link">Delete user</a></li></ul></a></li><li id="menu-item-a4a0842" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a4a0842"><a href="#users-user-account-locking" class="menu-item-link">User Account Locking<a href="#users-user-account-locking" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-05563c29" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-05563c29"><a href="#users-user-account-locking-post" class="menu-item-link">Set Lock</a></li><li id="menu-item-0d7d0759" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0d7d0759"><a href="#users-user-account-locking-delete" class="menu-item-link">Remove Lock</a></li></ul></a></li><li id="menu-item-c8da3571" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c8da3571"><a href="#users-user-schema" class="menu-item-link">User Schema</a></li><li id="menu-item-945c7f7e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-945c7f7e"><a href="#users-user-edit-form" class="menu-item-link">User Edit Form</a></li><li id="menu-item-f2dc48d3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f2dc48d3"><a href="#users-users" class="menu-item-link">Users<a href="#users-users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-32b9d676" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-32b9d676"><a href="#users-users-get" class="menu-item-link">List Users</a></li><li id="menu-item-cad07f7a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cad07f7a"><a href="#users-users-post" class="menu-item-link">Create User</a></li></ul></a></li><li id="menu-item-96f46204" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-96f46204"><a href="#users-user-create-form" class="menu-item-link">User Create Form</a></li></ul></a></li><li id="menu-item-1700bb8d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1700bb8d menu-item-has-children"><a href="#userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e117741f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e117741f"><a href="#userpreferences-userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences-userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-b1207a83" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b1207a83"><a href="#userpreferences-userpreferences-get" class="menu-item-link">Show my preferences</a></li><li id="menu-item-3be2313c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3be2313c"><a href="#userpreferences-userpreferences-patch" class="menu-item-link">Update UserPreferences</a></li></ul></a></li></ul></a></li><li id="menu-item-900536b8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-900536b8 menu-item-has-children"><a href="#versions" class="menu-item-link">Versions<a href="#versions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-05970d3e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-05970d3e"><a href="#versions-versions-by-project" class="menu-item-link">Versions by Project</a></li><li id="menu-item-275f6d4c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-275f6d4c"><a href="#versions-version" class="menu-item-link">Version</a></li></ul></a></li><li id="menu-item-458e9ba4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-458e9ba4 menu-item-has-children"><a href="#work-packages" class="menu-item-link">Work Packages<a href="#work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-c7c853eb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c7c853eb"><a href="#work-packages-work-package" class="menu-item-link">Work Package<a href="#work-packages-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3e2cf32f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3e2cf32f"><a href="#work-packages-work-package-get" class="menu-item-link">View Work Package</a></li><li id="menu-item-fa605d9d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fa605d9d"><a href="#work-packages-work-package-patch" class="menu-item-link">Edit Work Package</a></li><li id="menu-item-8fb53e93" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8fb53e93"><a href="#work-packages-work-package-delete" class="menu-item-link">Delete Work Package</a></li></ul></a></li><li id="menu-item-ec648f1a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ec648f1a"><a href="#work-packages-work-package-schema" class="menu-item-link">Work Package Schema</a></li><li id="menu-item-75f574f6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-75f574f6"><a href="#work-packages-work-package-edit-form" class="menu-item-link">Work Package Edit Form</a></li><li id="menu-item-e6bea99f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e6bea99f"><a href="#work-packages-work-packages" class="menu-item-link">Work Packages<a href="#work-packages-work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-40e14431" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-40e14431"><a href="#work-packages-work-packages-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-3c97e7c8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3c97e7c8"><a href="#work-packages-work-packages-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-e84eb77f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e84eb77f"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-b87235d6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b87235d6"><a href="#work-packages-work-packages-by-project" class="menu-item-link">Work Packages by Project<a href="#work-packages-work-packages-by-project" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-c1f7dc49" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c1f7dc49"><a href="#work-packages-work-packages-by-project-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-3304884f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3304884f"><a href="#work-packages-work-packages-by-project-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-a699d4aa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a699d4aa"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-9d32269e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9d32269e"><a href="#work-packages-watchers" class="menu-item-link">Watchers<a href="#work-packages-watchers" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-9c652ec5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9c652ec5"><a href="#work-packages-watchers-get" class="menu-item-link">List watchers</a></li><li id="menu-item-71191496" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-71191496"><a href="#work-packages-watchers-post" class="menu-item-link">Add watcher</a></li></ul></a></li><li id="menu-item-f514ebe8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f514ebe8"><a href="#work-packages-remove-watcher" class="menu-item-link">Remove Watcher</a></li><li id="menu-item-881c4dc4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-881c4dc4"><a href="#work-packages-available-watchers" class="menu-item-link">Available Watchers</a></li><li id="menu-item-9af1aa77" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9af1aa77"><a href="#work-packages-available-projects" class="menu-item-link">Available Projects</a></li><li id="menu-item-b24406ad" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b24406ad"><a href="#work-packages-revisions" class="menu-item-link">Revisions</a></li><li id="menu-item-92f76d1e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-92f76d1e"><a href="#work-packages-work-package-activities" class="menu-item-link">Work Package activities<a href="#work-packages-work-package-activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-624ba512" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-624ba512"><a href="#work-packages-work-package-activities-get" class="menu-item-link">List work package activities</a></li><li id="menu-item-346511ef" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-346511ef"><a href="#work-packages-work-package-activities-post" class="menu-item-link">Comment work package</a></li></ul></a></li><li id="menu-item-f8ad2825" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f8ad2825"><a href="#work-packages-available-assignees" class="menu-item-link">Available Assignees</a></li><li id="menu-item-4328514b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4328514b"><a href="#work-packages-available-responsibles" class="menu-item-link">Available Responsibles</a></li></ul></a></li></ul></div><div class="col-md-8"><div id="op-api-content"><div><header><div class="page-header"><h1 id="top">OpenProject API v3</h1></div></header><div class="description"></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="general">General&nbsp;<a href="#general"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>This is the current <strong>DRAFT</strong> of the specification for OpenProject APIv3.</p>
 <p>Please note that everything in this document might be <strong>subject to change</strong> in a future version of OpenProject. We intend to keep this specification
 as accurate as possible, however as long as the APIv3 is not in a stable state it is possible that there are intermediary differences between
 this specification and the real implementation. While we try to only specify what we want to keep, it might also happen that parts of this
@@ -757,7 +757,7 @@ a client should be able to discover further resources in the API.</p>
 <td>Collection</td>
 <td></td>
 <td>READ</td>
-<td></td>
+<td><strong>Permission</strong> View work packages in any project</td>
 </tr>
 <tr>
 <td style="text-align:center">statuses</td>
@@ -765,7 +765,7 @@ a client should be able to discover further resources in the API.</p>
 <td>Collection</td>
 <td></td>
 <td>READ</td>
-<td></td>
+<td><strong>Permission</strong> View work packages in any project</td>
 </tr>
 <tr>
 <td style="text-align:center">types</td>
@@ -773,7 +773,7 @@ a client should be able to discover further resources in the API.</p>
 <td>Collection</td>
 <td></td>
 <td>READ</td>
-<td></td>
+<td><strong>Permission</strong> View work packages in any project</td>
 </tr>
 <tr>
 <td style="text-align:center">workPackages</td>
@@ -781,7 +781,15 @@ a client should be able to discover further resources in the API.</p>
 <td>Collection</td>
 <td></td>
 <td>READ</td>
+<td><strong>Permission</strong> View work packages in any project</td>
+</tr>
+<tr>
+<td style="text-align:center">users</td>
+<td>List of all users</td>
+<td>Collection</td>
 <td></td>
+<td>READ</td>
+<td><strong>Permission</strong> Administrator</td>
 </tr>
 </tbody>
 </table>
@@ -813,14 +821,14 @@ a client should be able to discover further resources in the API.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="root-root">Root&nbsp;<a href="#root-root"><i class="fa fa-link"></i></a></h4><section id="root-root-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View root</span></div><div style="float:left"><a href="#root-root-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#bd1af4a0c329df03f990d83172bf24d5" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="bd1af4a0c329df03f990d83172bf24d5" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+<h4 id="root-root">Root&nbsp;<a href="#root-root"><i class="fa fa-link"></i></a></h4><section id="root-root-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View root</span></div><div style="float:left"><a href="#root-root-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#bf823963e039f2d3bc26c78ebfb12311" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="bf823963e039f2d3bc26c78ebfb12311" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_links</span>" : <span class="hljs-value">{
         "<span class="hljs-attribute">configuration</span>" : <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/configuration"</span>
         </span>}</span>,
         "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - admin"</span>
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard"</span>
         </span>};
         <span class="hljs-string">"userPreferences"</span> : {
             "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/my_preferences"</span>
@@ -836,10 +844,13 @@ a client should be able to discover further resources in the API.</p>
         </span>}</span>,
         "<span class="hljs-attribute">workPackages</span>" : <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">users</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/users"</span>
         </span>}
     </span>}</span>,
     "<span class="hljs-attribute">instanceName</span>" : <span class="hljs-value"><span class="hljs-string">"My own OpenProject"</span></span>,
-    "<span class="hljs-attribute">coreVersion</span>" : <span class="hljs-value"><span class="hljs-string">"4.3.0"</span>
+    "<span class="hljs-attribute">coreVersion</span>" : <span class="hljs-value"><span class="hljs-string">"6.1.0"</span>
 </span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="activities">Activities&nbsp;<a href="#activities"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-local-properties-23">Local Properties <a class="permalink" href="#header-local-properties-23" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
@@ -3397,7 +3408,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td>not locked; <strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
-<td style="text-align:center">showUser</td>
+<td style="text-align:center">show</td>
 <td>Link to the OpenProject user page (HTML)</td>
 <td></td>
 </tr>
@@ -3405,6 +3416,16 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td style="text-align:center">unlock</td>
 <td>Allow a locked user to login and act again</td>
 <td>locked; <strong>Permission</strong>: Administrator</td>
+</tr>
+<tr>
+<td style="text-align:center">update</td>
+<td>Updates the user’s attributes.</td>
+<td><strong>Permission</strong>: Administrator unless the API user updates itself</td>
+</tr>
+<tr>
+<td style="text-align:center">updateImmediately</td>
+<td>Updates the user’s attributes.</td>
+<td><strong>Permission</strong>: Administrator unless the API user updates itself</td>
 </tr>
 <tr>
 <td style="text-align:center">delete</td>
@@ -3429,6 +3450,13 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td style="text-align:center">self</td>
 <td>This user</td>
 <td>User</td>
+<td>not null</td>
+<td>READ</td>
+</tr>
+<tr>
+<td style="text-align:center">schema</td>
+<td>Schema describing the user</td>
+<td>Schema</td>
 <td>not null</td>
 <td>READ</td>
 </tr>
@@ -3459,25 +3487,25 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td style="text-align:center">login</td>
 <td>User’s login name</td>
 <td>String</td>
-<td></td>
-<td>READ</td>
-<td></td>
+<td>unique, 256 max length</td>
+<td>READ / WRITE</td>
+<td><strong>Permission</strong>: Administrator unless user updates itself</td>
 </tr>
 <tr>
 <td style="text-align:center">firstName</td>
 <td>User’s first name</td>
 <td>String</td>
-<td></td>
-<td>READ</td>
-<td></td>
+<td>30 max length</td>
+<td>READ / WRITE</td>
+<td><strong>Permission</strong>: Administrator unless user updates itself</td>
 </tr>
 <tr>
 <td style="text-align:center">lastName</td>
 <td>User’s last name</td>
 <td>String</td>
-<td></td>
-<td>READ</td>
-<td></td>
+<td>30 max length</td>
+<td>READ / WRITE</td>
+<td><strong>Permission</strong>: Administrator unless user updates itself</td>
 </tr>
 <tr>
 <td style="text-align:center">name</td>
@@ -3491,14 +3519,22 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td style="text-align:center">email</td>
 <td>User’s E-Mail address</td>
 <td>String</td>
-<td></td>
-<td>READ</td>
-<td>E-Mail address not hidden</td>
+<td>unique, 60 max length</td>
+<td>READ / WRITE</td>
+<td>E-Mail address not hidden, <strong>Permission</strong>: Administrator unless user updates itself</td>
+</tr>
+<tr>
+<td style="text-align:center">admin</td>
+<td>Flag indicating whether or not the user is an admin</td>
+<td>Boolean</td>
+<td>in: [true, false]</td>
+<td>READ / WRITE</td>
+<td><strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
 <td style="text-align:center">avatar</td>
 <td>URL to user’s avatar</td>
-<td>String</td>
+<td>Url</td>
 <td></td>
 <td>READ</td>
 <td></td>
@@ -3507,9 +3543,25 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td style="text-align:center">status</td>
 <td>The current activation status of the user (see below)</td>
 <td>String</td>
-<td></td>
+<td>in: [“active”, “registered”, “locked”, “invited”]</td>
 <td>READ</td>
 <td></td>
+</tr>
+<tr>
+<td style="text-align:center">language</td>
+<td>User’s language</td>
+<td>String</td>
+<td>ISO 639-1</td>
+<td>READ / WRITE</td>
+<td><strong>Permission</strong>: Administrator unless user updates itself</td>
+</tr>
+<tr>
+<td style="text-align:center">password</td>
+<td>User’s password</td>
+<td>String</td>
+<td></td>
+<td>WRITE</td>
+<td><strong>Permission</strong>: Administrator unless user updates itself</td>
 </tr>
 <tr>
 <td style="text-align:center">createdAt</td>
@@ -3540,44 +3592,149 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <li>
 <p><code>locked</code> - the user is locked and can’t log in</p>
 </li>
+<li>
+<p><code>invited</code> - the user has been invited and is pending registration</p>
+</li>
 </ul>
+<p>The <code>language</code> is limited to those activated in the system.</p>
+<p>Due to data privacy, the user’s properties are limited to reveal as little about the user as possible. Thus <code>login</code>, <code>firstName</code>, <code>lastName</code>, <code>language</code>, <code>createdAt</code> and <code>updatedAt</code> are hidden for all users except for admins or the user themselves.</p>
+<p>Please note that custom fields are not yet supported by the api although the backend supports them.</p>
 <h4 id="users-user">User&nbsp;<a href="#users-user"><i class="fa fa-link"></i></a></h4><section id="users-user-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View user</span></div><div style="float:left"><a href="#users-user-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>User id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#d18aa0db7798f1a464d8cc2518d48a81" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="d18aa0db7798f1a464d8cc2518d48a81" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#bf78c231ff536974ad86d1b6b1c3d9f9" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="bf78c231ff536974ad86d1b6b1c3d9f9" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">show</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
             "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
         </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
         </span>}</span>,
         "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Delete j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"DELETE"</span>
-        </span>}
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
+        }
     </span>}</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
     "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Sheppard"</span></span>,
     "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"shep@mail.com"</span></span>,
+    "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"https://gravatar/avatar"</span></span>,
     "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+    "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
     "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
     "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>404</code></strong><a data-toggle="collapse" data-target="#936e9116778c9f40ccda518ad81a1090" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="936e9116778c9f40ccda518ad81a1090" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the user does not exist.</p>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>404</code></strong><a data-toggle="collapse" data-target="#95a2a579ec6be39d0e3b03a6769a589e" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="95a2a579ec6be39d0e3b03a6769a589e" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the user does not exist or if the API user does not have permission to view them.</p>
+<p><strong>Required permission</strong> The user needs to be locked in if the installation is configured to pervent anonymous access</p>
 </div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist."</span>
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist or you do not have permission to view them."</span>
+</span>}</code></pre></li></ul></section><section id="users-user-patch" class="panel panel-warning"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Update user</span></div><div style="float:left"><a href="#users-user-patch" class="btn btn-xs btn-warning">PATCH</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}</code></div></div><div class="panel-body"><p>Updates the user’s writable attributes.
+When calling this endpoint the client provides a single object, containing at least the properties and links that are required, in the body.</p>
+</div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>User id</p>
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Request&nbsp;&nbsp;<code>Update User</code></strong><a data-toggle="collapse" data-target="#b0ec9535b3c0bf9e5771b8771f1c3f4f" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="b0ec9535b3c0bf9e5771b8771f1c3f4f" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"h.wurst"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"h.wurst@openproject.com"</span></span>,
+  "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"Hans"</span></span>,
+  "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Wurst"</span></span>,
+  "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#bb7209bb7976375e507904c30d5cbe1d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="bb7209bb7976375e507904c30d5cbe1d" class="list-group-item panel-collapse collapse"><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
+    "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">show</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
+        </span>}</span>,
+        "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
+        }
+    </span>}</span>,
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
+    "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+    "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Sheppard"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"shep@mail.com"</span></span>,
+    "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"https://gravatar/avatar"</span></span>,
+    "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+    "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#47db238ae66d1ad09a8b06f0cb345955" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="47db238ae66d1ad09a8b06f0cb345955" class="list-group-item panel-collapse collapse"><div class="description"><p>Occurs when the client did not send a valid JSON object in the request body.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidRequestBody"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The request body was not a single JSON object."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#a620f3cb35a446497afd4d63281992d6" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="a620f3cb35a446497afd4d63281992d6" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> Administrators only (exception: users may update their own accounts)</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to update the account of this user."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>404</code></strong><a data-toggle="collapse" data-target="#3653e01ec0c851fb1ef540da3f95d653" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3653e01ec0c851fb1ef540da3f95d653" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the user does not exist or if the API user does not have the necessary permissions to update it.</p>
+<p><strong>Required permission:</strong> Administrators only (exception: users may update their own accounts)</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist or you do not have permission to view them."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>422</code></strong><a data-toggle="collapse" data-target="#3d1e3feb771e8312f47d1d6c476bf021" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3d1e3feb771e8312f47d1d6c476bf021" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if:</p>
+<ul>
+<li>
+<p>the client tries to modify a read-only property (<code>PropertyIsReadOnly</code>)</p>
+</li>
+<li>
+<p>a constraint for a property was violated (<code>PropertyConstraintViolation</code>)</p>
+</li>
+</ul>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:PropertyConstraintViolation"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The email address is already taken."</span></span>,
+  "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">details</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">attribute</span>": <span class="hljs-value"><span class="hljs-string">"email"</span>
+    </span>}
+  </span>}
 </span>}</code></pre></li></ul></section><section id="users-user-delete" class="panel panel-danger"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Delete user</span></div><div style="float:left"><a href="#users-user-delete" class="btn btn-xs btn-danger">DELETE</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}</code></div></div><div class="panel-body"><p>Permanently deletes the specified user account.</p>
 </div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>User id</p>
 </dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>202</code></strong><a data-toggle="collapse" data-target="#53172eb3c1984bf07bac04734db49c3d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="53172eb3c1984bf07bac04734db49c3d" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the account was deleted successfully.</p>
@@ -3595,35 +3752,46 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist."</span>
 </span>}</code></pre></li></ul></section><h4 id="users-user-account-locking">User Account Locking&nbsp;<a href="#users-user-account-locking"><i class="fa fa-link"></i></a></h4><section id="users-user-account-locking-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Set Lock</span></div><div style="float:left"><a href="#users-user-account-locking-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}/lock</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>User id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#46858c794906397f4ef77b22033bad5a" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="46858c794906397f4ef77b22033bad5a" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#04aaf71bb7b58888bff36f7be91bc4b6" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="04aaf71bb7b58888bff36f7be91bc4b6" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">show</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
             "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
         </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
         </span>}</span>,
         "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Delete j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"DELETE"</span>
-        </span>}
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
+        }
     </span>}</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
     "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Sheppard"</span></span>,
     "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"shep@mail.com"</span></span>,
+    "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"https://gravatar/avatar"</span></span>,
     "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+    "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
     "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
     "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
 </span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#0b7c4db4005a7df568ffdf189b148b8f" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="0b7c4db4005a7df568ffdf189b148b8f" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client tries to lock a user account whose current status does not allow this transition.</p>
@@ -3644,35 +3812,46 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist."</span>
 </span>}</code></pre></li></ul></section><section id="users-user-account-locking-delete" class="panel panel-danger"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Remove Lock</span></div><div style="float:left"><a href="#users-user-account-locking-delete" class="btn btn-xs btn-danger">DELETE</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}/lock</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>User id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#d85b7c4bfd03e5cf85540e2532f9c10b" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="d85b7c4bfd03e5cf85540e2532f9c10b" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#1cbd9923d4e51a7df89c3f39f7ae7281" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="1cbd9923d4e51a7df89c3f39f7ae7281" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">show</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
             "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
         </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
         </span>}</span>,
         "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Delete j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"DELETE"</span>
-        </span>}
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
+        }
     </span>}</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
     "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Sheppard"</span></span>,
     "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"shep@mail.com"</span></span>,
+    "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"https://gravatar/avatar"</span></span>,
     "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+    "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
     "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
     "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
 </span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#84808aae8417095fa90c79633d4ec3d7" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="84808aae8417095fa90c79633d4ec3d7" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client tries to unlock a user account whose current status does not allow this transition.</p>
@@ -3692,6 +3871,536 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist."</span>
+</span>}</code></pre></li></ul></section><h4 id="users-user-schema">User Schema&nbsp;<a href="#users-user-schema"><i class="fa fa-link"></i></a></h4><section id="users-user-schema-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View User Schema</span></div><div style="float:left"><a href="#users-user-schema-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/schema</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#57ff5721363f82843a447d9380be576d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="57ff5721363f82843a447d9380be576d" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
+    <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Schema"</span>,
+    <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"self"</span>: <span class="hljs-collection">{ <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/schema"</span> }</span>
+    }</span>,
+
+    <span class="hljs-string">"id"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Id"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"Integer"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+    }</span>,
+    <span class="hljs-string">"login"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Login"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">"maxlength"</span>: <span class="hljs-number">256</span>
+    }</span>,
+    <span class="hljs-string">"firstName"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"First name"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
+    }</span>,
+    <span class="hljs-string">"lastName"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Last name"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
+    }</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Name"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+    }</span>,
+    <span class="hljs-string">"email"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Email"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">60</span>
+    }</span>,
+    <span class="hljs-string">"admin"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Administrator"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+    }</span>,
+    <span class="hljs-string">"avatar"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Avatar"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"Url"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>,
+    }</span>,
+    <span class="hljs-string">"status"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Status"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+    }</span>
+    <span class="hljs-string">"language"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Language"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
+    }</span>,
+    <span class="hljs-string">"password"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Password"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
+    }</span>,
+    <span class="hljs-string">"createdAt"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Created at"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+    }</span>,
+    <span class="hljs-string">"updatedAt"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Updated at"</span>,
+        <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
+        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+    }</span>
+}</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#a856f6c5535522ef4934fbf0cccaa311" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="a856f6c5535522ef4934fbf0cccaa311" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the user lacks permissions to view the schema.
+<strong>Required permission</strong> The user needs to be locked in if the installation is configured to pervent anonymous access</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to view the user schema."</span>
+</span>}</code></pre></li></ul></section><h4 id="users-user-edit-form">User Edit Form&nbsp;<a href="#users-user-edit-form"><i class="fa fa-link"></i></a></h4><p>This endpoint returns a form to allow a guided modification of an existing user.</p>
+<p>For more details and all possible responses see the general specification of <a href="#forms">Forms</a>.</p>
+<section id="users-user-edit-form-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">User Edit Form</span></div><div style="float:left"><a href="#users-user-edit-form-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}/form</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID of the user being modified</p>
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#d740a45c56c501eedaec640f564fb30d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="d740a45c56c501eedaec640f564fb30d" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
+    <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"self"</span>: <span class="hljs-collection">{ <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/form"</span> }</span>,
+        <span class="hljs-string">"validate"</span>: <span class="hljs-collection">{
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/form"</span>,
+            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+        }</span>,
+        <span class="hljs-string">"commit"</span>: <span class="hljs-collection">{
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users"</span>,
+            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+        }</span>
+    }</span>,
+
+    <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Form"</span>,
+
+    <span class="hljs-string">"_embedded"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"payload"</span>: <span class="hljs-collection">{
+           <span class="hljs-string">"login"</span>: <span class="hljs-string">"h.wurst"</span>,
+           <span class="hljs-string">"email"</span>: <span class="hljs-string">"h.wurst@openproject.com"</span>,
+           <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Hans"</span>,
+           <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Wurst"</span>,
+           <span class="hljs-string">"admin"</span>: <span class="hljs-literal">false</span>,
+           <span class="hljs-string">"language"</span>: <span class="hljs-string">"de"</span>,
+           <span class="hljs-string">"status"</span>: <span class="hljs-string">"active"</span>,
+           <span class="hljs-string">"password"</span>: <span class="hljs-string">"hunter5"</span>
+        }</span>,
+        <span class="hljs-string">"schema"</span>: <span class="hljs-collection">{
+          <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Schema"</span>,
+          <span class="hljs-string">"id"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Id"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Integer"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>,
+          <span class="hljs-string">"login"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Login"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+              <span class="hljs-string">"maxlength"</span>: <span class="hljs-number">256</span>
+          }</span>,
+          <span class="hljs-string">"firstName"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"First name"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
+          }</span>,
+          <span class="hljs-string">"lastName"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Last name"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
+          }</span>,
+          <span class="hljs-string">"name"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Name"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>,
+          <span class="hljs-string">"email"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Email"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">60</span>
+          }</span>,
+          <span class="hljs-string">"admin"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Administrator"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+          }</span>,
+          <span class="hljs-string">"avatar"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Avatar"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Url"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>,
+          }</span>,
+          <span class="hljs-string">"status"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Status"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>
+          <span class="hljs-string">"language"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Language"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"allowedValues"</span>: <span class="hljs-collection">[
+                <span class="hljs-string">"en"</span>,
+                <span class="hljs-string">"fr"</span>,
+                <span class="hljs-string">"de"</span>
+              ]</span>
+          }</span>,
+          <span class="hljs-string">"password"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Password"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
+          }</span>,
+          <span class="hljs-string">"createdAt"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Created at"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>,
+          <span class="hljs-string">"updatedAt"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Updated at"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>,
+          <span class="hljs-string">"customField5"</span> <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Retired"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
+          }</span>
+        }</span>
+        <span class="hljs-string">"validationErrors"</span>: <span class="hljs-collection">{
+            <span class="hljs-string">"subject"</span>: <span class="hljs-collection">{
+                <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Error"</span>,
+                <span class="hljs-string">"errorIdentifier"</span>: <span class="hljs-string">"urn:openproject-org:api:v3:errors:BadExampleError"</span>,
+                <span class="hljs-string">"message"</span>: <span class="hljs-string">"For the purpose of this example we need a validation error. The remainder of the response pretends there were no errors."</span>
+            }</span>
+        }</span>
+    }</span>
+}</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#53054cf2e61c4bb8dd0c1ee30e5efeb9" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="53054cf2e61c4bb8dd0c1ee30e5efeb9" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> Administrator or logged in user editing her/himself</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to edit the specified user."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>404</code></strong><a data-toggle="collapse" data-target="#ac958d1d2e25565c1e5561422ec0d926" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="ac958d1d2e25565c1e5561422ec0d926" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the user does not exist or the client does not have sufficient permissions to see it.</p>
+<p><strong>Required permission</strong> The user needs to be locked in if the installation is configured to pervent anonymous access</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist."</span>
+</span>}</code></pre></li></ul></section><h4 id="users-users">Users&nbsp;<a href="#users-users"><i class="fa fa-link"></i></a></h4><section id="users-users-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">List Users</span></div><div style="float:left"><a href="#users-users-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users{?offset,pageSize,filters,sortBy}</code></div></div><div class="panel-body"><p>Lists users. Only administrators have permission to do this.</p>
+</div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Page number inside the requested collection.</p>
+</dd><dt>pageSize</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Number of elements to display per page.</p>
+</dd><dt>filters</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[{ &quot;status&quot;: { &quot;operator&quot;: &quot;=&quot;, &quot;values&quot;: &quot;invited&quot; } }, { &quot;group&quot;: { &quot;operator&quot;: &quot;=&quot;, &quot;values&quot;: &quot;Managers&quot; } }, { &quot;name&quot;: { &quot;operator&quot;: &quot;=&quot;, &quot;values&quot;: &quot;h.wurst@openproject.com&quot; } }]</span></span><p>JSON specifying filter conditions.
+Accepts the same format as returned by the <a href="#queries">queries</a> endpoint. Currently supported filters are:</p>
+<ul>
+<li>
+<p>status: Status the user has</p>
+</li>
+<li>
+<p>group: Name of the group in which to-be-listed users are members.</p>
+</li>
+<li>
+<p>name: Filter users in whose first or last names, or email addresses the given string occurs.</p>
+</li>
+</ul>
+</dd><dt>sortBy</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[[&quot;status&quot;, &quot;asc&quot;]]</span></span><p>JSON specifying sort criteria.
+Accepts the same format as returned by the <a href="#queries">queries</a> endpoint.</p>
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#e57d756f58188d16168723aee5d4dc9e" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="e57d756f58188d16168723aee5d4dc9e" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">self</span>": <span class="hljs-value">{ "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users"</span> </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">total</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">count</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Collection"</span></span>,
+    "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">elements</span>": <span class="hljs-value">[
+            {
+                "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
+                "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+                        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+                        "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
+                    </span>}</span>,
+                    "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
+                        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
+                        <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+                        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Update j.sheppard"</span>
+                        <span class="hljs-string">"method"</span>: <span class="hljs-string">"PATCH"</span>
+                    </span>}</span>,
+                    "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
+                        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+                        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Delete j.sheppard"</span>
+                        <span class="hljs-string">"method"</span>: <span class="hljs-string">"DELETE"</span>
+                    </span>}
+                </span>}</span>,
+                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+                "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
+                "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+                "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Sheppard"</span></span>,
+                "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"shep@mail.com"</span></span>,
+                "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+                "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"https://gravatar/avatar"</span></span>,
+                "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+                "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
+                "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
+                "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
+            </span>}
+        ]
+    </span>}
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#699d28a48ca07a343408e444397c3c05" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="699d28a48ca07a343408e444397c3c05" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client sends an unknown sort column.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidQuery"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Unknown sort column."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#9627ed8626a8864b3b6b55f31c3ffc02" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="9627ed8626a8864b3b6b55f31c3ffc02" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> Administrator</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to list users."</span>
+</span>}</code></pre></li></ul></section><section id="users-users-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Create User</span></div><div style="float:left"><a href="#users-users-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users{?offset,pageSize,filters,sortBy}</code></div></div><div class="panel-body"><p>Creates a new user. Only administrators have permission to do so.
+When calling this endpoint the client provides a single object, containing at least the properties and links that are required, in the body.</p>
+<p>Valid values for <code>status</code>:</p>
+<ol>
+<li>“active” - In this case a password has to be provided in addition to the other attributes.</li>
+<li>“invited” - In this case nothing but the email address is required. The rest is optional. An invitation will be sent to the user.</li>
+</ol>
+</div><ul class="list-group"><li class="list-group-item"><strong>Request&nbsp;&nbsp;<code>Create User</code></strong><a data-toggle="collapse" data-target="#97d87db2e0b38779347cbda4e6599d22" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="97d87db2e0b38779347cbda4e6599d22" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"h.wurst"</span></span>,
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"h.wurst@openproject.com"</span></span>,
+  "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"Hans"</span></span>,
+  "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Wurst"</span></span>,
+  "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+  "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"de"</span></span>,
+  "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+  "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"hunter5"</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Request&nbsp;&nbsp;<code>Invite User</code></strong><a data-toggle="collapse" data-target="#22e63b55782d3cede3e5135cdf450271" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="22e63b55782d3cede3e5135cdf450271" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"h.wurst@openproject.com"</span></span>,
+  "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"Hanz"</span></span>,
+  "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"invited"</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>201</code></strong><a data-toggle="collapse" data-target="#72cc43a906888607c62eb8eb1d4d13b4" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="72cc43a906888607c62eb8eb1d4d13b4" class="list-group-item panel-collapse collapse"><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
+    "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">show</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
+        </span>}</span>,
+        "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
+        }
+    </span>}</span>,
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
+    "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
+    "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Sheppard"</span></span>,
+    "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"shep@mail.com"</span></span>,
+    "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"https://gravatar/avatar"</span></span>,
+    "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+    "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
+    "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
+    "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#4de018038ff9af67b552712915f9f053" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="4de018038ff9af67b552712915f9f053" class="list-group-item panel-collapse collapse"><div class="description"><p>Occurs when the client did not send a valid JSON object in the request body.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidRequestBody"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The request body was not a single JSON object."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#696cb1c65010fc9c00c9def80c0f7f60" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="696cb1c65010fc9c00c9def80c0f7f60" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> Administrator</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to create new users."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>422</code></strong><a data-toggle="collapse" data-target="#646ed273c69359c658f9cbf4c04e6b25" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="646ed273c69359c658f9cbf4c04e6b25" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if:</p>
+<ul>
+<li>a constraint for a property was violated (<code>PropertyConstraintViolation</code>)</li>
+</ul>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:PropertyConstraintViolation"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The email address is already taken."</span></span>,
+  "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">details</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">attribute</span>": <span class="hljs-value"><span class="hljs-string">"email"</span>
+    </span>}
+  </span>}
+</span>}</code></pre></li></ul></section><h4 id="users-user-create-form">User Create Form&nbsp;<a href="#users-user-create-form"><i class="fa fa-link"></i></a></h4><p>This endpoint returns a form to allow a guided creation of a new user.
+The returned form will be pre-filled with default values for every property, if available.</p>
+<p>For more details and all possible responses see the general specification of <a href="#forms">Forms</a>.</p>
+<section id="users-user-create-form-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">User Create Form</span></div><div style="float:left"><a href="#users-user-create-form-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/form</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#e5fc8037df4aa73e905a1fd51194cd29" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="e5fc8037df4aa73e905a1fd51194cd29" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
+    <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"self"</span>: <span class="hljs-collection">{ <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/form"</span> }</span>,
+        <span class="hljs-string">"validate"</span>: <span class="hljs-collection">{
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/form"</span>,
+            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+        }</span>,
+        <span class="hljs-string">"commit"</span>: <span class="hljs-collection">{
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users"</span>,
+            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+        }</span>
+    }</span>,
+
+    <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Form"</span>,
+
+    <span class="hljs-string">"_embedded"</span>: <span class="hljs-collection">{
+        <span class="hljs-string">"payload"</span>: <span class="hljs-collection">{
+           <span class="hljs-string">"login"</span>: <span class="hljs-string">"h.wurst"</span>,
+           <span class="hljs-string">"email"</span>: <span class="hljs-string">"h.wurst@openproject.com"</span>,
+           <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Hans"</span>,
+           <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Wurst"</span>,
+           <span class="hljs-string">"admin"</span>: <span class="hljs-literal">false</span>,
+           <span class="hljs-string">"language"</span>: <span class="hljs-string">"de"</span>,
+           <span class="hljs-string">"status"</span>: <span class="hljs-string">"active"</span>,
+           <span class="hljs-string">"password"</span>: <span class="hljs-string">"hunter5"</span>
+        }</span>,
+        <span class="hljs-string">"schema"</span>: <span class="hljs-collection">{
+          <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Schema"</span>,
+          <span class="hljs-string">"id"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Id"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Integer"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>,
+          <span class="hljs-string">"login"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Login"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+              <span class="hljs-string">"maxlength"</span>: <span class="hljs-number">256</span>
+          }</span>,
+          <span class="hljs-string">"firstName"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"First name"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
+          }</span>,
+          <span class="hljs-string">"lastName"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Last name"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
+          }</span>,
+          <span class="hljs-string">"name"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Name"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>,
+          <span class="hljs-string">"email"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Email"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
+              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">60</span>
+          }</span>,
+          <span class="hljs-string">"admin"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Administrator"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+          }</span>,
+          <span class="hljs-string">"avatar"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Avatar"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Url"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>,
+          }</span>,
+          <span class="hljs-string">"status"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Status"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>,
+              <span class="hljs-string">"allowedValues"</span>: <span class="hljs-collection">[
+                <span class="hljs-string">"active"</span>,
+                <span class="hljs-string">"invited"</span>,
+              ]</span>
+          }</span>
+          <span class="hljs-string">"language"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Language"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
+              <span class="hljs-string">"allowedValues"</span>: <span class="hljs-collection">[
+                <span class="hljs-string">"en"</span>,
+                <span class="hljs-string">"fr"</span>,
+                <span class="hljs-string">"de"</span>
+              ]</span>
+          }</span>,
+          <span class="hljs-string">"password"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Password"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
+          }</span>,
+          <span class="hljs-string">"createdAt"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Created at"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>,
+          <span class="hljs-string">"updatedAt"</span>: <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Updated at"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
+          }</span>,
+          <span class="hljs-string">"customField5"</span> <span class="hljs-collection">{
+              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Retired"</span>,
+              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
+              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
+          }</span>
+        }</span>
+        <span class="hljs-string">"validationErrors"</span>: <span class="hljs-collection">{
+            <span class="hljs-string">"subject"</span>: <span class="hljs-collection">{
+                <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Error"</span>,
+                <span class="hljs-string">"errorIdentifier"</span>: <span class="hljs-string">"urn:openproject-org:api:v3:errors:BadExampleError"</span>,
+                <span class="hljs-string">"message"</span>: <span class="hljs-string">"For the purpose of this example we need a validation error. The remainder of the response pretends there were no errors."</span>
+            }</span>
+        }</span>
+    }</span>
+}</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#595887c7b17a3c914926a7a55b7bf3dd" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="595887c7b17a3c914926a7a55b7bf3dd" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> Administrator</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to create new users."</span>
 </span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="userpreferences">UserPreferences&nbsp;<a href="#userpreferences"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-linked-properties-27">Linked Properties <a class="permalink" href="#header-linked-properties-27" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
@@ -5869,66 +6578,88 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
   "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span>
   </span>}
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#c57931869ecb50822b7c97ec3e270e0b" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="c57931869ecb50822b7c97ec3e270e0b" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#37959f193ece119deb72fef29487175a" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="37959f193ece119deb72fef29487175a" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">show</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
             "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
         </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
         </span>}</span>,
         "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Delete j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"DELETE"</span>
-        </span>}
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
+        }
     </span>}</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
     "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Sheppard"</span></span>,
     "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"shep@mail.com"</span></span>,
+    "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"https://gravatar/avatar"</span></span>,
     "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+    "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
     "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
     "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>201</code></strong><a data-toggle="collapse" data-target="#a46732befb50c6b3351cb513e92a2e13" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="a46732befb50c6b3351cb513e92a2e13" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>201</code></strong><a data-toggle="collapse" data-target="#f3710ed247eff2d95c414359df9593c7" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="f3710ed247eff2d95c414359df9593c7" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard - j.sheppard"</span>
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">showUser</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">show</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/users/1"</span></span>,
             "<span class="hljs-attribute">type</span>": <span class="hljs-value">'text/html'
         </span>}</span>,
         "<span class="hljs-attribute">lock</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Set lock on j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
         </span>}</span>,
         "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Delete j.sheppard"</span>
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"DELETE"</span>
-        </span>}
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
+        }
     </span>}</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
     "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Sheppard"</span></span>,
     "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"shep@mail.com"</span></span>,
+    "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">avatar</span>": <span class="hljs-value"><span class="hljs-string">"https://gravatar/avatar"</span></span>,
     "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"active"</span></span>,
+    "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
     "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
     "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
 </span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#3c045d63b74d864f7daef12d7c197ce7" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3c045d63b74d864f7daef12d7c197ce7" class="list-group-item panel-collapse collapse"><div class="description"><p>Occurs when the client did not send a valid JSON object in the request body.</p>
