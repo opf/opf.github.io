@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>OpenProject API v3</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{color:black;background:white;font:400 14px / 1.42 'Roboto',Helvetica,sans-serif}header{border-bottom:1px solid #f2f2f2;margin-bottom:12px}h1,h2,h3,h4,h5{color:black;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:36px}h2{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#428bca;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.2) 51.4%, rgba(255,255,255,0.2) 51.4%, rgba(255,255,255,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(0,0,0,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:6px;overflow:auto}pre code{color:black;background-color:transparent;padding:0;border:none}code{color:#444;background-color:#f5f5f5;font:'Inconsolata',monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:200 36px 'Raleway',Helvetica,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:black;background-color:#f0f6fb;border-left:4px solid #428bca}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#428bca}.warning{color:black;background-color:#fbf1f0;border-left:4px solid #c9302c}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#c9302c}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:black;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(0,0,0,0.7);padding:8px 12px;border-top:1px solid #d9d9d9;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:#000;background-color:#f2f2f2;border-radius:10px;margin:-2px 0}.badge.get{color:#70bbe1;background-color:#d9edf7}.badge.head{color:#70bbe1;background-color:#d9edf7}.badge.options{color:#70bbe1;background-color:#d9edf7}.badge.put{color:#f0db70;background-color:#fcf8e3}.badge.patch{color:#f0db70;background-color:#fcf8e3}.badge.post{color:#93cd7c;background-color:#dff0d8}.badge.delete{color:#ce8383;background-color:#f2dede}.collapse-button{float:right}.collapse-button .close{display:none;color:#428bca;cursor:pointer}.collapse-button .open{color:#428bca;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:16.5%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:16.5%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:51.5%;padding-right:12px}.right{box-sizing:border-box;float:right;width:48.5%;padding-left:12px}.right a{color:#428bca}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:white}.right pre{background-color:#1d1f21;border:1px solid #1d1f21}.right pre code{color:#c5c8c6}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e8ab8}.definition .method.head{color:#2e8ab8}.definition .method.options{color:#2e8ab8}.definition .method.post{color:#56b82e}.definition .method.put{color:#b8a22e}.definition .method.patch{color:#b8a22e}.definition .method.delete{color:#b82e2e}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:6px}.example-names .tab-button{cursor:pointer;color:black;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#444}.right .example-names .tab-button{color:white;border:1px solid #666;border-radius:6px}.right .example-names .tab-button.active{background-color:#5e5e5e}#nav-background{position:fixed;left:0;top:0;bottom:0;width:16.5%;padding-right:14.4px;background-color:#fbfbfb;border-right:1px solid #f0f0f0;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:48.6%;background-color:#333;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:48.6%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(0,0,0,0.5);background-color:#f2f2f2;text-decoration:none !important;border-top:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px;margin-bottom:12px;background-color:white;border:1px solid #d9d9d9;border-radius:6px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px;margin:-12px -12px 12px -12px;background-color:#f2f2f2;border-bottom:1px solid #d9d9d9;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid #d9d9d9}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:6px}.action h4.action-heading{padding:12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:3px}.action h4.action-heading .method.get{color:#fff;background-color:#337ab7}.action h4.action-heading .method.head{color:#fff;background-color:#337ab7}.action h4.action-heading .method.options{color:#fff;background-color:#337ab7}.action h4.action-heading .method.put{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.patch{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.post{color:#fff;background-color:#5cb85c}.action h4.action-heading .method.delete{color:#fff;background-color:#d9534f}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid white;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#bce8f1}.action.get h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.head{border-color:#bce8f1}.action.head h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.options{border-color:#bce8f1}.action.options h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.post{border-color:#d6e9c6}.action.post h4.action-heading{color:#5cb85c;background:#dff0d8;border-bottom-color:#d6e9c6}.action.put{border-color:#faebcc}.action.put h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.patch{border-color:#faebcc}.action.patch h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.delete{border-color:#ebccd1}.action.delete h4.action-heading{color:#d9534f;background:#f2dede;border-bottom-color:#ebccd1}</style></head><body class="preload"><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#general">General</a></div><div class="collapse-content"><ul><li><a href="#header-hypermedia">Hypermedia</a></li><li><a href="#header-formats">Formats</a></li><li><a href="#header-hal+json">HAL+JSON</a></li><li><a href="#header-api-response-structure">API response structure</a></li><li><a href="#header-authentication">Authentication</a></li><li><a href="#header-session-based-authentication">Session-based Authentication</a></li><li><a href="#header-api-key-through-basic-auth">API Key through Basic Auth</a></li><li><a href="#header-why-not-username-and-password?">Why not username and password?</a></li><li><a href="#header-future-work">Future Work</a></li><li><a href="#header-allowed-http-methods">Allowed HTTP methods</a></li><li><a href="#header-compression">Compression</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#basic-objects">Basic Objects</a></div><div class="collapse-content"><ul><li><a href="#header-links">Links</a></li><li><a href="#header-local-properties">Local Properties</a></li><li><a href="#header-errors">Errors</a></li><li><a href="#header-general-errors">General errors</a></li><li><a href="#header-example">Example</a></li><li><a href="#header-embedded-error-information">Embedded error information</a></li><li><a href="#header-error-details">Error details</a></li><li><a href="#header-example-1">Example</a></li><li><a href="#header-multiple-error-objects">Multiple error objects</a></li><li><a href="#header-example-2">Example</a></li><li><a href="#header-list-of-error-identifiers">List of Error Identifiers</a></li><li><a href="#header-formattable-text">Formattable Text</a></li><li><a href="#header-example-3">Example</a></li><li><a href="#header-dates,-times-and-durations">Dates, Times and Durations</a></li><li><a href="#header-colors">Colors</a></li><li><a href="#header-examples">Examples</a></li><li><a href="#header-digests">Digests</a></li><li><a href="#header-example-4">Example</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#collections">Collections</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-1">Local Properties</a></li><li><a href="#header-links-1">Links</a></li><li><a href="#collections-offset-based-pagination-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view offset based</a></li><li><a href="#collections-cursor-based-pagination-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view cursor based</a></li><li><a href="#collections-aggregations-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view aggregated result</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#root">Root</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-2">Local Properties</a></li><li><a href="#root-root-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View root</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#activities">Activities</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-3">Local Properties</a></li><li><a href="#activities-activity">Activity</a><ul><li><a href="#activities-activity-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View activity</a></li><li><a href="#activities-activity-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Update activity</a></li></ul></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#attachments">Attachments</a></div><div class="collapse-content"><ul><li><a href="#header-actions">Actions</a></li><li><a href="#header-linked-properties">Linked Properties</a></li><li><a href="#header-local-properties-4">Local Properties</a></li><li><a href="#attachments-attachment">Attachment</a><ul><li><a href="#attachments-attachment-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View attachment</a></li><li><a href="#attachments-attachment-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Delete attachment</a></li></ul></li><li><a href="#attachments-attachments-by-work-package">Attachments by work package</a><ul><li><a href="#attachments-attachments-by-work-package-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List attachments</a></li><li><a href="#attachments-attachments-by-work-package-post"><span class="badge post"><i class="fa fa-plus"></i></span>Add attachment</a></li></ul></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#categories">Categories</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-1">Linked Properties</a></li><li><a href="#header-local-properties-5">Local Properties</a></li><li><a href="#categories-categories-by-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List categories of a project</a></li><li><a href="#categories-category-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Category</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#configuration">Configuration</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-6">Local Properties</a></li><li><a href="#configuration-configuration-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View configuration</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#forms">Forms</a></div><div class="collapse-content"><ul><li><a href="#header-actions-1">Actions</a></li><li><a href="#header-linked-properties-2">Linked Properties</a></li><li><a href="#header-embedded-properties-">Embedded Properties:</a></li><li><a href="#header-payload">Payload</a></li><li><a href="#header-schema">Schema</a></li><li><a href="#header-validation-errors">Validation Errors</a></li><li><a href="#forms-example-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>show or validate form</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#previewing">Previewing</a></div><div class="collapse-content"><ul><li><a href="#previewing-textile-post"><span class="badge post"><i class="fa fa-plus"></i></span>Preview Textile document</a></li><li><a href="#previewing-plain-text-post"><span class="badge post"><i class="fa fa-plus"></i></span>Preview plain document</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#priorities">Priorities</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-3">Linked Properties</a></li><li><a href="#header-local-properties-7">Local Properties</a></li><li><a href="#priorities-priorities-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List all Priorities</a></li><li><a href="#priorities-priority-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view Priority</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#projects">Projects</a></div><div class="collapse-content"><ul><li><a href="#header-actions-2">Actions</a></li><li><a href="#header-linked-properties-4">Linked Properties</a></li><li><a href="#header-local-properties-8">Local Properties</a></li><li><a href="#projects-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View project</a></li><li><a href="#projects-projects-by-version-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List projects with version</a></li><li><a href="#projects-work-package-columns-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Work Package columns</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#queries">Queries</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-9">Local Properties</a></li><li><a href="#queries-query-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View query</a></li><li><a href="#queries-star-query-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Star query</a></li><li><a href="#queries-unstar-query-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Unstar query</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#revisions">Revisions</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-5">Linked Properties</a></li><li><a href="#header-local-properties-10">Local Properties</a></li><li><a href="#revisions-revision-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View revision</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#schemas">Schemas</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-6">Linked Properties</a></li><li><a href="#header-field-schema">Field schema</a></li><li><a href="#header-linked-properties-7">Linked Properties</a></li><li><a href="#header-local-properties-11">Local Properties</a></li><li><a href="#schemas-example-schema-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view the schema</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#statuses">Statuses</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-8">Linked Properties</a></li><li><a href="#header-local-properties-12">Local Properties</a></li><li><a href="#statuses-statuses-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List all Statuses</a></li><li><a href="#statuses-status-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Status</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#string-objects">String Objects</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-9">Linked Properties</a></li><li><a href="#header-local-properties-13">Local Properties</a></li><li><a href="#string-objects-string-object-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View String Object</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#types">Types</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-10">Linked Properties</a></li><li><a href="#header-local-properties-14">Local Properties</a></li><li><a href="#types-types-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List all Types</a></li><li><a href="#types-types-by-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List types available in a project</a></li><li><a href="#types-type-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Type</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#users">Users</a></div><div class="collapse-content"><ul><li><a href="#header-actions-3">Actions</a></li><li><a href="#header-linked-properties-11">Linked Properties</a></li><li><a href="#header-local-properties-15">Local Properties</a></li><li><a href="#users-user">User</a><ul><li><a href="#users-user-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View user</a></li><li><a href="#users-user-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Update user</a></li><li><a href="#users-user-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Delete user</a></li></ul></li><li><a href="#users-user-account-locking">User Account Locking</a><ul><li><a href="#users-user-account-locking-post"><span class="badge post"><i class="fa fa-plus"></i></span>Set Lock</a></li><li><a href="#users-user-account-locking-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Remove Lock</a></li></ul></li><li><a href="#users-user-schema-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View User Schema</a></li><li><a href="#users-user-edit-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>User Edit Form</a></li><li><a href="#users-users">Users</a><ul><li><a href="#users-users-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List Users</a></li><li><a href="#users-users-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create User</a></li></ul></li><li><a href="#users-user-create-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>User Create Form</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#userpreferences">UserPreferences</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-12">Linked Properties</a></li><li><a href="#header-local-properties-16">Local Properties</a></li><li><a href="#userpreferences-userpreferences">UserPreferences</a><ul><li><a href="#userpreferences-userpreferences-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Show my preferences</a></li><li><a href="#userpreferences-userpreferences-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Update UserPreferences</a></li></ul></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#versions">Versions</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-13">Linked Properties</a></li><li><a href="#header-local-properties-17">Local Properties</a></li><li><a href="#versions-versions-by-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List versions available in a project</a></li><li><a href="#versions-version-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Version</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#work-packages">Work Packages</a></div><div class="collapse-content"><ul><li><a href="#header-actions-4">Actions</a></li><li><a href="#header-linked-properties-14">Linked Properties</a></li><li><a href="#header-local-properties-18">Local Properties</a></li><li><a href="#work-packages-work-package">Work Package</a><ul><li><a href="#work-packages-work-package-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Work Package</a></li><li><a href="#work-packages-work-package-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Edit Work Package</a></li><li><a href="#work-packages-work-package-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Delete Work Package</a></li></ul></li><li><a href="#work-packages-work-package-schema-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Work Package Schema</a></li><li><a href="#work-packages-work-package-edit-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>Work Package Edit Form</a></li><li><a href="#work-packages-work-packages">Work Packages</a><ul><li><a href="#work-packages-work-packages-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List Work Packages</a></li><li><a href="#work-packages-work-packages-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create Work Package</a></li></ul></li><li><a href="#work-packages-work-package-create-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>Work Package Create Form</a></li><li><a href="#work-packages-work-packages-by-project">Work Packages by Project</a><ul><li><a href="#work-packages-work-packages-by-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List Work Packages</a></li><li><a href="#work-packages-work-packages-by-project-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create Work Package</a></li></ul></li><li><a href="#work-packages-work-package-create-form-post-1"><span class="badge post"><i class="fa fa-plus"></i></span>Work Package Create Form</a></li><li><a href="#work-packages-watchers">Watchers</a><ul><li><a href="#work-packages-watchers-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List watchers</a></li><li><a href="#work-packages-watchers-post"><span class="badge post"><i class="fa fa-plus"></i></span>Add watcher</a></li></ul></li><li><a href="#work-packages-remove-watcher-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Remove watcher</a></li><li><a href="#work-packages-available-watchers-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available watchers</a></li><li><a href="#work-packages-available-projects-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available projects</a></li><li><a href="#work-packages-revisions-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Revisions</a></li><li><a href="#work-packages-work-package-activities">Work Package activities</a><ul><li><a href="#work-packages-work-package-activities-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List work package activities</a></li><li><a href="#work-packages-work-package-activities-post"><span class="badge post"><i class="fa fa-plus"></i></span>Comment work package</a></li></ul></li><li><a href="#work-packages-available-assignees-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available assignees</a></li><li><a href="#work-packages-available-responsibles-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available responsibles</a></li></ul></div></div></nav><div class="content"><header><h1 id="top">OpenProject API v3</h1></header><section id="general" class="resource-group"><h2 class="group-heading">General <a href="#general" class="permalink">&para;</a></h2><p>This is the current <strong>DRAFT</strong> of the specification for OpenProject APIv3.</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>OpenProject API v3</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{color:black;background:white;font:400 14px / 1.42 'Roboto',Helvetica,sans-serif}header{border-bottom:1px solid #f2f2f2;margin-bottom:12px}h1,h2,h3,h4,h5{color:black;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:36px}h2{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#428bca;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.2) 51.4%, rgba(255,255,255,0.2) 51.4%, rgba(255,255,255,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(0,0,0,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:6px;overflow:auto}pre code{color:black;background-color:transparent;padding:0;border:none}code{color:#444;background-color:#f5f5f5;font:'Inconsolata',monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:200 36px 'Raleway',Helvetica,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:black;background-color:#f0f6fb;border-left:4px solid #428bca}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#428bca}.warning{color:black;background-color:#fbf1f0;border-left:4px solid #c9302c}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#c9302c}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:black;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(0,0,0,0.7);padding:8px 12px;border-top:1px solid #d9d9d9;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:#000;background-color:#f2f2f2;border-radius:10px;margin:-2px 0}.badge.get{color:#70bbe1;background-color:#d9edf7}.badge.head{color:#70bbe1;background-color:#d9edf7}.badge.options{color:#70bbe1;background-color:#d9edf7}.badge.put{color:#f0db70;background-color:#fcf8e3}.badge.patch{color:#f0db70;background-color:#fcf8e3}.badge.post{color:#93cd7c;background-color:#dff0d8}.badge.delete{color:#ce8383;background-color:#f2dede}.collapse-button{float:right}.collapse-button .close{display:none;color:#428bca;cursor:pointer}.collapse-button .open{color:#428bca;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:16.5%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:16.5%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:51.5%;padding-right:12px}.right{box-sizing:border-box;float:right;width:48.5%;padding-left:12px}.right a{color:#428bca}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:white}.right pre{background-color:#1d1f21;border:1px solid #1d1f21}.right pre code{color:#c5c8c6}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e8ab8}.definition .method.head{color:#2e8ab8}.definition .method.options{color:#2e8ab8}.definition .method.post{color:#56b82e}.definition .method.put{color:#b8a22e}.definition .method.patch{color:#b8a22e}.definition .method.delete{color:#b82e2e}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:6px}.example-names .tab-button{cursor:pointer;color:black;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#444}.right .example-names .tab-button{color:white;border:1px solid #666;border-radius:6px}.right .example-names .tab-button.active{background-color:#5e5e5e}#nav-background{position:fixed;left:0;top:0;bottom:0;width:16.5%;padding-right:14.4px;background-color:#fbfbfb;border-right:1px solid #f0f0f0;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:48.6%;background-color:#333;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:48.6%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(0,0,0,0.5);background-color:#f2f2f2;text-decoration:none !important;border-top:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px;margin-bottom:12px;background-color:white;border:1px solid #d9d9d9;border-radius:6px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px;margin:-12px -12px 12px -12px;background-color:#f2f2f2;border-bottom:1px solid #d9d9d9;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid #d9d9d9}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:6px}.action h4.action-heading{padding:12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:3px}.action h4.action-heading .method.get{color:#fff;background-color:#337ab7}.action h4.action-heading .method.head{color:#fff;background-color:#337ab7}.action h4.action-heading .method.options{color:#fff;background-color:#337ab7}.action h4.action-heading .method.put{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.patch{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.post{color:#fff;background-color:#5cb85c}.action h4.action-heading .method.delete{color:#fff;background-color:#d9534f}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid white;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#bce8f1}.action.get h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.head{border-color:#bce8f1}.action.head h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.options{border-color:#bce8f1}.action.options h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.post{border-color:#d6e9c6}.action.post h4.action-heading{color:#5cb85c;background:#dff0d8;border-bottom-color:#d6e9c6}.action.put{border-color:#faebcc}.action.put h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.patch{border-color:#faebcc}.action.patch h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.delete{border-color:#ebccd1}.action.delete h4.action-heading{color:#d9534f;background:#f2dede;border-bottom-color:#ebccd1}</style></head><body class="preload"><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#general">General</a></div><div class="collapse-content"><ul><li><a href="#header-hypermedia">Hypermedia</a></li><li><a href="#header-formats">Formats</a></li><li><a href="#header-hal+json">HAL+JSON</a></li><li><a href="#header-api-response-structure">API response structure</a></li><li><a href="#header-authentication">Authentication</a></li><li><a href="#header-session-based-authentication">Session-based Authentication</a></li><li><a href="#header-api-key-through-basic-auth">API Key through Basic Auth</a></li><li><a href="#header-why-not-username-and-password?">Why not username and password?</a></li><li><a href="#header-future-work">Future Work</a></li><li><a href="#header-allowed-http-methods">Allowed HTTP methods</a></li><li><a href="#header-compression">Compression</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#basic-objects">Basic Objects</a></div><div class="collapse-content"><ul><li><a href="#header-links">Links</a></li><li><a href="#header-local-properties">Local Properties</a></li><li><a href="#header-errors">Errors</a></li><li><a href="#header-general-errors">General errors</a></li><li><a href="#header-example">Example</a></li><li><a href="#header-embedded-error-information">Embedded error information</a></li><li><a href="#header-error-details">Error details</a></li><li><a href="#header-example-1">Example</a></li><li><a href="#header-multiple-error-objects">Multiple error objects</a></li><li><a href="#header-example-2">Example</a></li><li><a href="#header-list-of-error-identifiers">List of Error Identifiers</a></li><li><a href="#header-formattable-text">Formattable Text</a></li><li><a href="#header-example-3">Example</a></li><li><a href="#header-dates,-times-and-durations">Dates, Times and Durations</a></li><li><a href="#header-colors">Colors</a></li><li><a href="#header-examples">Examples</a></li><li><a href="#header-digests">Digests</a></li><li><a href="#header-example-4">Example</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#collections">Collections</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-1">Local Properties</a></li><li><a href="#header-links-1">Links</a></li><li><a href="#collections-offset-based-pagination-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view offset based</a></li><li><a href="#collections-cursor-based-pagination-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view cursor based</a></li><li><a href="#collections-aggregations-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view aggregated result</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#root">Root</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-2">Local Properties</a></li><li><a href="#root-root-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View root</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#activities">Activities</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-3">Local Properties</a></li><li><a href="#activities-activity">Activity</a><ul><li><a href="#activities-activity-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View activity</a></li><li><a href="#activities-activity-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Update activity</a></li></ul></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#attachments">Attachments</a></div><div class="collapse-content"><ul><li><a href="#header-actions">Actions</a></li><li><a href="#header-linked-properties">Linked Properties</a></li><li><a href="#header-local-properties-4">Local Properties</a></li><li><a href="#attachments-attachment">Attachment</a><ul><li><a href="#attachments-attachment-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View attachment</a></li><li><a href="#attachments-attachment-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Delete attachment</a></li></ul></li><li><a href="#attachments-attachments-by-work-package">Attachments by work package</a><ul><li><a href="#attachments-attachments-by-work-package-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List attachments</a></li><li><a href="#attachments-attachments-by-work-package-post"><span class="badge post"><i class="fa fa-plus"></i></span>Add attachment</a></li></ul></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#categories">Categories</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-1">Linked Properties</a></li><li><a href="#header-local-properties-5">Local Properties</a></li><li><a href="#categories-categories-by-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List categories of a project</a></li><li><a href="#categories-category-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Category</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#configuration">Configuration</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-6">Local Properties</a></li><li><a href="#configuration-configuration-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View configuration</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#forms">Forms</a></div><div class="collapse-content"><ul><li><a href="#header-actions-1">Actions</a></li><li><a href="#header-linked-properties-2">Linked Properties</a></li><li><a href="#header-embedded-properties-">Embedded Properties:</a></li><li><a href="#header-payload">Payload</a></li><li><a href="#header-schema">Schema</a></li><li><a href="#header-validation-errors">Validation Errors</a></li><li><a href="#forms-example-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>show or validate form</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#previewing">Previewing</a></div><div class="collapse-content"><ul><li><a href="#previewing-textile-post"><span class="badge post"><i class="fa fa-plus"></i></span>Preview Textile document</a></li><li><a href="#previewing-plain-text-post"><span class="badge post"><i class="fa fa-plus"></i></span>Preview plain document</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#priorities">Priorities</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-3">Linked Properties</a></li><li><a href="#header-local-properties-7">Local Properties</a></li><li><a href="#priorities-priorities-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List all Priorities</a></li><li><a href="#priorities-priority-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view Priority</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#projects">Projects</a></div><div class="collapse-content"><ul><li><a href="#header-actions-2">Actions</a></li><li><a href="#header-linked-properties-4">Linked Properties</a></li><li><a href="#header-local-properties-8">Local Properties</a></li><li><a href="#projects-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View project</a></li><li><a href="#projects-projects-by-version-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List projects with version</a></li><li><a href="#projects-work-package-columns-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Work Package columns</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#queries">Queries</a></div><div class="collapse-content"><ul><li><a href="#header-local-properties-9">Local Properties</a></li><li><a href="#queries-query-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View query</a></li><li><a href="#queries-star-query-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Star query</a></li><li><a href="#queries-unstar-query-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Unstar query</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#relations">Relations</a></div><div class="collapse-content"><ul><li><a href="#header-actions-3">Actions</a></li><li><a href="#header-linked-properties-5">Linked Properties</a></li><li><a href="#header-local-properties-10">Local Properties</a></li><li><a href="#relations-relation">Relation</a><ul><li><a href="#relations-relation-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Relation</a></li><li><a href="#relations-relation-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Edit Relation</a></li><li><a href="#relations-relation-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Delete Relation</a></li></ul></li><li><a href="#relations-relation-schema-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View relation schema</a></li><li><a href="#relations-relation-schema-for-type-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View relation schema for type</a></li><li><a href="#relations-relations-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List Relations</a></li><li><a href="#relations-relation-edit-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>Relation edit form</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#revisions">Revisions</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-6">Linked Properties</a></li><li><a href="#header-local-properties-11">Local Properties</a></li><li><a href="#revisions-revision-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View revision</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#schemas">Schemas</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-7">Linked Properties</a></li><li><a href="#header-field-schema">Field schema</a></li><li><a href="#header-linked-properties-8">Linked Properties</a></li><li><a href="#header-local-properties-12">Local Properties</a></li><li><a href="#schemas-example-schema-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>view the schema</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#statuses">Statuses</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-9">Linked Properties</a></li><li><a href="#header-local-properties-13">Local Properties</a></li><li><a href="#statuses-statuses-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List all Statuses</a></li><li><a href="#statuses-status-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Status</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#string-objects">String Objects</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-10">Linked Properties</a></li><li><a href="#header-local-properties-14">Local Properties</a></li><li><a href="#string-objects-string-object-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View String Object</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#types">Types</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-11">Linked Properties</a></li><li><a href="#header-local-properties-15">Local Properties</a></li><li><a href="#types-types-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List all Types</a></li><li><a href="#types-types-by-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List types available in a project</a></li><li><a href="#types-type-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Type</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#users">Users</a></div><div class="collapse-content"><ul><li><a href="#header-actions-4">Actions</a></li><li><a href="#header-linked-properties-12">Linked Properties</a></li><li><a href="#header-local-properties-16">Local Properties</a></li><li><a href="#users-user">User</a><ul><li><a href="#users-user-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View user</a></li><li><a href="#users-user-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Update user</a></li><li><a href="#users-user-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Delete user</a></li></ul></li><li><a href="#users-user-account-locking">User Account Locking</a><ul><li><a href="#users-user-account-locking-post"><span class="badge post"><i class="fa fa-plus"></i></span>Set Lock</a></li><li><a href="#users-user-account-locking-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Remove Lock</a></li></ul></li><li><a href="#users-user-schema-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View User Schema</a></li><li><a href="#users-user-edit-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>User Edit Form</a></li><li><a href="#users-users">Users</a><ul><li><a href="#users-users-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List Users</a></li><li><a href="#users-users-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create User</a></li></ul></li><li><a href="#users-user-create-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>User Create Form</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#userpreferences">UserPreferences</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-13">Linked Properties</a></li><li><a href="#header-local-properties-17">Local Properties</a></li><li><a href="#userpreferences-userpreferences">UserPreferences</a><ul><li><a href="#userpreferences-userpreferences-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Show my preferences</a></li><li><a href="#userpreferences-userpreferences-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Update UserPreferences</a></li></ul></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#versions">Versions</a></div><div class="collapse-content"><ul><li><a href="#header-linked-properties-14">Linked Properties</a></li><li><a href="#header-local-properties-18">Local Properties</a></li><li><a href="#versions-versions-by-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List versions available in a project</a></li><li><a href="#versions-version-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Version</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#work-packages">Work Packages</a></div><div class="collapse-content"><ul><li><a href="#header-actions-5">Actions</a></li><li><a href="#header-linked-properties-15">Linked Properties</a></li><li><a href="#header-local-properties-19">Local Properties</a></li><li><a href="#work-packages-work-package">Work Package</a><ul><li><a href="#work-packages-work-package-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Work Package</a></li><li><a href="#work-packages-work-package-patch"><span class="badge patch"><i class="fa fa-pencil"></i></span>Edit Work Package</a></li><li><a href="#work-packages-work-package-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Delete Work Package</a></li></ul></li><li><a href="#work-packages-work-package-schema-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>View Work Package Schema</a></li><li><a href="#work-packages-work-package-edit-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>Work Package Edit Form</a></li><li><a href="#work-packages-work-packages">Work Packages</a><ul><li><a href="#work-packages-work-packages-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List Work Packages</a></li><li><a href="#work-packages-work-packages-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create Work Package</a></li></ul></li><li><a href="#work-packages-work-package-create-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>Work Package Create Form</a></li><li><a href="#work-packages-work-packages-by-project">Work Packages by Project</a><ul><li><a href="#work-packages-work-packages-by-project-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List Work Packages</a></li><li><a href="#work-packages-work-packages-by-project-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create Work Package</a></li></ul></li><li><a href="#work-packages-work-package-create-form-post-1"><span class="badge post"><i class="fa fa-plus"></i></span>Work Package Create Form</a></li><li><a href="#work-packages-relations">Relations</a><ul><li><a href="#work-packages-relations-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create Relation</a></li><li><a href="#work-packages-relations-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List relations</a></li></ul></li><li><a href="#work-packages-work-package-relation-form-post"><span class="badge post"><i class="fa fa-plus"></i></span>Relation create form</a></li><li><a href="#work-packages-watchers">Watchers</a><ul><li><a href="#work-packages-watchers-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List watchers</a></li><li><a href="#work-packages-watchers-post"><span class="badge post"><i class="fa fa-plus"></i></span>Add watcher</a></li></ul></li><li><a href="#work-packages-remove-watcher-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Remove watcher</a></li><li><a href="#work-packages-available-relation-candidates-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available relation candidates</a></li><li><a href="#work-packages-available-watchers-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available watchers</a></li><li><a href="#work-packages-available-projects-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available projects</a></li><li><a href="#work-packages-revisions-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Revisions</a></li><li><a href="#work-packages-work-package-activities">Work Package activities</a><ul><li><a href="#work-packages-work-package-activities-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>List work package activities</a></li><li><a href="#work-packages-work-package-activities-post"><span class="badge post"><i class="fa fa-plus"></i></span>Comment work package</a></li></ul></li><li><a href="#work-packages-available-assignees-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available assignees</a></li><li><a href="#work-packages-available-responsibles-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Available responsibles</a></li></ul></div></div></nav><div class="content"><header><h1 id="top">OpenProject API v3</h1></header><section id="general" class="resource-group"><h2 class="group-heading">General <a href="#general" class="permalink">&para;</a></h2><p>This is the current <strong>DRAFT</strong> of the specification for OpenProject APIv3.</p>
 <p>Please note that everything in this document might be <strong>subject to change</strong> in a future version of OpenProject. We intend to keep this specification
 as accurate as possible, however as long as the APIv3 is not in a stable state it is possible that there are intermediary differences between
 this specification and the real implementation. While we try to only specify what we want to keep, it might also happen that parts of this
@@ -614,7 +614,7 @@ Note that you have to mark a column as summable in the instance settings, to be 
 </li>
 </ul>
 <p>A group object contains aggregation data for the elements of a group:</p>
-<h3 id="header-local-properties-19">Local Properties <a class="permalink" href="#header-local-properties-19" aria-hidden="true">¶</a></h3>
+<h3 id="header-local-properties-20">Local Properties <a class="permalink" href="#header-local-properties-20" aria-hidden="true">¶</a></h3>
 <table>
 <thead>
 <tr>
@@ -832,6 +832,9 @@ a client should be able to discover further resources in the API.</p>
         </span>}</span>,
         "<span class="hljs-attribute">priorities</span>" : <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/priorities"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">relations</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span>
         </span>}</span>,
         "<span class="hljs-attribute">statuses</span>" : <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/statuses"</span>
@@ -2607,8 +2610,554 @@ project.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified query does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="revisions" class="resource-group"><h2 class="group-heading">Revisions <a href="#revisions" class="permalink">&para;</a></h2><p>Revisions are sets of updates to files in the context of repositories linked in OpenProject.</p>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="relations" class="resource-group"><h2 class="group-heading">Relations <a href="#relations" class="permalink">&para;</a></h2><p>Work packages may be related to each other in different ways.</p>
+<pre><code>+--------------+                            +--------------+
+|<span class="hljs-string">              </span>|<span class="hljs-string"> 1                        1 </span>|<span class="hljs-string">              </span>|
+|<span class="hljs-string"> Work package +-------------+--------------+ Work package </span>|
+|<span class="hljs-string">              </span>|<span class="hljs-string"> from        </span>|<span class="hljs-string">           to </span>|<span class="hljs-string">              </span>|
++--------------+             |<span class="hljs-string">              +--------------+
+                      +------+-------+
+                      </span>|<span class="hljs-string">   Relation   </span>|
+                      +--------------+
+                      |<span class="hljs-string"> type         </span>|
+                      |<span class="hljs-string"> reverseType  </span>|
+                      |<span class="hljs-string"> description  </span>|
+                      |<span class="hljs-string"> delay        </span>|
+                      +--------------+</code></pre>
+<h2 id="header-actions-3">Actions <a class="permalink" href="#header-actions-3" aria-hidden="true">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Link</th>
+<th>Description</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">update</td>
+<td>Updates the relation between two work packages via a form</td>
+<td><strong>Permission</strong>: manage work package relations</td>
+</tr>
+<tr>
+<td style="text-align:center">updateImmediately</td>
+<td>Updates the relation between two work packages</td>
+<td><strong>Permission</strong>: manage work package relations</td>
+</tr>
+<tr>
+<td style="text-align:center">delete</td>
+<td>Destroys the relation between the two work packages</td>
+<td><strong>Permission</strong>: manage work package relations</td>
+</tr>
+</tbody>
+</table>
 <h2 id="header-linked-properties-5">Linked Properties <a class="permalink" href="#header-linked-properties-5" aria-hidden="true">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Link</th>
+<th>Description</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Supported operations</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">self</td>
+<td>This relation</td>
+<td>Relation</td>
+<td>not null</td>
+<td>READ</td>
+<td><strong>Permission</strong>: view work packages</td>
+</tr>
+<tr>
+<td style="text-align:center">schema</td>
+<td>The schema of this relation</td>
+<td>Schema</td>
+<td>not null</td>
+<td>READ</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">from</td>
+<td>The emanating work package</td>
+<td>WorkPackage</td>
+<td>not null</td>
+<td>READ</td>
+<td><strong>Permission</strong>: view work packages</td>
+</tr>
+<tr>
+<td style="text-align:center">to</td>
+<td>The work package the relation ends in</td>
+<td>WorkPackage</td>
+<td>not null</td>
+<td>READ</td>
+<td><strong>Permission</strong>: view work packages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="header-local-properties-10">Local Properties <a class="permalink" href="#header-local-properties-10" aria-hidden="true">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Supported operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">id</td>
+<td>Relation ID</td>
+<td>Integer</td>
+<td>x &gt; 0</td>
+<td>READ</td>
+</tr>
+<tr>
+<td style="text-align:center">name</td>
+<td>The internationalized name of this kind of relation</td>
+<td>String</td>
+<td></td>
+<td>READ</td>
+</tr>
+<tr>
+<td style="text-align:center">type</td>
+<td>Which kind of relation (blocks, precedes, etc.)</td>
+<td>String</td>
+<td>in: relates, duplicates, duplicated, blocks, blocked, precedes, follows, includes, partof, requires, required</td>
+<td>READ / WRITE</td>
+</tr>
+<tr>
+<td style="text-align:center">reverseType</td>
+<td>The kind of relation from the other WP’s perspective</td>
+<td>String</td>
+<td>in: relates, duplicates, duplicated, blocks, blocked, precedes, follows, includes, partof, requires, required</td>
+<td>READ</td>
+</tr>
+<tr>
+<td style="text-align:center">description</td>
+<td>Short text further describing the relation</td>
+<td>String</td>
+<td></td>
+<td>READ / WRITE</td>
+</tr>
+<tr>
+<td style="text-align:center">delay*</td>
+<td>The delay in days between closing of <code>from</code> and start of <code>to</code></td>
+<td>Integer</td>
+<td>x &gt;= 0</td>
+<td>READ / WRITE</td>
+</tr>
+</tbody>
+</table>
+<p>* Only applicable for some relation types such as “follows”. You can check using the relation by schema
+endpoint at <code>/api/v3/relations/schema/{type}</code>.</p>
+<div id="relations-relation" class="resource"><h3 class="resource-heading">Relation <a href="#relations-relation" class="permalink">&nbsp;&para;</a></h3><div id="relations-relation-get" class="action get"><h4 class="action-heading"><div class="name">View Relation</div><a href="#relations-relation-get" class="method get">GET</a><code class="uri">/api/v3/relations/{id}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations/<span class="hljs-attribute" title="id">1</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Relation id</p>
+</dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1/form"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/42"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Steel Delivery"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/84"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Bending the steel"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Relation"</span></span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"precedes"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"precedes"</span></span>,
+  "<span class="hljs-attribute">reverseType</span>": <span class="hljs-value"><span class="hljs-string">"follows"</span></span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"We can't bend the steel before it's been delivered!"</span></span>,
+  "<span class="hljs-attribute">delay</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the relation does not exist or the client does not have sufficient permissions to see it.</p>
+<p><strong>Required permission:</strong> view work packages for the involved work packages</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation does not exist."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="relations-relation-patch" class="action patch"><h4 class="action-heading"><div class="name">Edit Relation</div><a href="#relations-relation-patch" class="method patch">PATCH</a><code class="uri">/api/v3/relations/{id}</code></h4><p>When calling this endpoint the client provides a single object, containing the properties and links that it wants to change, in the body.
+It is only allowed to provide properties or links supporting the <strong>write</strong> operation.</p>
+<p>Note that changing the <code>type</code> of a relation invariably also changes the respective <code>reverseType</code> as well as the “name” of it.
+The returned Relation object will reflect that change. For instance if you change a Relation’s
+<code>type</code> to “follows” then the <code>reverseType</code> will be changed to <code>precedes</code>.</p>
+<h4>Example URI</h4><div class="definition"><span class="method patch">PATCH</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations/<span class="hljs-attribute" title="id">1</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Relation ID</p>
+</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>Update Relation</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"blocks"</span></span>,
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Actually the supplier has to bend the steel before they can deliver it."</span>
+    <span class="hljs-string">"delay"</span>: <span class="hljs-number">3</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1/form"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/42"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Steel Delivery"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/84"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Bending the steel"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Relation"</span></span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"precedes"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"precedes"</span></span>,
+  "<span class="hljs-attribute">reverseType</span>": <span class="hljs-value"><span class="hljs-string">"follows"</span></span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"We can't bend the steel before it's been delivered!"</span></span>,
+  "<span class="hljs-attribute">delay</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Occurs when the client did not send a valid JSON object in the request body.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidRequestBody"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The request body was not a single JSON object."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the relation does not exist or the client does not have sufficient permissions to see it.</p>
+<p><strong>Required permission:</strong> manage work package relations</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation does not exist."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>422</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if:</p>
+<ul>
+<li>
+<p>the client tries to modify a read-only property (<code>PropertyIsReadOnly</code>)</p>
+</li>
+<li>
+<p>a constraint for a property was violated (<code>PropertyConstraintViolation</code>)</p>
+</li>
+<li>
+<p>the client provides a link to an invalid resource (<code>ResourceTypeMismatch</code>) or a
+work package that does not exist or for which the client does not have sufficient permissions
+to see it (<strong>required permissions</strong>: <code>view work packages</code> for the involved work packages).</p>
+</li>
+</ul>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:PropertyConstraintViolation"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Delay must be a number greater than or equal to 0"</span></span>,
+  "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">details</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">attribute</span>": <span class="hljs-value"><span class="hljs-string">"delay"</span>
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="relations-relation-delete" class="action delete"><h4 class="action-heading"><div class="name">Delete Relation</div><a href="#relations-relation-delete" class="method delete">DELETE</a><code class="uri">/api/v3/relations/{id}</code></h4><p>Deletes the relation.</p>
+<h4>Example URI</h4><div class="definition"><span class="method delete">DELETE</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations/<span class="hljs-attribute" title="id">1</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Relation ID</p>
+</dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>204</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the relation was deleted successfully.
+The response body is empty.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>403</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> manage work package relations</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to delete this relation."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the relation does not exist or the client does not have sufficient permissions to see it.</p>
+<p><strong>Required permission:</strong> manage work package relations</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation does not exist."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="relations-relation-schema" class="resource"><h3 class="resource-heading">Relation schema <a href="#relations-relation-schema" class="permalink">&nbsp;&para;</a></h3><div id="relations-relation-schema-get" class="action get"><h4 class="action-heading"><div class="name">View relation schema</div><a href="#relations-relation-schema-get" class="method get">GET</a><code class="uri">/api/v3/relations/schema</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations/schema</span></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Schema"</span></span>,
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/schema"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"ID"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Type"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">reverseType</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Reverse Type"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Description"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"From work package"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"To work package"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">delay</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Delay"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="relations-relation-schema-for-type" class="resource"><h3 class="resource-heading">Relation schema for type <a href="#relations-relation-schema-for-type" class="permalink">&nbsp;&para;</a></h3><p>The exact schema for a relation may depend on it’s type.
+For instance the “follows” relation has an additional “delay” field which is not
+applicable for the other relations.</p>
+<div id="relations-relation-schema-for-type-get" class="action get"><h4 class="action-heading"><div class="name">View relation schema for type</div><a href="#relations-relation-schema-for-type-get" class="method get">GET</a><code class="uri">/api/v3/relations/schema/{type}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations/schema/<span class="hljs-attribute" title="type">follows</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>type</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>follows</span></span><p>Type of the schema</p>
+</dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Schema"</span></span>,
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/schema"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"ID"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Type"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">reverseType</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Reverse Type"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Description"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"From work package"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"To work package"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">delay</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Delay"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the relation type does not exist or the client does not have sufficient permissions to see it.</p>
+<p><strong>Required permission:</strong> manage work package relations</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation type does not exist."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="relations-relations" class="resource"><h3 class="resource-heading">Relations <a href="#relations-relations" class="permalink">&nbsp;&para;</a></h3><div id="relations-relations-get" class="action get"><h4 class="action-heading"><div class="name">List Relations</div><a href="#relations-relations-get" class="method get">GET</a><code class="uri">/api/v3/relations?offset,pageSize,filters,sortBy</code></h4><p>Lists all relations according to the given (optional, logically conjunctive) filters and ordered by ID.
+The response only includes relations between work packages which the user is allowed to see.</p>
+<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations?offset,pageSize,filters,sortBy</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>0</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>5</span></span><p>Page number inside the requested collection</p>
+</dd><dt>pageSize</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>20</span></span><p>Number of elements to display per page</p>
+</dd><dt>filters</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[{ &quot;from&quot;: { &quot;operator&quot;: &quot;=&quot;, &quot;values&quot;: 42 }&quot; }]</span></span><p>JSON specifying filter conditions.
+Accepts the same format as returned by the <a href="#queries">queries</a> endpoint. Valid fields to filter by are:
+<code>from</code> (ID of work package from which the filtered relations emanates), <code>to</code> (ID of work package to which this related points),
+<code>involved</code> (ID of either the <code>from</code> or the <code>to</code> work package.), <code>type</code> (The type of relation to filter by, e.g. “follows”)</p>
+</dd><dt>sortBy</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[[&quot;type&quot;, &quot;asc&quot;]]</span></span><p>JSON specifying sort criteria.
+Accepts the same format as returned by the <a href="#queries">queries</a> endpoint.</p>
+</dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">total</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
+  "<span class="hljs-attribute">count</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Collection"</span></span>,
+  "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">elements</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1/form"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span></span>,
+            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/42"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Steel Delivery"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/84"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Bending the steel"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Relation"</span></span>,
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"precedes"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"precedes"</span></span>,
+        "<span class="hljs-attribute">reverseType</span>": <span class="hljs-value"><span class="hljs-string">"follows"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"We can't bend the steel before it's been delivered!"</span></span>,
+        "<span class="hljs-attribute">delay</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+      </span>}
+    ]
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="relations-relation-edit-form" class="resource"><h3 class="resource-heading">Relation edit form <a href="#relations-relation-edit-form" class="permalink">&nbsp;&para;</a></h3><p>This endpoint returns a form to allow a guided creation of a new work package relation.
+The returned form will be pre-filled with default values for every property, if available.</p>
+<p>For more details and all possible responses see the general specification of <a href="#forms">Forms</a>.</p>
+<div id="relations-relation-edit-form-post" class="action post"><h4 class="action-heading"><div class="name">Relation edit form</div><a href="#relations-relation-edit-form-post" class="method post">POST</a><code class="uri">/api/v3/relations/{id}/form</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations/<span class="hljs-attribute" title="id">1</span>/form</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID of the relation being modified</p>
+</dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Relation"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"follows"</span></span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"let it rest for 3 days"</span></span>,
+  "<span class="hljs-attribute">delay</span>": <span class="hljs-value"><span class="hljs-number">3</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/form"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">validate</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/form"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">commit</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Form"</span></span>,
+  "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">payload</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/4534"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/3857"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"follows"</span></span>,
+      "<span class="hljs-attribute">delay</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"let it rest for 3 days"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Schema"</span></span>,
+      "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/schema"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"ID"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Type"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+        "<span class="hljs-attribute">allowedValues</span>": <span class="hljs-value">[
+          <span class="hljs-string">"relates"</span>,
+          <span class="hljs-string">"duplicates"</span>,
+          <span class="hljs-string">"duplicated"</span>,
+          <span class="hljs-string">"blocks"</span>,
+          <span class="hljs-string">"blocked"</span>,
+          <span class="hljs-string">"precedes"</span>,
+          <span class="hljs-string">"follows"</span>,
+          <span class="hljs-string">"includes"</span>,
+          <span class="hljs-string">"partof"</span>,
+          <span class="hljs-string">"requires"</span>,
+          <span class="hljs-string">"required"</span>
+        ]
+      </span>}</span>,
+      "<span class="hljs-attribute">reverseType</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Reverse Type"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Description"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"From work package"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+        "<span class="hljs-attribute">writeable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"To work package"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">delay</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Delay"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">validationErrors</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+        "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:BadExampleError"</span></span>,
+        "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"For the purpose of this example we need a validation error. The remainder of the response pretends there were no errors."</span>
+      </span>}
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>403</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> manage work package relations</p>
+<p><em>Note that you will only receive this error, if you are at least allowed to see the involved work packages.</em></p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to edit the specified relation."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the relation does not exist or the client does not have sufficient permissions to see it.</p>
+<p><strong>Required permission:</strong> view (involved) work package(s), manage work package relations</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation does not exist."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="revisions" class="resource-group"><h2 class="group-heading">Revisions <a href="#revisions" class="permalink">&para;</a></h2><p>Revisions are sets of updates to files in the context of repositories linked in OpenProject.</p>
+<h2 id="header-linked-properties-6">Linked Properties <a class="permalink" href="#header-linked-properties-6" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2650,7 +3199,7 @@ project.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-10">Local Properties <a class="permalink" href="#header-local-properties-10" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-11">Local Properties <a class="permalink" href="#header-local-properties-11" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2742,7 +3291,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified revision does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="schemas" class="resource-group"><h2 class="group-heading">Schemas <a href="#schemas" class="permalink">&para;</a></h2><h2 id="header-linked-properties-6">Linked Properties <a class="permalink" href="#header-linked-properties-6" aria-hidden="true">¶</a></h2>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="schemas" class="resource-group"><h2 class="group-heading">Schemas <a href="#schemas" class="permalink">&para;</a></h2><h2 id="header-linked-properties-7">Linked Properties <a class="permalink" href="#header-linked-properties-7" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2769,7 +3318,7 @@ and objects describing the corresponding property as values.
 These objects are called <strong>field schema</strong> and form the core of the schema representation,
 each of them can contain its own <code>_links</code> and <code>_embedded</code> section.</p>
 <h1 id="header-field-schema">Field schema <a class="permalink" href="#header-field-schema" aria-hidden="true">¶</a></h1>
-<h2 id="header-linked-properties-7">Linked Properties <a class="permalink" href="#header-linked-properties-7" aria-hidden="true">¶</a></h2>
+<h2 id="header-linked-properties-8">Linked Properties <a class="permalink" href="#header-linked-properties-8" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2787,7 +3336,7 @@ each of them can contain its own <code>_links</code> and <code>_embedded</code> 
 <p>The <code>allowedValues</code> can either contain a list of canonical links or just a single link to a collection resource.
 This is an optimization to allow efficient handling of both small resource lists (that can be enumerated inline) and large
 resource lists (requiring one or more separate requests).</p>
-<h2 id="header-local-properties-11">Local Properties <a class="permalink" href="#header-local-properties-11" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-12">Local Properties <a class="permalink" href="#header-local-properties-12" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2916,7 +3465,7 @@ For properties that have a default value, the client can assume the default valu
       ]
     </span>}
   </span>}
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="statuses" class="resource-group"><h2 class="group-heading">Statuses <a href="#statuses" class="permalink">&para;</a></h2><h2 id="header-linked-properties-8">Linked Properties <a class="permalink" href="#header-linked-properties-8" aria-hidden="true">¶</a></h2>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="statuses" class="resource-group"><h2 class="group-heading">Statuses <a href="#statuses" class="permalink">&para;</a></h2><h2 id="header-linked-properties-9">Linked Properties <a class="permalink" href="#header-linked-properties-9" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2937,7 +3486,7 @@ For properties that have a default value, the client can assume the default valu
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-12">Local Properties <a class="permalink" href="#header-local-properties-12" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-13">Local Properties <a class="permalink" href="#header-local-properties-13" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3116,7 +3665,7 @@ For properties that have a default value, the client can assume the default valu
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to see this status."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="string-objects" class="resource-group"><h2 class="group-heading">String Objects <a href="#string-objects" class="permalink">&para;</a></h2><h2 id="header-linked-properties-9">Linked Properties <a class="permalink" href="#header-linked-properties-9" aria-hidden="true">¶</a></h2>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="string-objects" class="resource-group"><h2 class="group-heading">String Objects <a href="#string-objects" class="permalink">&para;</a></h2><h2 id="header-linked-properties-10">Linked Properties <a class="permalink" href="#header-linked-properties-10" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3137,7 +3686,7 @@ For properties that have a default value, the client can assume the default valu
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-13">Local Properties <a class="permalink" href="#header-local-properties-13" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-14">Local Properties <a class="permalink" href="#header-local-properties-14" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3169,7 +3718,7 @@ e.g. to be able to provide <code>allowedValues</code> for a string typed propert
   </span>}</span>,
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"StringObject"</span></span>,
   "<span class="hljs-attribute">value</span>": <span class="hljs-value"><span class="hljs-string">"Foo"</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="types" class="resource-group"><h2 class="group-heading">Types <a href="#types" class="permalink">&para;</a></h2><h2 id="header-linked-properties-10">Linked Properties <a class="permalink" href="#header-linked-properties-10" aria-hidden="true">¶</a></h2>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="types" class="resource-group"><h2 class="group-heading">Types <a href="#types" class="permalink">&para;</a></h2><h2 id="header-linked-properties-11">Linked Properties <a class="permalink" href="#header-linked-properties-11" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3190,7 +3739,7 @@ e.g. to be able to provide <code>allowedValues</code> for a string typed propert
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-14">Local Properties <a class="permalink" href="#header-local-properties-14" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-15">Local Properties <a class="permalink" href="#header-local-properties-15" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3389,7 +3938,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to see this type."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="users" class="resource-group"><h2 class="group-heading">Users <a href="#users" class="permalink">&para;</a></h2><h2 id="header-actions-3">Actions <a class="permalink" href="#header-actions-3" aria-hidden="true">¶</a></h2>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="users" class="resource-group"><h2 class="group-heading">Users <a href="#users" class="permalink">&para;</a></h2><h2 id="header-actions-4">Actions <a class="permalink" href="#header-actions-4" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3431,7 +3980,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 </tr>
 </tbody>
 </table>
-<h2 id="header-linked-properties-11">Linked Properties <a class="permalink" href="#header-linked-properties-11" aria-hidden="true">¶</a></h2>
+<h2 id="header-linked-properties-12">Linked Properties <a class="permalink" href="#header-linked-properties-12" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3459,7 +4008,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-15">Local Properties <a class="permalink" href="#header-local-properties-15" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-16">Local Properties <a class="permalink" href="#header-local-properties-16" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4398,7 +4947,7 @@ The returned form will be pre-filled with default values for every property, if 
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to create new users."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="userpreferences" class="resource-group"><h2 class="group-heading">UserPreferences <a href="#userpreferences" class="permalink">&para;</a></h2><h2 id="header-linked-properties-12">Linked Properties <a class="permalink" href="#header-linked-properties-12" aria-hidden="true">¶</a></h2>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="userpreferences" class="resource-group"><h2 class="group-heading">UserPreferences <a href="#userpreferences" class="permalink">&para;</a></h2><h2 id="header-linked-properties-13">Linked Properties <a class="permalink" href="#header-linked-properties-13" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4426,7 +4975,7 @@ The returned form will be pre-filled with default values for every property, if 
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-16">Local Properties <a class="permalink" href="#header-local-properties-16" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-17">Local Properties <a class="permalink" href="#header-local-properties-17" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4549,7 +5098,7 @@ Reasons are:</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:PropertyConstraintViolation"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Time zone is not set to one of the allowed values."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="versions" class="resource-group"><h2 class="group-heading">Versions <a href="#versions" class="permalink">&para;</a></h2><h2 id="header-linked-properties-13">Linked Properties <a class="permalink" href="#header-linked-properties-13" aria-hidden="true">¶</a></h2>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="versions" class="resource-group"><h2 class="group-heading">Versions <a href="#versions" class="permalink">&para;</a></h2><h2 id="header-linked-properties-14">Linked Properties <a class="permalink" href="#header-linked-properties-14" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4584,7 +5133,7 @@ Reasons are:</p>
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-17">Local Properties <a class="permalink" href="#header-local-properties-17" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-18">Local Properties <a class="permalink" href="#header-local-properties-18" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4784,7 +5333,7 @@ a version. That’s why a 404 is returned here, even if a 403 might be more appr
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified version does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="work-packages" class="resource-group"><h2 class="group-heading">Work Packages <a href="#work-packages" class="permalink">&para;</a></h2><h2 id="header-actions-4">Actions <a class="permalink" href="#header-actions-4" aria-hidden="true">¶</a></h2>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="work-packages" class="resource-group"><h2 class="group-heading">Work Packages <a href="#work-packages" class="permalink">&para;</a></h2><h2 id="header-actions-5">Actions <a class="permalink" href="#header-actions-5" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4815,6 +5364,11 @@ a version. That’s why a 404 is returned here, even if a 403 might be more appr
 <td>logged in; watching</td>
 </tr>
 <tr>
+<td style="text-align:center">addRelation</td>
+<td>Adds a relation to this work package.</td>
+<td><strong>Permission</strong>: manage wp relations</td>
+</tr>
+<tr>
 <td style="text-align:center">addWatcher</td>
 <td>Add any user to WP watchers</td>
 <td><strong>Permission</strong>: add watcher</td>
@@ -4841,7 +5395,7 @@ a version. That’s why a 404 is returned here, even if a 403 might be more appr
 </tr>
 </tbody>
 </table>
-<h2 id="header-linked-properties-14">Linked Properties <a class="permalink" href="#header-linked-properties-14" aria-hidden="true">¶</a></h2>
+<h2 id="header-linked-properties-15">Linked Properties <a class="permalink" href="#header-linked-properties-15" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4935,6 +5489,14 @@ a version. That’s why a 404 is returned here, even if a 403 might be more appr
 <td></td>
 </tr>
 <tr>
+<td style="text-align:center">relations</td>
+<td>Relations this work package is involved in</td>
+<td>Relation</td>
+<td></td>
+<td>READ</td>
+<td><strong>Permission</strong> view work packages</td>
+</tr>
+<tr>
 <td style="text-align:center">revisions</td>
 <td>Revisions that are referencing the work package</td>
 <td>Revision</td>
@@ -4984,7 +5546,7 @@ a version. That’s why a 404 is returned here, even if a 403 might be more appr
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-18">Local Properties <a class="permalink" href="#header-local-properties-18" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-19">Local Properties <a class="permalink" href="#header-local-properties-19" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -5180,6 +5742,10 @@ the human readable name of custom fields.</em></p>
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/23"</span></span>,
       "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Laron Leuschke - Alaina5788"</span>
     </span>}</span>,
+    "<span class="hljs-attribute">relations</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/relations"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Show relations"</span>
+    </span>}</span>,
     "<span class="hljs-attribute">revisions</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/revisions"</span>
     </span>}</span>,
@@ -5235,7 +5801,7 @@ the human readable name of custom fields.</em></p>
       "<span class="hljs-attribute">templated</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
     </span>}</span>,
     "<span class="hljs-attribute">addRelation</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/relations"</span></span>,
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span></span>,
       "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"post"</span></span>,
       "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Add relation"</span>
     </span>}</span>,
@@ -5355,6 +5921,10 @@ not just the current user.</p>
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/23"</span></span>,
       "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Laron Leuschke - Alaina5788"</span>
     </span>}</span>,
+    "<span class="hljs-attribute">relations</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/relations"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Show relations"</span>
+    </span>}</span>,
     "<span class="hljs-attribute">revisions</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/revisions"</span>
     </span>}</span>,
@@ -5410,7 +5980,7 @@ not just the current user.</p>
       "<span class="hljs-attribute">templated</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
     </span>}</span>,
     "<span class="hljs-attribute">addRelation</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/relations"</span></span>,
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span></span>,
       "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"post"</span></span>,
       "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Add relation"</span>
     </span>}</span>,
@@ -5841,6 +6411,10 @@ not just the current user.</p>
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/23"</span></span>,
       "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Laron Leuschke - Alaina5788"</span>
     </span>}</span>,
+    "<span class="hljs-attribute">relations</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/relations"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Show relations"</span>
+    </span>}</span>,
     "<span class="hljs-attribute">revisions</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/revisions"</span>
     </span>}</span>,
@@ -5896,7 +6470,7 @@ not just the current user.</p>
       "<span class="hljs-attribute">templated</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
     </span>}</span>,
     "<span class="hljs-attribute">addRelation</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/relations"</span></span>,
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span></span>,
       "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"post"</span></span>,
       "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Add relation"</span>
     </span>}</span>,
@@ -6217,6 +6791,10 @@ not just the current user.</p>
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/23"</span></span>,
       "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Laron Leuschke - Alaina5788"</span>
     </span>}</span>,
+    "<span class="hljs-attribute">relations</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/relations"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Show relations"</span>
+    </span>}</span>,
     "<span class="hljs-attribute">revisions</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/revisions"</span>
     </span>}</span>,
@@ -6272,7 +6850,7 @@ not just the current user.</p>
       "<span class="hljs-attribute">templated</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
     </span>}</span>,
     "<span class="hljs-attribute">addRelation</span>": <span class="hljs-value">{
-      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1528/relations"</span></span>,
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span></span>,
       "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"post"</span></span>,
       "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Add relation"</span>
     </span>}</span>,
@@ -6480,6 +7058,218 @@ The returned form will be pre-filled with default values for every property, if 
       </span>}
     </span>}
   </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="work-packages-relations" class="resource"><h3 class="resource-heading">Relations <a href="#work-packages-relations" class="permalink">&nbsp;&para;</a></h3><div id="work-packages-relations-post" class="action post"><h4 class="action-heading"><div class="name">Create Relation</div><a href="#work-packages-relations-post" class="method post">POST</a><code class="uri">/api/v3/work_packages/{work_package_id}/relations</code></h4><p>When calling this endpoint the client provides a single object, containing at least the properties and links that are required, in the body.
+The required fields of a Relation can be found in its schema, which is embedded in the respective form.
+Note that it is only allowed to provide properties or links supporting the write operation.</p>
+<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/work_packages/<span class="hljs-attribute" title="work_package_id">1</span>/relations</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>work_package_id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Work package id</p>
+</dd></dl></div><div class="title"><strong>Request&nbsp;&nbsp;<code>Create Relation</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">_links</span>":
+    <span class="hljs-value">{
+        "<span class="hljs-attribute">from</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/42"</span></span>,
+        "<span class="hljs-attribute">to</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/84"</span>
+    </span>}
+    <span class="hljs-string">"type"</span>: <span class="hljs-string">"duplicates"</span></span>,
+    "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"This is the same thing. Let's track it in one place only, shall we?"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>201</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1/form"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">delete</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/1"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/42"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Steel Delivery"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/84"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Bending the steel"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Relation"</span></span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"precedes"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"precedes"</span></span>,
+  "<span class="hljs-attribute">reverseType</span>": <span class="hljs-value"><span class="hljs-string">"follows"</span></span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"We can't bend the steel before it's been delivered!"</span></span>,
+  "<span class="hljs-attribute">delay</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Occurs when the client did not send a valid JSON object in the request body.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidRequestBody"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The request body was not a single JSON object."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>403</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> manage work package relations</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to create a relation."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>409</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if there already exists a relation between the given work packages of <strong>any</strong> type
+or if the relation is not allowed.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:UpdateConflict"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"A relation of that type between the work packages either already exists or is not allowed."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>422</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if:</p>
+<ul>
+<li>
+<p>the client tries to write a read-only property (<code>PropertyIsReadOnly</code>)</p>
+</li>
+<li>
+<p>a constraint for a property was violated (<code>PropertyConstraintViolation</code>)</p>
+</li>
+<li>
+<p>the client provides a link to an invalid resource (<code>ResourceTypeMismatch</code>)</p>
+</li>
+</ul>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:PropertyConstraintViolation"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Delay must be a number greater than or equal to 0"</span></span>,
+  "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">details</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">attribute</span>": <span class="hljs-value"><span class="hljs-string">"delay"</span>
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="work-packages-relations-get" class="action get"><h4 class="action-heading"><div class="name">List relations</div><a href="#work-packages-relations-get" class="method get">GET</a><code class="uri">/api/v3/work_packages/{work_package_id}/relations</code></h4><p>Lists all relations this work package is involved in.</p>
+<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/work_packages/<span class="hljs-attribute" title="work_package_id">1</span>/relations</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>work_package_id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Work package id</p>
+</dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>302</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/plain</span><br><span class="hljs-attribute">Location</span>: <span class="hljs-string">/api/v3/relations?involved={work_package_id}</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>You are being redirected to /api/v3/relations?involved={work_package_id}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="work-packages-work-package-relation-form" class="resource"><h3 class="resource-heading">Work Package Relation Form <a href="#work-packages-work-package-relation-form" class="permalink">&nbsp;&para;</a></h3><div id="work-packages-work-package-relation-form-post" class="action post"><h4 class="action-heading"><div class="name">Relation create form</div><a href="#work-packages-work-package-relation-form-post" class="method post">POST</a><code class="uri">/api/v3/work_packages/{id}/relations/form</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/work_packages/<span class="hljs-attribute" title="id">1</span>/relations/form</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID of the relation being modified</p>
+</dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Relation"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"follows"</span></span>,
+  "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/3493"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/4582"</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"let it rest for 3 days"</span></span>,
+  "<span class="hljs-attribute">delay</span>": <span class="hljs-value"><span class="hljs-number">3</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/form"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">validate</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations/form"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">commit</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span></span>,
+      "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Form"</span></span>,
+  "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">payload</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/4534"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/3857"</span>
+        </span>}
+      </span>}</span>,
+      "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"follows"</span></span>,
+      "<span class="hljs-attribute">delay</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"let it rest for 3 days"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Schema"</span></span>,
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"ID"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Type"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+        "<span class="hljs-attribute">allowedValues</span>": <span class="hljs-value">[
+          <span class="hljs-string">"relates"</span>,
+          <span class="hljs-string">"duplicates"</span>,
+          <span class="hljs-string">"duplicated"</span>,
+          <span class="hljs-string">"blocks"</span>,
+          <span class="hljs-string">"blocked"</span>,
+          <span class="hljs-string">"precedes"</span>,
+          <span class="hljs-string">"follows"</span>,
+          <span class="hljs-string">"includes"</span>,
+          <span class="hljs-string">"partof"</span>,
+          <span class="hljs-string">"requires"</span>,
+          <span class="hljs-string">"required"</span>
+        ]
+      </span>}</span>,
+      "<span class="hljs-attribute">reverseType</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Reverse Type"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Description"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">allowedValues</span>": <span class="hljs-value">[
+            {
+              "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/{id}"</span>
+            </span>}
+          ]
+        </span>}</span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"From work package"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">to</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">allowedValues</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/{id}/available_relation_candidates"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Available work packages to relate to"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"To work package"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">delay</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Delay"</span></span>,
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"Integer"</span></span>,
+        "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+      </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">validationErrors</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">from</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+        "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:BadExampleError"</span></span>,
+        "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"For the purpose of this example we need a validation error. The remainder of the response pretends there were no errors."</span>
+      </span>}
+    </span>}
+  </span>}
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>403</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
+<p><strong>Required permission:</strong> manage work package relations</p>
+<p><em>Note that you will only receive this error, if you are at least allowed to see the involved work packages.</em></p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to edit the specified relation."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>404</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><div class="description"><p>Returned if the relation does not exist or the client does not have sufficient permissions to see it.</p>
+<p><strong>Required permission:</strong> view (involved) work package(s), manage work package relations</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation does not exist."</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="work-packages-watchers" class="resource"><h3 class="resource-heading">Watchers <a href="#work-packages-watchers" class="permalink">&nbsp;&para;</a></h3><div id="work-packages-watchers-get" class="action get"><h4 class="action-heading"><div class="name">List watchers</div><a href="#work-packages-watchers-get" class="method get">GET</a><code class="uri">/api/v3/work_packages/{work_package_id}/watchers</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/work_packages/<span class="hljs-attribute" title="work_package_id">1</span>/watchers</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>work_package_id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Work package id</p>
 </dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
@@ -6735,6 +7525,54 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified work package does not exist."</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="work-packages-available-relation-candidates" class="resource"><h3 class="resource-heading">Available relation candidates <a href="#work-packages-available-relation-candidates" class="permalink">&nbsp;&para;</a></h3><p>Lists work packages with which this work package can be in a relation.
+Only sound candidates are returned. For instance a work package cannot stand in relation to itself,
+and a work package that follows another cannot precede it.</p>
+<p>Candidates can be filtered. Most commonly one will want to filter by subject.
+You can do this through the <code>filters</code> parameter which works just like the work package index.</p>
+<p>For instance to find all work packages with “rollout” in their subject:</p>
+<pre><code>?<span class="hljs-atom">filters</span>=[{<span class="hljs-string">"subject"</span>:{<span class="hljs-string">"operator"</span>:<span class="hljs-string">"~"</span>,<span class="hljs-string">"values"</span>:[<span class="hljs-string">"rollout"</span>]}}]</code></pre>
+<p>For convenience there is also a simple <code>query</code> parameter which is a shortcut for listing work packages
+whose ID or subject contain the given string.</p>
+<pre><code>?query=<span class="hljs-number">112</span></code></pre>
+<div id="work-packages-available-relation-candidates-get" class="action get"><h4 class="action-heading"><div class="name">Available relation candidates</div><a href="#work-packages-available-relation-candidates-get" class="method get">GET</a><code class="uri">/api/v3/work_packages/available_relation_candidates?filters,query,offset,pageSize</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/work_packages/available_relation_candidates?filters,query,offset,pageSize</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Page number inside the requested collection.</p>
+</dd><dt>pageSize</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Number of elements to display per page.</p>
+</dd><dt>filters</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[{ &quot;status_id&quot;: { &quot;operator&quot;: &quot;o&quot;, &quot;values&quot;: null }&quot; }]</span></span><p>JSON specifying filter conditions.
+Accepts the same format as returned by the <a href="#queries">queries</a> endpoint.</p>
+</dd><dt>query</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>&quot;rollout&quot;</span></span><p>Shortcut for filtering by ID or subject</p>
+</dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/projects/14/work_packages"</span>
+    </span>}
+  </span>}</span>,
+  "<span class="hljs-attribute">total</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">count</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Collection"</span></span>,
+  "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">elements</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+        "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">subject</span>": <span class="hljs-value"><span class="hljs-string">"Skipped other properties for brevity"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
+        "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/2"</span>
+          </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">subject</span>": <span class="hljs-value"><span class="hljs-string">"Skipped other properties for brevity"</span>
+      </span>}
+    ]
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="work-packages-available-watchers" class="resource"><h3 class="resource-heading">Available Watchers <a href="#work-packages-available-watchers" class="permalink">&nbsp;&para;</a></h3><div id="work-packages-available-watchers-get" class="action get"><h4 class="action-heading"><div class="name">Available watchers</div><a href="#work-packages-available-watchers-get" class="method get">GET</a><code class="uri">/api/v3/work_packages/{id}/available_watchers</code></h4><p>Gets a list of users that are able to be watchers of the specified work package.</p>
 <h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/work_packages/<span class="hljs-attribute" title="id">1</span>/available_watchers</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>work package id</p>
 </dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -7247,7 +8085,7 @@ not just the current user.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 17 Oct 2016</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 18 Oct 2016</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
