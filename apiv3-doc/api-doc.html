@@ -1,7 +1,7 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>OpenProject API v3</title><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200"><style>/* Highlight.js Theme Tomorrow */
 .hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}
 
-</style></head><body><div class="container"><div class="row"><div class="col-md-3"><ul id="op-api-menu" class="menu"><li id="menu-item-312ed57f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-312ed57f"><a href="#general" class="menu-item-link">General</a></li><li id="menu-item-65817eb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-65817eb"><a href="#basic-objects" class="menu-item-link">Basic Objects</a></li><li id="menu-item-4a976e9f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4a976e9f menu-item-has-children"><a href="#collections" class="menu-item-link">Collections<a href="#collections" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-408416ae" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-408416ae"><a href="#collections-offset-based-pagination" class="menu-item-link">Offset based pagination</a></li><li id="menu-item-22d06bc5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-22d06bc5"><a href="#collections-cursor-based-pagination" class="menu-item-link">Cursor based pagination</a></li><li id="menu-item-f2cd1098" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f2cd1098"><a href="#collections-aggregations" class="menu-item-link">Aggregations</a></li></ul></a></li><li id="menu-item-e4618b23" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e4618b23 menu-item-has-children"><a href="#root" class="menu-item-link">Root<a href="#root" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-b373cab7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b373cab7"><a href="#root-root" class="menu-item-link">Root</a></li></ul></a></li><li id="menu-item-2340638b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2340638b menu-item-has-children"><a href="#activities" class="menu-item-link">Activities<a href="#activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-4d49765d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4d49765d"><a href="#activities-activity" class="menu-item-link">Activity<a href="#activities-activity" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-917d144c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-917d144c"><a href="#activities-activity-get" class="menu-item-link">View activity</a></li><li id="menu-item-e0e955f1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e0e955f1"><a href="#activities-activity-patch" class="menu-item-link">Update activity</a></li></ul></a></li></ul></a></li><li id="menu-item-ffd9db4c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ffd9db4c menu-item-has-children"><a href="#attachments" class="menu-item-link">Attachments<a href="#attachments" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-5eeee2a6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5eeee2a6"><a href="#attachments-attachment" class="menu-item-link">Attachment<a href="#attachments-attachment" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-4184d1ca" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4184d1ca"><a href="#attachments-attachment-get" class="menu-item-link">View attachment</a></li><li id="menu-item-897c2bb4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-897c2bb4"><a href="#attachments-attachment-delete" class="menu-item-link">Delete attachment</a></li></ul></a></li><li id="menu-item-8e40a32c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8e40a32c"><a href="#attachments-attachments-by-work-package" class="menu-item-link">Attachments by work package<a href="#attachments-attachments-by-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-cc95c5b3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cc95c5b3"><a href="#attachments-attachments-by-work-package-get" class="menu-item-link">List attachments</a></li><li id="menu-item-ff1e2276" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ff1e2276"><a href="#attachments-attachments-by-work-package-post" class="menu-item-link">Add attachment</a></li></ul></a></li></ul></a></li><li id="menu-item-3568f1ec" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3568f1ec menu-item-has-children"><a href="#categories" class="menu-item-link">Categories<a href="#categories" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-5b8a0d3c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5b8a0d3c"><a href="#categories-categories-by-project" class="menu-item-link">Categories by Project</a></li><li id="menu-item-042eb614" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-042eb614"><a href="#categories-category" class="menu-item-link">Category</a></li></ul></a></li><li id="menu-item-70f4f5ab" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-70f4f5ab menu-item-has-children"><a href="#configuration" class="menu-item-link">Configuration<a href="#configuration" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-799e59d8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-799e59d8"><a href="#configuration-configuration" class="menu-item-link">Configuration</a></li></ul></a></li><li id="menu-item-065ce42d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-065ce42d menu-item-has-children"><a href="#forms" class="menu-item-link">Forms<a href="#forms" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0ec51923" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0ec51923"><a href="#forms-example-form" class="menu-item-link">Example Form</a></li></ul></a></li><li id="menu-item-3d6b8012" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3d6b8012 menu-item-has-children"><a href="#previewing" class="menu-item-link">Previewing<a href="#previewing" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f6a9b59" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f6a9b59"><a href="#previewing-textile" class="menu-item-link">Textile</a></li><li id="menu-item-6628c04e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6628c04e"><a href="#previewing-plain-text" class="menu-item-link">Plain Text</a></li></ul></a></li><li id="menu-item-11ee2669" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-11ee2669 menu-item-has-children"><a href="#priorities" class="menu-item-link">Priorities<a href="#priorities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e9aa3d8c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e9aa3d8c"><a href="#priorities-priorities" class="menu-item-link">Priorities</a></li><li id="menu-item-b4691417" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b4691417"><a href="#priorities-priority" class="menu-item-link">Priority</a></li></ul></a></li><li id="menu-item-bbef5027" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bbef5027 menu-item-has-children"><a href="#projects" class="menu-item-link">Projects<a href="#projects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-b0dcdb54" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b0dcdb54"><a href="#projects-project" class="menu-item-link">Project</a></li><li id="menu-item-3bc262aa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3bc262aa"><a href="#projects-projects-by-version" class="menu-item-link">Projects by version</a></li><li id="menu-item-a3d29373" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a3d29373"><a href="#projects-work-package-columns" class="menu-item-link">Work Package Columns</a></li></ul></a></li><li id="menu-item-613b61d3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-613b61d3 menu-item-has-children"><a href="#queries" class="menu-item-link">Queries<a href="#queries" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-620822b8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-620822b8"><a href="#queries-query" class="menu-item-link">Query</a></li><li id="menu-item-7824f4a7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7824f4a7"><a href="#queries-star-query" class="menu-item-link">Star Query</a></li><li id="menu-item-9cf95c14" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9cf95c14"><a href="#queries-unstar-query" class="menu-item-link">Unstar Query</a></li></ul></a></li><li id="menu-item-aad88e36" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-aad88e36 menu-item-has-children"><a href="#relations" class="menu-item-link">Relations<a href="#relations" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-cf9ce817" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cf9ce817"><a href="#relations-relation" class="menu-item-link">Relation<a href="#relations-relation" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-1dbe71a7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1dbe71a7"><a href="#relations-relation-get" class="menu-item-link">View Relation</a></li><li id="menu-item-30e1106b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-30e1106b"><a href="#relations-relation-patch" class="menu-item-link">Edit Relation</a></li><li id="menu-item-f48c2c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f48c2c"><a href="#relations-relation-delete" class="menu-item-link">Delete Relation</a></li></ul></a></li><li id="menu-item-8aac1543" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8aac1543"><a href="#relations-relation-schema" class="menu-item-link">Relation schema</a></li><li id="menu-item-835b814d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-835b814d"><a href="#relations-relation-schema-for-type" class="menu-item-link">Relation schema for type</a></li><li id="menu-item-29256493" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-29256493"><a href="#relations-relations" class="menu-item-link">Relations</a></li><li id="menu-item-fea5393b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fea5393b"><a href="#relations-relation-edit-form" class="menu-item-link">Relation edit form</a></li></ul></a></li><li id="menu-item-4afde1ef" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4afde1ef menu-item-has-children"><a href="#revisions" class="menu-item-link">Revisions<a href="#revisions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-dbdd3b4f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-dbdd3b4f"><a href="#revisions-revision" class="menu-item-link">Revision</a></li></ul></a></li><li id="menu-item-aea542da" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-aea542da menu-item-has-children"><a href="#schemas" class="menu-item-link">Schemas<a href="#schemas" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-2cd22cdf" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2cd22cdf"><a href="#schemas-example-schema" class="menu-item-link">Example Schema</a></li></ul></a></li><li id="menu-item-6a44fd2d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6a44fd2d menu-item-has-children"><a href="#statuses" class="menu-item-link">Statuses<a href="#statuses" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-2c4340c4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2c4340c4"><a href="#statuses-statuses" class="menu-item-link">Statuses</a></li><li id="menu-item-78045f35" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-78045f35"><a href="#statuses-status" class="menu-item-link">Status</a></li></ul></a></li><li id="menu-item-a1db0146" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a1db0146 menu-item-has-children"><a href="#string-objects" class="menu-item-link">String Objects<a href="#string-objects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-32711b6b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-32711b6b"><a href="#string-objects-string-object" class="menu-item-link">String Object</a></li></ul></a></li><li id="menu-item-a0f26f9b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a0f26f9b menu-item-has-children"><a href="#types" class="menu-item-link">Types<a href="#types" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-27c2060a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-27c2060a"><a href="#types-types" class="menu-item-link">Types</a></li><li id="menu-item-0b62590f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0b62590f"><a href="#types-types-by-project" class="menu-item-link">Types by Project</a></li><li id="menu-item-8938fa8f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8938fa8f"><a href="#types-type" class="menu-item-link">Type</a></li></ul></a></li><li id="menu-item-896466e3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-896466e3 menu-item-has-children"><a href="#users" class="menu-item-link">Users<a href="#users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f1267072" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f1267072"><a href="#users-user" class="menu-item-link">User<a href="#users-user" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0fb478cc" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0fb478cc"><a href="#users-user-get" class="menu-item-link">View user</a></li><li id="menu-item-22718b1a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-22718b1a"><a href="#users-user-patch" class="menu-item-link">Update user</a></li><li id="menu-item-6832f1ce" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6832f1ce"><a href="#users-user-delete" class="menu-item-link">Delete user</a></li></ul></a></li><li id="menu-item-628c5bf5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-628c5bf5"><a href="#users-user-account-locking" class="menu-item-link">User Account Locking<a href="#users-user-account-locking" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-48190fe4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-48190fe4"><a href="#users-user-account-locking-post" class="menu-item-link">Set Lock</a></li><li id="menu-item-5bf3f864" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5bf3f864"><a href="#users-user-account-locking-delete" class="menu-item-link">Remove Lock</a></li></ul></a></li><li id="menu-item-502d29fa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-502d29fa"><a href="#users-user-schema" class="menu-item-link">User Schema</a></li><li id="menu-item-f5b063a8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f5b063a8"><a href="#users-user-edit-form" class="menu-item-link">User Edit Form</a></li><li id="menu-item-fe0a7796" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fe0a7796"><a href="#users-users" class="menu-item-link">Users<a href="#users-users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-4c4aa4bd" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4c4aa4bd"><a href="#users-users-get" class="menu-item-link">List Users</a></li><li id="menu-item-b4df24fa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b4df24fa"><a href="#users-users-post" class="menu-item-link">Create User</a></li></ul></a></li><li id="menu-item-76c42778" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-76c42778"><a href="#users-user-create-form" class="menu-item-link">User Create Form</a></li></ul></a></li><li id="menu-item-8eb2c514" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8eb2c514 menu-item-has-children"><a href="#userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-908f2b77" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-908f2b77"><a href="#userpreferences-userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences-userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-96f832fb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-96f832fb"><a href="#userpreferences-userpreferences-get" class="menu-item-link">Show my preferences</a></li><li id="menu-item-24463178" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-24463178"><a href="#userpreferences-userpreferences-patch" class="menu-item-link">Update UserPreferences</a></li></ul></a></li></ul></a></li><li id="menu-item-529ee6fa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-529ee6fa menu-item-has-children"><a href="#versions" class="menu-item-link">Versions<a href="#versions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-29fb7871" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-29fb7871"><a href="#versions-versions-by-project" class="menu-item-link">Versions by Project</a></li><li id="menu-item-9c2478a4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9c2478a4"><a href="#versions-version" class="menu-item-link">Version</a></li></ul></a></li><li id="menu-item-3158ff35" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3158ff35 menu-item-has-children"><a href="#work-packages" class="menu-item-link">Work Packages<a href="#work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-45e1c0ca" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-45e1c0ca"><a href="#work-packages-work-package" class="menu-item-link">Work Package<a href="#work-packages-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-ef0342d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ef0342d"><a href="#work-packages-work-package-get" class="menu-item-link">View Work Package</a></li><li id="menu-item-789ed411" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-789ed411"><a href="#work-packages-work-package-patch" class="menu-item-link">Edit Work Package</a></li><li id="menu-item-c882b0a9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c882b0a9"><a href="#work-packages-work-package-delete" class="menu-item-link">Delete Work Package</a></li></ul></a></li><li id="menu-item-28e3fcf1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-28e3fcf1"><a href="#work-packages-work-package-schema" class="menu-item-link">Work Package Schema</a></li><li id="menu-item-aaebb28" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-aaebb28"><a href="#work-packages-work-package-edit-form" class="menu-item-link">Work Package Edit Form</a></li><li id="menu-item-fb71c52f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fb71c52f"><a href="#work-packages-work-packages" class="menu-item-link">Work Packages<a href="#work-packages-work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-cc78b4f8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cc78b4f8"><a href="#work-packages-work-packages-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-079328f3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-079328f3"><a href="#work-packages-work-packages-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-dcb6e1c1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-dcb6e1c1"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-1d123f42" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1d123f42"><a href="#work-packages-work-packages-by-project" class="menu-item-link">Work Packages by Project<a href="#work-packages-work-packages-by-project" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3f5c916b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3f5c916b"><a href="#work-packages-work-packages-by-project-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-8df7f892" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8df7f892"><a href="#work-packages-work-packages-by-project-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-5d4165e9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5d4165e9"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-843668c9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-843668c9"><a href="#work-packages-relations" class="menu-item-link">Relations<a href="#work-packages-relations" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-2c7643ee" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2c7643ee"><a href="#work-packages-relations-post" class="menu-item-link">Create Relation</a></li><li id="menu-item-b793f7ba" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b793f7ba"><a href="#work-packages-relations-get" class="menu-item-link">List relations</a></li></ul></a></li><li id="menu-item-6018619b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6018619b"><a href="#work-packages-work-package-relation-form" class="menu-item-link">Work Package Relation Form</a></li><li id="menu-item-4447c451" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4447c451"><a href="#work-packages-watchers" class="menu-item-link">Watchers<a href="#work-packages-watchers" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-aab24c48" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-aab24c48"><a href="#work-packages-watchers-get" class="menu-item-link">List watchers</a></li><li id="menu-item-1e7b3846" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1e7b3846"><a href="#work-packages-watchers-post" class="menu-item-link">Add watcher</a></li></ul></a></li><li id="menu-item-d9339fbe" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d9339fbe"><a href="#work-packages-remove-watcher" class="menu-item-link">Remove Watcher</a></li><li id="menu-item-79d284ac" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-79d284ac"><a href="#work-packages-available-relation-candidates" class="menu-item-link">Available relation candidates</a></li><li id="menu-item-a32184a8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a32184a8"><a href="#work-packages-available-watchers" class="menu-item-link">Available Watchers</a></li><li id="menu-item-187833bf" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-187833bf"><a href="#work-packages-available-projects" class="menu-item-link">Available Projects</a></li><li id="menu-item-baf4f42c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-baf4f42c"><a href="#work-packages-revisions" class="menu-item-link">Revisions</a></li><li id="menu-item-8946033c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8946033c"><a href="#work-packages-work-package-activities" class="menu-item-link">Work Package activities<a href="#work-packages-work-package-activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-a1a69d59" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a1a69d59"><a href="#work-packages-work-package-activities-get" class="menu-item-link">List work package activities</a></li><li id="menu-item-702c9b54" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-702c9b54"><a href="#work-packages-work-package-activities-post" class="menu-item-link">Comment work package</a></li></ul></a></li><li id="menu-item-e1be4e36" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e1be4e36"><a href="#work-packages-available-assignees" class="menu-item-link">Available Assignees</a></li><li id="menu-item-5a44cbc5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5a44cbc5"><a href="#work-packages-available-responsibles" class="menu-item-link">Available Responsibles</a></li></ul></a></li></ul></div><div class="col-md-8"><div id="op-api-content"><div><header><div class="page-header"><h1 id="top">OpenProject API v3</h1></div></header><div class="description"></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="general">General&nbsp;<a href="#general"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>This is the current <strong>DRAFT</strong> of the specification for OpenProject APIv3.</p>
+</style></head><body><div class="container"><div class="row"><div class="col-md-3"><ul id="op-api-menu" class="menu"><li id="menu-item-4209bd0b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4209bd0b"><a href="#general" class="menu-item-link">General</a></li><li id="menu-item-af4d263f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-af4d263f"><a href="#basic-objects" class="menu-item-link">Basic Objects</a></li><li id="menu-item-d9968a7b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d9968a7b menu-item-has-children"><a href="#collections" class="menu-item-link">Collections<a href="#collections" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3cb61206" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3cb61206"><a href="#collections-offset-based-pagination" class="menu-item-link">Offset based pagination</a></li><li id="menu-item-b7a11294" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b7a11294"><a href="#collections-cursor-based-pagination" class="menu-item-link">Cursor based pagination</a></li><li id="menu-item-4beee8df" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4beee8df"><a href="#collections-aggregations" class="menu-item-link">Aggregations</a></li></ul></a></li><li id="menu-item-fa61fdf1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fa61fdf1 menu-item-has-children"><a href="#activities" class="menu-item-link">Activities<a href="#activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-daec3b35" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-daec3b35"><a href="#activities-activity" class="menu-item-link">Activity<a href="#activities-activity" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-ad3ba7fd" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ad3ba7fd"><a href="#activities-activity-get" class="menu-item-link">View activity</a></li><li id="menu-item-3d65582b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3d65582b"><a href="#activities-activity-patch" class="menu-item-link">Update activity</a></li></ul></a></li></ul></a></li><li id="menu-item-7692b866" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7692b866 menu-item-has-children"><a href="#attachments" class="menu-item-link">Attachments<a href="#attachments" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-7c703392" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7c703392"><a href="#attachments-attachment" class="menu-item-link">Attachment<a href="#attachments-attachment" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-577faee7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-577faee7"><a href="#attachments-attachment-get" class="menu-item-link">View attachment</a></li><li id="menu-item-82d1c9d6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-82d1c9d6"><a href="#attachments-attachment-delete" class="menu-item-link">Delete attachment</a></li></ul></a></li><li id="menu-item-a0968b6f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a0968b6f"><a href="#attachments-attachments-by-work-package" class="menu-item-link">Attachments by work package<a href="#attachments-attachments-by-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-974f1262" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-974f1262"><a href="#attachments-attachments-by-work-package-get" class="menu-item-link">List attachments</a></li><li id="menu-item-6ab5f8da" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6ab5f8da"><a href="#attachments-attachments-by-work-package-post" class="menu-item-link">Add attachment</a></li></ul></a></li></ul></a></li><li id="menu-item-cbc5bbc8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cbc5bbc8 menu-item-has-children"><a href="#categories" class="menu-item-link">Categories<a href="#categories" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f6651168" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f6651168"><a href="#categories-categories-by-project" class="menu-item-link">Categories by Project</a></li><li id="menu-item-98150d96" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-98150d96"><a href="#categories-category" class="menu-item-link">Category</a></li></ul></a></li><li id="menu-item-b7a8fc58" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b7a8fc58 menu-item-has-children"><a href="#configuration" class="menu-item-link">Configuration<a href="#configuration" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-590f07c1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-590f07c1"><a href="#configuration-configuration" class="menu-item-link">Configuration</a></li></ul></a></li><li id="menu-item-1ae44c82" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1ae44c82 menu-item-has-children"><a href="#forms" class="menu-item-link">Forms<a href="#forms" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-853985b2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-853985b2"><a href="#forms-example-form" class="menu-item-link">Example Form</a></li></ul></a></li><li id="menu-item-5118212a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5118212a menu-item-has-children"><a href="#priorities" class="menu-item-link">Priorities<a href="#priorities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-873d85a5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-873d85a5"><a href="#priorities-priorities" class="menu-item-link">Priorities</a></li><li id="menu-item-3fb9b362" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3fb9b362"><a href="#priorities-priority" class="menu-item-link">Priority</a></li></ul></a></li><li id="menu-item-99cefe95" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-99cefe95 menu-item-has-children"><a href="#projects" class="menu-item-link">Projects<a href="#projects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-7ad2a04d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7ad2a04d"><a href="#projects-project" class="menu-item-link">Project</a></li><li id="menu-item-f2749f31" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f2749f31"><a href="#projects-projects-by-version" class="menu-item-link">Projects by version</a></li><li id="menu-item-2c323586" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2c323586"><a href="#projects-work-package-columns" class="menu-item-link">Work Package Columns</a></li></ul></a></li><li id="menu-item-e08cadc3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e08cadc3 menu-item-has-children"><a href="#queries" class="menu-item-link">Queries<a href="#queries" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f55e132c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f55e132c"><a href="#queries-query" class="menu-item-link">Query</a></li><li id="menu-item-4939ff11" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4939ff11"><a href="#queries-star-query" class="menu-item-link">Star Query</a></li><li id="menu-item-d20338c9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d20338c9"><a href="#queries-unstar-query" class="menu-item-link">Unstar Query</a></li></ul></a></li><li id="menu-item-7c8dea53" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7c8dea53 menu-item-has-children"><a href="#relations" class="menu-item-link">Relations<a href="#relations" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-86fbec13" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-86fbec13"><a href="#relations-relation" class="menu-item-link">Relation<a href="#relations-relation" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e4d507f9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e4d507f9"><a href="#relations-relation-get" class="menu-item-link">View Relation</a></li><li id="menu-item-ed57da4d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ed57da4d"><a href="#relations-relation-patch" class="menu-item-link">Edit Relation</a></li><li id="menu-item-4ec4de14" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4ec4de14"><a href="#relations-relation-delete" class="menu-item-link">Delete Relation</a></li></ul></a></li><li id="menu-item-7671d158" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7671d158"><a href="#relations-relation-schema" class="menu-item-link">Relation schema</a></li><li id="menu-item-4dc7da5e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4dc7da5e"><a href="#relations-relation-schema-for-type" class="menu-item-link">Relation schema for type</a></li><li id="menu-item-ca6de6a5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ca6de6a5"><a href="#relations-relations" class="menu-item-link">Relations</a></li><li id="menu-item-03fce4db" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-03fce4db"><a href="#relations-relation-edit-form" class="menu-item-link">Relation edit form</a></li></ul></a></li><li id="menu-item-9eed8fee" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9eed8fee menu-item-has-children"><a href="#previewing" class="menu-item-link">Previewing<a href="#previewing" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f3e969b7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f3e969b7"><a href="#previewing-textile" class="menu-item-link">Textile</a></li><li id="menu-item-36989d4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-36989d4"><a href="#previewing-plain-text" class="menu-item-link">Plain Text</a></li></ul></a></li><li id="menu-item-1b9abae2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1b9abae2 menu-item-has-children"><a href="#revisions" class="menu-item-link">Revisions<a href="#revisions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3a931f66" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3a931f66"><a href="#revisions-revision" class="menu-item-link">Revision</a></li></ul></a></li><li id="menu-item-fe65aa42" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fe65aa42 menu-item-has-children"><a href="#root" class="menu-item-link">Root<a href="#root" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-779906c8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-779906c8"><a href="#root-root" class="menu-item-link">Root</a></li></ul></a></li><li id="menu-item-06e7a813" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-06e7a813 menu-item-has-children"><a href="#schemas" class="menu-item-link">Schemas<a href="#schemas" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-cfe0a39e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cfe0a39e"><a href="#schemas-example-schema" class="menu-item-link">Example Schema</a></li></ul></a></li><li id="menu-item-e5cc5a9d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e5cc5a9d menu-item-has-children"><a href="#statuses" class="menu-item-link">Statuses<a href="#statuses" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e041d6b1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e041d6b1"><a href="#statuses-statuses" class="menu-item-link">Statuses</a></li><li id="menu-item-3fb3d1b6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3fb3d1b6"><a href="#statuses-status" class="menu-item-link">Status</a></li></ul></a></li><li id="menu-item-065adcc1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-065adcc1 menu-item-has-children"><a href="#string-objects" class="menu-item-link">String Objects<a href="#string-objects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6fdd9175" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6fdd9175"><a href="#string-objects-string-object" class="menu-item-link">String Object</a></li></ul></a></li><li id="menu-item-af82f584" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-af82f584 menu-item-has-children"><a href="#types" class="menu-item-link">Types<a href="#types" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-ad724531" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ad724531"><a href="#types-types" class="menu-item-link">Types</a></li><li id="menu-item-87217b98" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-87217b98"><a href="#types-types-by-project" class="menu-item-link">Types by Project</a></li><li id="menu-item-8add586" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8add586"><a href="#types-type" class="menu-item-link">Type</a></li></ul></a></li><li id="menu-item-0e6a8518" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0e6a8518 menu-item-has-children"><a href="#userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-02e248b2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-02e248b2"><a href="#userpreferences-userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences-userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-c9a73c16" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c9a73c16"><a href="#userpreferences-userpreferences-get" class="menu-item-link">Show my preferences</a></li><li id="menu-item-ba142e08" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ba142e08"><a href="#userpreferences-userpreferences-patch" class="menu-item-link">Update UserPreferences</a></li></ul></a></li></ul></a></li><li id="menu-item-45cd832d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-45cd832d menu-item-has-children"><a href="#users" class="menu-item-link">Users<a href="#users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-818f376c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-818f376c"><a href="#users-user" class="menu-item-link">User<a href="#users-user" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d3a5c54b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d3a5c54b"><a href="#users-user-get" class="menu-item-link">View user</a></li><li id="menu-item-18a43b06" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-18a43b06"><a href="#users-user-patch" class="menu-item-link">Update user</a></li><li id="menu-item-0d2704c1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0d2704c1"><a href="#users-user-delete" class="menu-item-link">Delete user</a></li></ul></a></li><li id="menu-item-d3a6a475" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d3a6a475"><a href="#users-user-account-locking" class="menu-item-link">User Account Locking<a href="#users-user-account-locking" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3f9046ab" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3f9046ab"><a href="#users-user-account-locking-post" class="menu-item-link">Set Lock</a></li><li id="menu-item-409388e8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-409388e8"><a href="#users-user-account-locking-delete" class="menu-item-link">Remove Lock</a></li></ul></a></li><li id="menu-item-4e6ccf05" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4e6ccf05"><a href="#users-user-schema" class="menu-item-link">User Schema</a></li><li id="menu-item-bced0647" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bced0647"><a href="#users-user-edit-form" class="menu-item-link">User Edit Form</a></li><li id="menu-item-66aaf7e7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-66aaf7e7"><a href="#users-users" class="menu-item-link">Users<a href="#users-users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-4117a149" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4117a149"><a href="#users-users-get" class="menu-item-link">List Users</a></li><li id="menu-item-2757c2c8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2757c2c8"><a href="#users-users-post" class="menu-item-link">Create User</a></li></ul></a></li><li id="menu-item-1b1dbf03" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1b1dbf03"><a href="#users-user-create-form" class="menu-item-link">User Create Form</a></li></ul></a></li><li id="menu-item-5bf5761b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5bf5761b menu-item-has-children"><a href="#versions" class="menu-item-link">Versions<a href="#versions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d2640cd3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d2640cd3"><a href="#versions-versions-by-project" class="menu-item-link">Versions by Project</a></li><li id="menu-item-8d87352b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8d87352b"><a href="#versions-version" class="menu-item-link">Version</a></li></ul></a></li><li id="menu-item-4bd005df" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4bd005df menu-item-has-children"><a href="#work-packages" class="menu-item-link">Work Packages<a href="#work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-9146f675" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9146f675"><a href="#work-packages-work-package" class="menu-item-link">Work Package<a href="#work-packages-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-8aa9e94c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8aa9e94c"><a href="#work-packages-work-package-get" class="menu-item-link">View Work Package</a></li><li id="menu-item-918afb32" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-918afb32"><a href="#work-packages-work-package-patch" class="menu-item-link">Edit Work Package</a></li><li id="menu-item-91f3ab1c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-91f3ab1c"><a href="#work-packages-work-package-delete" class="menu-item-link">Delete Work Package</a></li></ul></a></li><li id="menu-item-daa77c2f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-daa77c2f"><a href="#work-packages-work-package-schema" class="menu-item-link">Work Package Schema</a></li><li id="menu-item-52f8bfcd" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-52f8bfcd"><a href="#work-packages-work-package-edit-form" class="menu-item-link">Work Package Edit Form</a></li><li id="menu-item-74ef4122" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-74ef4122"><a href="#work-packages-work-packages" class="menu-item-link">Work Packages<a href="#work-packages-work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-aeb14324" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-aeb14324"><a href="#work-packages-work-packages-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-68abee82" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-68abee82"><a href="#work-packages-work-packages-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-46801931" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-46801931"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-53af6ba4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-53af6ba4"><a href="#work-packages-work-packages-by-project" class="menu-item-link">Work Packages by Project<a href="#work-packages-work-packages-by-project" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-51f7747a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-51f7747a"><a href="#work-packages-work-packages-by-project-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-a6eca2c2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a6eca2c2"><a href="#work-packages-work-packages-by-project-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-ca462346" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ca462346"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-3d103386" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3d103386"><a href="#work-packages-relations" class="menu-item-link">Relations<a href="#work-packages-relations" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-cb7695dc" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cb7695dc"><a href="#work-packages-relations-post" class="menu-item-link">Create Relation</a></li><li id="menu-item-e2bc544c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e2bc544c"><a href="#work-packages-relations-get" class="menu-item-link">List relations</a></li></ul></a></li><li id="menu-item-45f6a7b5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-45f6a7b5"><a href="#work-packages-work-package-relation-form" class="menu-item-link">Work Package Relation Form</a></li><li id="menu-item-fb6ec8ca" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fb6ec8ca"><a href="#work-packages-watchers" class="menu-item-link">Watchers<a href="#work-packages-watchers" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-da2f5974" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-da2f5974"><a href="#work-packages-watchers-get" class="menu-item-link">List watchers</a></li><li id="menu-item-fae961d8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fae961d8"><a href="#work-packages-watchers-post" class="menu-item-link">Add watcher</a></li></ul></a></li><li id="menu-item-ee1ed40e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ee1ed40e"><a href="#work-packages-remove-watcher" class="menu-item-link">Remove Watcher</a></li><li id="menu-item-d15310ef" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d15310ef"><a href="#work-packages-available-relation-candidates" class="menu-item-link">Available relation candidates</a></li><li id="menu-item-97d7d9a6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-97d7d9a6"><a href="#work-packages-available-watchers" class="menu-item-link">Available Watchers</a></li><li id="menu-item-63d4aea3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-63d4aea3"><a href="#work-packages-available-projects" class="menu-item-link">Available Projects</a></li><li id="menu-item-c9aacba1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c9aacba1"><a href="#work-packages-revisions" class="menu-item-link">Revisions</a></li><li id="menu-item-ab3f778c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ab3f778c"><a href="#work-packages-work-package-activities" class="menu-item-link">Work Package activities<a href="#work-packages-work-package-activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-94193b4a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-94193b4a"><a href="#work-packages-work-package-activities-get" class="menu-item-link">List work package activities</a></li><li id="menu-item-3c3834ca" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3c3834ca"><a href="#work-packages-work-package-activities-post" class="menu-item-link">Comment work package</a></li></ul></a></li><li id="menu-item-8283684c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8283684c"><a href="#work-packages-available-assignees" class="menu-item-link">Available Assignees</a></li><li id="menu-item-d96da4f3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d96da4f3"><a href="#work-packages-available-responsibles" class="menu-item-link">Available Responsibles</a></li></ul></a></li></ul></div><div class="col-md-8"><div id="op-api-content"><div><header><div class="page-header"><h1 id="top">OpenProject API v3</h1></div></header><div class="description"></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="general">General&nbsp;<a href="#general"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>This is the current <strong>DRAFT</strong> of the specification for OpenProject APIv3.</p>
 <p>Please note that everything in this document might be <strong>subject to change</strong> in a future version of OpenProject. We intend to keep this specification
 as accurate as possible, however as long as the APIv3 is not in a stable state it is possible that there are intermediary differences between
 this specification and the real implementation. While we try to only specify what we want to keep, it might also happen that parts of this
@@ -711,150 +711,7 @@ You can pass any column name as returned by the <a href="#queries">queries</a> e
             <span class="hljs-string">"i"</span>: <span class="hljs-number">15</span>
         }</span>
     }</span>
-}</span></code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="root">Root&nbsp;<a href="#root"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>The root resource contains links to available resources in the API. By following these links
-a client should be able to discover further resources in the API.</p>
-<p><em>Note: Currently there is no list action for projects available.</em>
-<em>A client will therefore have to know links to projects and can’t (yet) discover them.</em></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Link</th>
-<th>Description</th>
-<th>Type</th>
-<th>Nullable</th>
-<th>Supported operations</th>
-<th>Condition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">configuration</td>
-<td>The configuration of this OpenProject instance</td>
-<td>Configuration</td>
-<td></td>
-<td>READ</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:center">user</td>
-<td>The user currently logged-in</td>
-<td>User</td>
-<td></td>
-<td>READ</td>
-<td>logged in</td>
-</tr>
-<tr>
-<td style="text-align:center">userPreferences</td>
-<td>The preferences of the logged-in user</td>
-<td>UserPreference</td>
-<td></td>
-<td>READ</td>
-<td>logged in</td>
-</tr>
-<tr>
-<td style="text-align:center">priorities</td>
-<td>List of available priorities</td>
-<td>Collection</td>
-<td></td>
-<td>READ</td>
-<td><strong>Permission</strong> View work packages in any project</td>
-</tr>
-<tr>
-<td style="text-align:center">statuses</td>
-<td>List of available work package statuses</td>
-<td>Collection</td>
-<td></td>
-<td>READ</td>
-<td><strong>Permission</strong> View work packages in any project</td>
-</tr>
-<tr>
-<td style="text-align:center">types</td>
-<td>List of available work package types</td>
-<td>Collection</td>
-<td></td>
-<td>READ</td>
-<td><strong>Permission</strong> View work packages in any project</td>
-</tr>
-<tr>
-<td style="text-align:center">workPackages</td>
-<td>List of all work packages</td>
-<td>Collection</td>
-<td></td>
-<td>READ</td>
-<td><strong>Permission</strong> View work packages in any project</td>
-</tr>
-<tr>
-<td style="text-align:center">users</td>
-<td>List of all users</td>
-<td>Collection</td>
-<td></td>
-<td>READ</td>
-<td><strong>Permission</strong> Administrator</td>
-</tr>
-</tbody>
-</table>
-<h2 id="header-local-properties-23">Local Properties <a class="permalink" href="#header-local-properties-23" aria-hidden="true">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Property</th>
-<th>Description</th>
-<th>Type</th>
-<th>Condition</th>
-<th>Supported operations</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">instanceName</td>
-<td>The name of the OpenProject instance</td>
-<td>String</td>
-<td></td>
-<td>READ</td>
-</tr>
-<tr>
-<td style="text-align:center">coreVersion</td>
-<td>The OpenProject core version number for the instance</td>
-<td>String</td>
-<td></td>
-<td>READ</td>
-</tr>
-</tbody>
-</table>
-<h4 id="root-root">Root&nbsp;<a href="#root-root"><i class="fa fa-link"></i></a></h4><section id="root-root-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View root</span></div><div style="float:left"><a href="#root-root-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#3169feedf87feea43e8b7ea73993bb6e" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3169feedf87feea43e8b7ea73993bb6e" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-    "<span class="hljs-attribute">_links</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">configuration</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/configuration"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard"</span>
-        </span>};
-        <span class="hljs-string">"userPreferences"</span> : {
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/my_preferences"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">priorities</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/priorities"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">relations</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">statuses</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/statuses"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">types</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/types"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">workPackages</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages"</span>
-        </span>}</span>,
-        "<span class="hljs-attribute">users</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/users"</span>
-        </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">instanceName</span>" : <span class="hljs-value"><span class="hljs-string">"My own OpenProject"</span></span>,
-    "<span class="hljs-attribute">coreVersion</span>" : <span class="hljs-value"><span class="hljs-string">"6.1.0"</span>
-</span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="activities">Activities&nbsp;<a href="#activities"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-local-properties-24">Local Properties <a class="permalink" href="#header-local-properties-24" aria-hidden="true">¶</a></h2>
+}</span></code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="activities">Activities&nbsp;<a href="#activities"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-local-properties-23">Local Properties <a class="permalink" href="#header-local-properties-23" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1050,7 +907,7 @@ container (e.g. a work package or a board message).</p>
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-25">Local Properties <a class="permalink" href="#header-local-properties-25" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-24">Local Properties <a class="permalink" href="#header-local-properties-24" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1391,7 +1248,7 @@ Reasons are:</p>
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-26">Local Properties <a class="permalink" href="#header-local-properties-26" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-25">Local Properties <a class="permalink" href="#header-local-properties-25" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1525,7 +1382,7 @@ Note that there is no 1:1 relationship between this endpoint and the settings yo
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-27">Local Properties <a class="permalink" href="#header-local-properties-27" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-26">Local Properties <a class="permalink" href="#header-local-properties-26" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1798,35 +1655,6 @@ It <strong>does not occur</strong> for requests containing undefined properties 
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:UpdateConflict"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The resource you are about to edit was changed in the meantime."</span>
-</span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="previewing">Previewing&nbsp;<a href="#previewing"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>Throughout OpenProject user input for many properties can be formatted (e.g. using <em>Textile</em>).
-Using the appropriate rendering endpoint it is possible to render custom formatted inputs into HTML and thus
-receive a preview of the rendered text.</p>
-<p>The request to a rendering endpoint must always have a MIME-Type of <code>text/plain</code>.
-The request body is the actual string that shall be rendered as HTML string.</p>
-<h4 id="previewing-textile">Textile&nbsp;<a href="#previewing-textile"><i class="fa fa-link"></i></a></h4><section id="previewing-textile-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Preview Textile document</span></div><div style="float:left"><a href="#previewing-textile-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/render/textile{?context}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>context</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>/api/v3/work_packages/42</span></span><p>API-Link to the context in which the rendering occurs, for example a specific work package.</p>
-<p>If left out only context-agnostic rendering takes place.
-Please note that OpenProject features textile-extensions that can only work given a context (e.g. display attached images).</p>
-<p><strong>Supported contexts:</strong></p>
-<ul>
-<li><code>/api/v3/work_packages/{id}</code> - an existing work package</li>
-</ul>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#6e75ffd3d94f7c17c7aaf059f0bb6cbc" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="6e75ffd3d94f7c17c7aaf059f0bb6cbc" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/plain</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-constant">Hello </span>world! <span class="hljs-string">"This"</span><span class="hljs-symbol">:http</span><span class="hljs-symbol">://example</span>.com *is* textile!</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#f7b33468d3b90abe0d2eef8f794b4099" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="f7b33468d3b90abe0d2eef8f794b4099" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/html</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Hello world! <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://example.com"</span>&gt;</span>This<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>is<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> textile!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#1b1edb415dff35224c59302b7d253671" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="1b1edb415dff35224c59302b7d253671" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the context passed by the client is not valid (e.g. unknown).</p>
-<p>Note that this response will also occur when the requesting user
-is not allowed to see the context resource (e.g. limited work package visibility).</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidRenderContext"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Could not render textile string in the given context."</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>415</code></strong><a data-toggle="collapse" data-target="#ddf1efdcdb9aeb9e2430ea6a2bf14152" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="ddf1efdcdb9aeb9e2430ea6a2bf14152" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the Content-Type indicated in the request is not <code>text/plain</code>.</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:TypeNotSupported"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Expected Content-Type to be 'text/plain' but got 'application/json'."</span>
-</span>}</code></pre></li></ul></section><h4 id="previewing-plain-text">Plain Text&nbsp;<a href="#previewing-plain-text"><i class="fa fa-link"></i></a></h4><section id="previewing-plain-text-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Preview plain document</span></div><div style="float:left"><a href="#previewing-plain-text-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/render/plain</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#09d500fc23a9cc7ce31f855ff8fb2cf3" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="09d500fc23a9cc7ce31f855ff8fb2cf3" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/plain</span><br></code></pre><h5>Body</h5><pre><code>Hello world! This *<span class="hljs-keyword">is</span>* plain <span class="hljs-type">text</span>!</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#3c90ebbb70816ae81a3ed9da8fdf2f3e" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3c90ebbb70816ae81a3ed9da8fdf2f3e" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/html</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-variable">&lt;p&gt;</span>Hello world! This <span class="hljs-keyword">*</span>is<span class="hljs-keyword">*</span> plain text!<span class="hljs-variable">&lt;/p&gt;</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>415</code></strong><a data-toggle="collapse" data-target="#ba88448ae1b45c0bb4e4aedbd204e3b8" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="ba88448ae1b45c0bb4e4aedbd204e3b8" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the Content-Type indicated in the request is not <code>text/plain</code>.</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:TypeNotSupported"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Expected Content-Type to be 'text/plain' but got 'application/json'."</span>
 </span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="priorities">Priorities&nbsp;<a href="#priorities"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-linked-properties-19">Linked Properties <a class="permalink" href="#header-linked-properties-19" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
@@ -1848,7 +1676,7 @@ is not allowed to see the context resource (e.g. limited work package visibility
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-28">Local Properties <a class="permalink" href="#header-local-properties-28" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-27">Local Properties <a class="permalink" href="#header-local-properties-27" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2063,7 +1891,7 @@ is not allowed to see the context resource (e.g. limited work package visibility
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-29">Local Properties <a class="permalink" href="#header-local-properties-29" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-28">Local Properties <a class="permalink" href="#header-local-properties-28" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2334,7 +2162,7 @@ project.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-30">Local Properties <a class="permalink" href="#header-local-properties-30" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-29">Local Properties <a class="permalink" href="#header-local-properties-29" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2701,7 +2529,7 @@ project.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-31">Local Properties <a class="permalink" href="#header-local-properties-31" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-30">Local Properties <a class="permalink" href="#header-local-properties-30" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -2986,7 +2814,7 @@ applicable for the other relations.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation type does not exist."</span>
-</span>}</code></pre></li></ul></section><h4 id="relations-relations">Relations&nbsp;<a href="#relations-relations"><i class="fa fa-link"></i></a></h4><section id="relations-relations-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">List Relations</span></div><div style="float:left"><a href="#relations-relations-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/relations?offset,pageSize,filters,sortBy</code></div></div><div class="panel-body"><p>Lists all relations according to the given (optional, logically conjunctive) filters and ordered by ID.
+</span>}</code></pre></li></ul></section><h4 id="relations-relations">Relations&nbsp;<a href="#relations-relations"><i class="fa fa-link"></i></a></h4><section id="relations-relations-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">List Relations</span></div><div style="float:left"><a href="#relations-relations-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/relations{?offset,pageSize,filters,sortBy}</code></div></div><div class="panel-body"><p>Lists all relations according to the given (optional, logically conjunctive) filters and ordered by ID.
 The response only includes relations between work packages which the user is allowed to see.</p>
 </div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>0</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>5</span></span><p>Page number inside the requested collection</p>
 </dd><dt>pageSize</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>20</span></span><p>Number of elements to display per page</p>
@@ -3159,6 +2987,35 @@ The returned form will be pre-filled with default values for every property, if 
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation does not exist."</span>
+</span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="previewing">Previewing&nbsp;<a href="#previewing"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>Throughout OpenProject user input for many properties can be formatted (e.g. using <em>Textile</em>).
+Using the appropriate rendering endpoint it is possible to render custom formatted inputs into HTML and thus
+receive a preview of the rendered text.</p>
+<p>The request to a rendering endpoint must always have a MIME-Type of <code>text/plain</code>.
+The request body is the actual string that shall be rendered as HTML string.</p>
+<h4 id="previewing-textile">Textile&nbsp;<a href="#previewing-textile"><i class="fa fa-link"></i></a></h4><section id="previewing-textile-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Preview Textile document</span></div><div style="float:left"><a href="#previewing-textile-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/render/textile{?context}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>context</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>/api/v3/work_packages/42</span></span><p>API-Link to the context in which the rendering occurs, for example a specific work package.</p>
+<p>If left out only context-agnostic rendering takes place.
+Please note that OpenProject features textile-extensions that can only work given a context (e.g. display attached images).</p>
+<p><strong>Supported contexts:</strong></p>
+<ul>
+<li><code>/api/v3/work_packages/{id}</code> - an existing work package</li>
+</ul>
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#6e75ffd3d94f7c17c7aaf059f0bb6cbc" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="6e75ffd3d94f7c17c7aaf059f0bb6cbc" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/plain</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-constant">Hello </span>world! <span class="hljs-string">"This"</span><span class="hljs-symbol">:http</span><span class="hljs-symbol">://example</span>.com *is* textile!</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#f7b33468d3b90abe0d2eef8f794b4099" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="f7b33468d3b90abe0d2eef8f794b4099" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/html</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Hello world! <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://example.com"</span>&gt;</span>This<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>is<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> textile!<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#1b1edb415dff35224c59302b7d253671" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="1b1edb415dff35224c59302b7d253671" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the context passed by the client is not valid (e.g. unknown).</p>
+<p>Note that this response will also occur when the requesting user
+is not allowed to see the context resource (e.g. limited work package visibility).</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidRenderContext"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Could not render textile string in the given context."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>415</code></strong><a data-toggle="collapse" data-target="#ddf1efdcdb9aeb9e2430ea6a2bf14152" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="ddf1efdcdb9aeb9e2430ea6a2bf14152" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the Content-Type indicated in the request is not <code>text/plain</code>.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:TypeNotSupported"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Expected Content-Type to be 'text/plain' but got 'application/json'."</span>
+</span>}</code></pre></li></ul></section><h4 id="previewing-plain-text">Plain Text&nbsp;<a href="#previewing-plain-text"><i class="fa fa-link"></i></a></h4><section id="previewing-plain-text-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Preview plain document</span></div><div style="float:left"><a href="#previewing-plain-text-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/render/plain</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#09d500fc23a9cc7ce31f855ff8fb2cf3" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="09d500fc23a9cc7ce31f855ff8fb2cf3" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/plain</span><br></code></pre><h5>Body</h5><pre><code>Hello world! This *<span class="hljs-keyword">is</span>* plain <span class="hljs-type">text</span>!</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#3c90ebbb70816ae81a3ed9da8fdf2f3e" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3c90ebbb70816ae81a3ed9da8fdf2f3e" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/html</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-variable">&lt;p&gt;</span>Hello world! This <span class="hljs-keyword">*</span>is<span class="hljs-keyword">*</span> plain text!<span class="hljs-variable">&lt;/p&gt;</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>415</code></strong><a data-toggle="collapse" data-target="#ba88448ae1b45c0bb4e4aedbd204e3b8" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="ba88448ae1b45c0bb4e4aedbd204e3b8" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the Content-Type indicated in the request is not <code>text/plain</code>.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:TypeNotSupported"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Expected Content-Type to be 'text/plain' but got 'application/json'."</span>
 </span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="revisions">Revisions&nbsp;<a href="#revisions"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>Revisions are sets of updates to files in the context of repositories linked in OpenProject.</p>
 <h2 id="header-linked-properties-22">Linked Properties <a class="permalink" href="#header-linked-properties-22" aria-hidden="true">¶</a></h2>
 <table>
@@ -3202,7 +3059,7 @@ The returned form will be pre-filled with default values for every property, if 
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-32">Local Properties <a class="permalink" href="#header-local-properties-32" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-31">Local Properties <a class="permalink" href="#header-local-properties-31" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -3294,6 +3151,149 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified revision does not exist."</span>
+</span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="root">Root&nbsp;<a href="#root"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>The root resource contains links to available resources in the API. By following these links
+a client should be able to discover further resources in the API.</p>
+<p><em>Note: Currently there is no list action for projects available.</em>
+<em>A client will therefore have to know links to projects and can’t (yet) discover them.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Link</th>
+<th>Description</th>
+<th>Type</th>
+<th>Nullable</th>
+<th>Supported operations</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">configuration</td>
+<td>The configuration of this OpenProject instance</td>
+<td>Configuration</td>
+<td></td>
+<td>READ</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">user</td>
+<td>The user currently logged-in</td>
+<td>User</td>
+<td></td>
+<td>READ</td>
+<td>logged in</td>
+</tr>
+<tr>
+<td style="text-align:center">userPreferences</td>
+<td>The preferences of the logged-in user</td>
+<td>UserPreference</td>
+<td></td>
+<td>READ</td>
+<td>logged in</td>
+</tr>
+<tr>
+<td style="text-align:center">priorities</td>
+<td>List of available priorities</td>
+<td>Collection</td>
+<td></td>
+<td>READ</td>
+<td><strong>Permission</strong> View work packages in any project</td>
+</tr>
+<tr>
+<td style="text-align:center">statuses</td>
+<td>List of available work package statuses</td>
+<td>Collection</td>
+<td></td>
+<td>READ</td>
+<td><strong>Permission</strong> View work packages in any project</td>
+</tr>
+<tr>
+<td style="text-align:center">types</td>
+<td>List of available work package types</td>
+<td>Collection</td>
+<td></td>
+<td>READ</td>
+<td><strong>Permission</strong> View work packages in any project</td>
+</tr>
+<tr>
+<td style="text-align:center">workPackages</td>
+<td>List of all work packages</td>
+<td>Collection</td>
+<td></td>
+<td>READ</td>
+<td><strong>Permission</strong> View work packages in any project</td>
+</tr>
+<tr>
+<td style="text-align:center">users</td>
+<td>List of all users</td>
+<td>Collection</td>
+<td></td>
+<td>READ</td>
+<td><strong>Permission</strong> Administrator</td>
+</tr>
+</tbody>
+</table>
+<h2 id="header-local-properties-32">Local Properties <a class="permalink" href="#header-local-properties-32" aria-hidden="true">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Condition</th>
+<th>Supported operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">instanceName</td>
+<td>The name of the OpenProject instance</td>
+<td>String</td>
+<td></td>
+<td>READ</td>
+</tr>
+<tr>
+<td style="text-align:center">coreVersion</td>
+<td>The OpenProject core version number for the instance</td>
+<td>String</td>
+<td></td>
+<td>READ</td>
+</tr>
+</tbody>
+</table>
+<h4 id="root-root">Root&nbsp;<a href="#root-root"><i class="fa fa-link"></i></a></h4><section id="root-root-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View root</span></div><div style="float:left"><a href="#root-root-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#3169feedf87feea43e8b7ea73993bb6e" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="3169feedf87feea43e8b7ea73993bb6e" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">_links</span>" : <span class="hljs-value">{
+        "<span class="hljs-attribute">configuration</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/configuration"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard"</span>
+        </span>};
+        <span class="hljs-string">"userPreferences"</span> : {
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/my_preferences"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">priorities</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/priorities"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">relations</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/relations"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">statuses</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/statuses"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">types</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/types"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">workPackages</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">users</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/users"</span>
+        </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">instanceName</span>" : <span class="hljs-value"><span class="hljs-string">"My own OpenProject"</span></span>,
+    "<span class="hljs-attribute">coreVersion</span>" : <span class="hljs-value"><span class="hljs-string">"6.1.0"</span>
 </span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="schemas">Schemas&nbsp;<a href="#schemas"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-linked-properties-23">Linked Properties <a class="permalink" href="#header-linked-properties-23" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
@@ -3941,6 +3941,157 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to see this type."</span>
+</span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="userpreferences">UserPreferences&nbsp;<a href="#userpreferences"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-linked-properties-28">Linked Properties <a class="permalink" href="#header-linked-properties-28" aria-hidden="true">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Link</th>
+<th>Description</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Supported operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">self</td>
+<td>This UserPreferences</td>
+<td>UserPreferences</td>
+<td>not null</td>
+<td>READ</td>
+</tr>
+<tr>
+<td style="text-align:center">user</td>
+<td>The user that this preference belongs to</td>
+<td>User</td>
+<td>not null</td>
+<td>READ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="header-local-properties-37">Local Properties <a class="permalink" href="#header-local-properties-37" aria-hidden="true">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Supported operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">hideMail</td>
+<td>Hide mail address from other users</td>
+<td>Boolean</td>
+<td></td>
+<td>READ / WRITE</td>
+</tr>
+<tr>
+<td style="text-align:center">timeZone</td>
+<td>Current selected time zone</td>
+<td>String</td>
+<td></td>
+<td>READ / WRITE</td>
+</tr>
+<tr>
+<td style="text-align:center">theme</td>
+<td>Current selected theme</td>
+<td>String</td>
+<td></td>
+<td>READ / WRITE</td>
+</tr>
+<tr>
+<td style="text-align:center">commentSortDescending</td>
+<td>Sort comments in descending order</td>
+<td>Boolean</td>
+<td></td>
+<td>READ / WRITE</td>
+</tr>
+<tr>
+<td style="text-align:center">warnOnLeavingUnsaved</td>
+<td>Issue warning when leaving a page with unsaved text</td>
+<td>Boolean</td>
+<td></td>
+<td>READ / WRITE</td>
+</tr>
+<tr>
+<td style="text-align:center">accessibilityMode</td>
+<td>Enable accessibility mode</td>
+<td>Boolean</td>
+<td></td>
+<td>READ / WRITE</td>
+</tr>
+</tbody>
+</table>
+<h4 id="userpreferences-userpreferences">UserPreferences&nbsp;<a href="#userpreferences-userpreferences"><i class="fa fa-link"></i></a></h4><section id="userpreferences-userpreferences-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Show my preferences</span></div><div style="float:left"><a href="#userpreferences-userpreferences-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/my_preferences</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#60050881f65be0ad72848c81bf131c08" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="60050881f65be0ad72848c81bf131c08" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">_type</span>" : <span class="hljs-value"><span class="hljs-string">"UserPreferences"</span></span>,
+    "<span class="hljs-attribute">_links</span>" : <span class="hljs-value">{
+        "<span class="hljs-attribute">self</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/my_preferences"</span></span>,
+        }</span>,
+        "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard"</span>
+        </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">hideMail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"Europe/Berlin"</span></span>,
+    "<span class="hljs-attribute">theme</span>" : <span class="hljs-value"><span class="hljs-string">"OpenProject"</span></span>,
+    "<span class="hljs-attribute">commentSortDescending</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">warnOnLeavingUnsaved</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">accessibilityMode</span>" : <span class="hljs-value"><span class="hljs-literal">false</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>401</code></strong><a data-toggle="collapse" data-target="#91181374ff051a1c705ad69da9f8d91f" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="91181374ff051a1c705ad69da9f8d91f" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if no user is currently authenticated</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:Unauthenticated"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You need to be authenticated to access this resource."</span>
+</span>}</code></pre></li></ul></section><section id="userpreferences-userpreferences-patch" class="panel panel-warning"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Update UserPreferences</span></div><div style="float:left"><a href="#userpreferences-userpreferences-patch" class="btn btn-xs btn-warning">PATCH</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/my_preferences</code></div></div><div class="panel-body"><p>When calling this endpoint the client provides a single object, containing the properties that it wants to change, in the body.</p>
+</div><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#55ac4cbe70491903082f8374a8eb1013" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="55ac4cbe70491903082f8374a8eb1013" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">accessibilityMode</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">timeZone</span>": <span class="hljs-value"><span class="hljs-string">"Europe/Paris"</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#2fe2c873ab46fb2925eb597d1f3259f9" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="2fe2c873ab46fb2925eb597d1f3259f9" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="hljs-attribute">_type</span>" : <span class="hljs-value"><span class="hljs-string">"UserPreferences"</span></span>,
+    "<span class="hljs-attribute">_links</span>" : <span class="hljs-value">{
+        "<span class="hljs-attribute">self</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/my_preferences"</span></span>,
+        }</span>,
+        "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard"</span>
+        </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">hideMail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"Europe/Berlin"</span></span>,
+    "<span class="hljs-attribute">theme</span>" : <span class="hljs-value"><span class="hljs-string">"OpenProject"</span></span>,
+    "<span class="hljs-attribute">commentSortDescending</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">warnOnLeavingUnsaved</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">accessibilityMode</span>" : <span class="hljs-value"><span class="hljs-literal">false</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#8d5863613b179833039459f5d3296fba" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="8d5863613b179833039459f5d3296fba" class="list-group-item panel-collapse collapse"><div class="description"><p>Occurs when the client did not send a valid JSON object in the request body.</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidRequestBody"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The request body was not a single JSON object."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>401</code></strong><a data-toggle="collapse" data-target="#d06e31a819f82d1366c5c895b5f333d3" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="d06e31a819f82d1366c5c895b5f333d3" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if no user is currently authenticated</p>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:Unauthenticated"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You need to be authenticated to access this resource."</span>
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>422</code></strong><a data-toggle="collapse" data-target="#7a44e81e8e4e6093d691a81b4c464637" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="7a44e81e8e4e6093d691a81b4c464637" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the update contains invalid properties.
+Reasons are:</p>
+<ul>
+<li>
+<p>Specifying an invalid type</p>
+</li>
+<li>
+<p>Using an unknown time zone</p>
+</li>
+</ul>
+</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
+  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:PropertyConstraintViolation"</span></span>,
+  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Time zone is not set to one of the allowed values."</span>
 </span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="users">Users&nbsp;<a href="#users"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-actions-10">Actions <a class="permalink" href="#header-actions-10" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
@@ -3983,7 +4134,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 </tr>
 </tbody>
 </table>
-<h2 id="header-linked-properties-28">Linked Properties <a class="permalink" href="#header-linked-properties-28" aria-hidden="true">¶</a></h2>
+<h2 id="header-linked-properties-29">Linked Properties <a class="permalink" href="#header-linked-properties-29" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4011,7 +4162,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 </tr>
 </tbody>
 </table>
-<h2 id="header-local-properties-37">Local Properties <a class="permalink" href="#header-local-properties-37" aria-hidden="true">¶</a></h2>
+<h2 id="header-local-properties-38">Local Properties <a class="permalink" href="#header-local-properties-38" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -4950,157 +5101,6 @@ The returned form will be pre-filled with default values for every property, if 
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to create new users."</span>
-</span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="userpreferences">UserPreferences&nbsp;<a href="#userpreferences"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-linked-properties-29">Linked Properties <a class="permalink" href="#header-linked-properties-29" aria-hidden="true">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Link</th>
-<th>Description</th>
-<th>Type</th>
-<th>Constraints</th>
-<th>Supported operations</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">self</td>
-<td>This UserPreferences</td>
-<td>UserPreferences</td>
-<td>not null</td>
-<td>READ</td>
-</tr>
-<tr>
-<td style="text-align:center">user</td>
-<td>The user that this preference belongs to</td>
-<td>User</td>
-<td>not null</td>
-<td>READ</td>
-</tr>
-</tbody>
-</table>
-<h2 id="header-local-properties-38">Local Properties <a class="permalink" href="#header-local-properties-38" aria-hidden="true">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Property</th>
-<th>Description</th>
-<th>Type</th>
-<th>Constraints</th>
-<th>Supported operations</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">hideMail</td>
-<td>Hide mail address from other users</td>
-<td>Boolean</td>
-<td></td>
-<td>READ / WRITE</td>
-</tr>
-<tr>
-<td style="text-align:center">timeZone</td>
-<td>Current selected time zone</td>
-<td>String</td>
-<td></td>
-<td>READ / WRITE</td>
-</tr>
-<tr>
-<td style="text-align:center">theme</td>
-<td>Current selected theme</td>
-<td>String</td>
-<td></td>
-<td>READ / WRITE</td>
-</tr>
-<tr>
-<td style="text-align:center">commentSortDescending</td>
-<td>Sort comments in descending order</td>
-<td>Boolean</td>
-<td></td>
-<td>READ / WRITE</td>
-</tr>
-<tr>
-<td style="text-align:center">warnOnLeavingUnsaved</td>
-<td>Issue warning when leaving a page with unsaved text</td>
-<td>Boolean</td>
-<td></td>
-<td>READ / WRITE</td>
-</tr>
-<tr>
-<td style="text-align:center">accessibilityMode</td>
-<td>Enable accessibility mode</td>
-<td>Boolean</td>
-<td></td>
-<td>READ / WRITE</td>
-</tr>
-</tbody>
-</table>
-<h4 id="userpreferences-userpreferences">UserPreferences&nbsp;<a href="#userpreferences-userpreferences"><i class="fa fa-link"></i></a></h4><section id="userpreferences-userpreferences-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Show my preferences</span></div><div style="float:left"><a href="#userpreferences-userpreferences-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/my_preferences</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#60050881f65be0ad72848c81bf131c08" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="60050881f65be0ad72848c81bf131c08" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-    "<span class="hljs-attribute">_type</span>" : <span class="hljs-value"><span class="hljs-string">"UserPreferences"</span></span>,
-    "<span class="hljs-attribute">_links</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">self</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/my_preferences"</span></span>,
-        }</span>,
-        "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard"</span>
-        </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">hideMail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-    "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"Europe/Berlin"</span></span>,
-    "<span class="hljs-attribute">theme</span>" : <span class="hljs-value"><span class="hljs-string">"OpenProject"</span></span>,
-    "<span class="hljs-attribute">commentSortDescending</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">warnOnLeavingUnsaved</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">accessibilityMode</span>" : <span class="hljs-value"><span class="hljs-literal">false</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>401</code></strong><a data-toggle="collapse" data-target="#91181374ff051a1c705ad69da9f8d91f" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="91181374ff051a1c705ad69da9f8d91f" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if no user is currently authenticated</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:Unauthenticated"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You need to be authenticated to access this resource."</span>
-</span>}</code></pre></li></ul></section><section id="userpreferences-userpreferences-patch" class="panel panel-warning"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Update UserPreferences</span></div><div style="float:left"><a href="#userpreferences-userpreferences-patch" class="btn btn-xs btn-warning">PATCH</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/my_preferences</code></div></div><div class="panel-body"><p>When calling this endpoint the client provides a single object, containing the properties that it wants to change, in the body.</p>
-</div><ul class="list-group"><li class="list-group-item"><strong>Request</strong><a data-toggle="collapse" data-target="#55ac4cbe70491903082f8374a8eb1013" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="55ac4cbe70491903082f8374a8eb1013" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">accessibilityMode</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-  "<span class="hljs-attribute">timeZone</span>": <span class="hljs-value"><span class="hljs-string">"Europe/Paris"</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#2fe2c873ab46fb2925eb597d1f3259f9" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="2fe2c873ab46fb2925eb597d1f3259f9" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-    "<span class="hljs-attribute">_type</span>" : <span class="hljs-value"><span class="hljs-string">"UserPreferences"</span></span>,
-    "<span class="hljs-attribute">_links</span>" : <span class="hljs-value">{
-        "<span class="hljs-attribute">self</span>" : <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>" : <span class="hljs-value"><span class="hljs-string">"/api/v3/my_preferences"</span></span>,
-        }</span>,
-        "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
-            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"John Sheppard"</span>
-        </span>}
-    </span>}</span>,
-    "<span class="hljs-attribute">hideMail</span>" : <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-    "<span class="hljs-attribute">timeZone</span>" : <span class="hljs-value"><span class="hljs-string">"Europe/Berlin"</span></span>,
-    "<span class="hljs-attribute">theme</span>" : <span class="hljs-value"><span class="hljs-string">"OpenProject"</span></span>,
-    "<span class="hljs-attribute">commentSortDescending</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">warnOnLeavingUnsaved</span>" : <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">accessibilityMode</span>" : <span class="hljs-value"><span class="hljs-literal">false</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#8d5863613b179833039459f5d3296fba" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="8d5863613b179833039459f5d3296fba" class="list-group-item panel-collapse collapse"><div class="description"><p>Occurs when the client did not send a valid JSON object in the request body.</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:InvalidRequestBody"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The request body was not a single JSON object."</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>401</code></strong><a data-toggle="collapse" data-target="#d06e31a819f82d1366c5c895b5f333d3" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="d06e31a819f82d1366c5c895b5f333d3" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if no user is currently authenticated</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:Unauthenticated"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You need to be authenticated to access this resource."</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>422</code></strong><a data-toggle="collapse" data-target="#7a44e81e8e4e6093d691a81b4c464637" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="7a44e81e8e4e6093d691a81b4c464637" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the update contains invalid properties.
-Reasons are:</p>
-<ul>
-<li>
-<p>Specifying an invalid type</p>
-</li>
-<li>
-<p>Using an unknown time zone</p>
-</li>
-</ul>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:PropertyConstraintViolation"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"Time zone is not set to one of the allowed values."</span>
 </span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="versions">Versions&nbsp;<a href="#versions"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-linked-properties-30">Linked Properties <a class="permalink" href="#header-linked-properties-30" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
@@ -7538,7 +7538,7 @@ You can do this through the <code>filters</code> parameter which works just like
 <p>For convenience there is also a simple <code>query</code> parameter which is a shortcut for listing work packages
 whose ID or subject contain the given string.</p>
 <pre><code>?query=<span class="hljs-number">112</span></code></pre>
-<section id="work-packages-available-relation-candidates-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Available relation candidates</span></div><div style="float:left"><a href="#work-packages-available-relation-candidates-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/work_packages/{id}/available_relation_candidates?filters,query,offset,pageSize</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Page number inside the requested collection.</p>
+<section id="work-packages-available-relation-candidates-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Available relation candidates</span></div><div style="float:left"><a href="#work-packages-available-relation-candidates-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/work_packages/{id}/available_relation_candidates{?filters,query,offset,pageSize}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Page number inside the requested collection.</p>
 </dd><dt>pageSize</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Number of elements to display per page.</p>
 </dd><dt>filters</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[{ &quot;status_id&quot;: { &quot;operator&quot;: &quot;o&quot;, &quot;values&quot;: null }&quot; }]</span></span><p>JSON specifying filter conditions.
 Accepts the same format as returned by the <a href="#queries">queries</a> endpoint.</p>
