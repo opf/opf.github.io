@@ -1,7 +1,7 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>OpenProject API v3</title><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200"><style>/* Highlight.js Theme Tomorrow */
 .hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}
 
-</style></head><body><div class="container"><div class="row"><div class="col-md-3"><ul id="op-api-menu" class="menu"><li id="menu-item-d9a423c4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d9a423c4"><a href="#general" class="menu-item-link">General</a></li><li id="menu-item-134e3694" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-134e3694"><a href="#basic-objects" class="menu-item-link">Basic Objects</a></li><li id="menu-item-2f3db6e1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2f3db6e1 menu-item-has-children"><a href="#collections" class="menu-item-link">Collections<a href="#collections" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d67fb112" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d67fb112"><a href="#collections-offset-based-pagination" class="menu-item-link">Offset based pagination</a></li><li id="menu-item-8c4a278b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8c4a278b"><a href="#collections-cursor-based-pagination" class="menu-item-link">Cursor based pagination</a></li><li id="menu-item-e9d8cbe6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e9d8cbe6"><a href="#collections-aggregations" class="menu-item-link">Aggregations</a></li></ul></a></li><li id="menu-item-a9f517a4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a9f517a4 menu-item-has-children"><a href="#activities" class="menu-item-link">Activities<a href="#activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-9a086549" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9a086549"><a href="#activities-activity" class="menu-item-link">Activity<a href="#activities-activity" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-c46ba847" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c46ba847"><a href="#activities-activity-get" class="menu-item-link">View activity</a></li><li id="menu-item-447d2e41" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-447d2e41"><a href="#activities-activity-patch" class="menu-item-link">Update activity</a></li></ul></a></li></ul></a></li><li id="menu-item-d521e796" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d521e796 menu-item-has-children"><a href="#attachments" class="menu-item-link">Attachments<a href="#attachments" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-fb99769d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fb99769d"><a href="#attachments-attachment" class="menu-item-link">Attachment<a href="#attachments-attachment" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-ff657908" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ff657908"><a href="#attachments-attachment-get" class="menu-item-link">View attachment</a></li><li id="menu-item-0e6b6731" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0e6b6731"><a href="#attachments-attachment-delete" class="menu-item-link">Delete attachment</a></li></ul></a></li><li id="menu-item-6ac1275f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6ac1275f"><a href="#attachments-attachments-by-work-package" class="menu-item-link">Attachments by work package<a href="#attachments-attachments-by-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-fe26d02d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fe26d02d"><a href="#attachments-attachments-by-work-package-get" class="menu-item-link">List attachments</a></li><li id="menu-item-f429c8aa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f429c8aa"><a href="#attachments-attachments-by-work-package-post" class="menu-item-link">Add attachment</a></li></ul></a></li></ul></a></li><li id="menu-item-29656328" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-29656328 menu-item-has-children"><a href="#categories" class="menu-item-link">Categories<a href="#categories" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f6599c9a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f6599c9a"><a href="#categories-categories-by-project" class="menu-item-link">Categories by Project</a></li><li id="menu-item-12431319" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-12431319"><a href="#categories-category" class="menu-item-link">Category</a></li></ul></a></li><li id="menu-item-c5133d98" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c5133d98 menu-item-has-children"><a href="#configuration" class="menu-item-link">Configuration<a href="#configuration" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f64ace1e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f64ace1e"><a href="#configuration-configuration" class="menu-item-link">Configuration</a></li></ul></a></li><li id="menu-item-0efc8d0c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0efc8d0c menu-item-has-children"><a href="#forms" class="menu-item-link">Forms<a href="#forms" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d6280e31" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d6280e31"><a href="#forms-example-form" class="menu-item-link">Example Form</a></li></ul></a></li><li id="menu-item-4155b1aa" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4155b1aa menu-item-has-children"><a href="#priorities" class="menu-item-link">Priorities<a href="#priorities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-8feb86bb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8feb86bb"><a href="#priorities-priorities" class="menu-item-link">Priorities</a></li><li id="menu-item-c742d6eb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c742d6eb"><a href="#priorities-priority" class="menu-item-link">Priority</a></li></ul></a></li><li id="menu-item-f622a263" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f622a263 menu-item-has-children"><a href="#projects" class="menu-item-link">Projects<a href="#projects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-e870c3d7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e870c3d7"><a href="#projects-project" class="menu-item-link">Project</a></li><li id="menu-item-67109ec9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-67109ec9"><a href="#projects-projects-by-version" class="menu-item-link">Projects by version</a></li><li id="menu-item-bddf9eea" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bddf9eea"><a href="#projects-work-package-columns" class="menu-item-link">Work Package Columns</a></li></ul></a></li><li id="menu-item-e73b278c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e73b278c menu-item-has-children"><a href="#queries" class="menu-item-link">Queries<a href="#queries" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-2f4b5211" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2f4b5211"><a href="#queries-query" class="menu-item-link">Query</a></li><li id="menu-item-f8e44f48" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f8e44f48"><a href="#queries-star-query" class="menu-item-link">Star Query</a></li><li id="menu-item-979332d3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-979332d3"><a href="#queries-unstar-query" class="menu-item-link">Unstar Query</a></li></ul></a></li><li id="menu-item-7918b544" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7918b544 menu-item-has-children"><a href="#relations" class="menu-item-link">Relations<a href="#relations" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-b45bb58f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b45bb58f"><a href="#relations-relation" class="menu-item-link">Relation<a href="#relations-relation" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-b53e4de7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b53e4de7"><a href="#relations-relation-get" class="menu-item-link">View Relation</a></li><li id="menu-item-10c74a2a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-10c74a2a"><a href="#relations-relation-patch" class="menu-item-link">Edit Relation</a></li><li id="menu-item-bef0372c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bef0372c"><a href="#relations-relation-delete" class="menu-item-link">Delete Relation</a></li></ul></a></li><li id="menu-item-ed9d8ae2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ed9d8ae2"><a href="#relations-relation-schema" class="menu-item-link">Relation schema</a></li><li id="menu-item-c8b935d1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c8b935d1"><a href="#relations-relation-schema-for-type" class="menu-item-link">Relation schema for type</a></li><li id="menu-item-9f59f111" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9f59f111"><a href="#relations-relations" class="menu-item-link">Relations</a></li><li id="menu-item-47b08e54" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-47b08e54"><a href="#relations-relation-edit-form" class="menu-item-link">Relation edit form</a></li></ul></a></li><li id="menu-item-261e287" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-261e287 menu-item-has-children"><a href="#previewing" class="menu-item-link">Previewing<a href="#previewing" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d75be63a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d75be63a"><a href="#previewing-textile" class="menu-item-link">Textile</a></li><li id="menu-item-e11b2499" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e11b2499"><a href="#previewing-plain-text" class="menu-item-link">Plain Text</a></li></ul></a></li><li id="menu-item-044694a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-044694a menu-item-has-children"><a href="#revisions" class="menu-item-link">Revisions<a href="#revisions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-474a0a45" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-474a0a45"><a href="#revisions-revision" class="menu-item-link">Revision</a></li></ul></a></li><li id="menu-item-8a3b5a24" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8a3b5a24 menu-item-has-children"><a href="#root" class="menu-item-link">Root<a href="#root" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d13b3e8f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d13b3e8f"><a href="#root-root" class="menu-item-link">Root</a></li></ul></a></li><li id="menu-item-cae54b8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cae54b8 menu-item-has-children"><a href="#schemas" class="menu-item-link">Schemas<a href="#schemas" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-9e1b1aca" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9e1b1aca"><a href="#schemas-example-schema" class="menu-item-link">Example Schema</a></li></ul></a></li><li id="menu-item-9dcdc771" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9dcdc771 menu-item-has-children"><a href="#statuses" class="menu-item-link">Statuses<a href="#statuses" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d1c26c75" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d1c26c75"><a href="#statuses-statuses" class="menu-item-link">Statuses</a></li><li id="menu-item-7481bc7e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7481bc7e"><a href="#statuses-status" class="menu-item-link">Status</a></li></ul></a></li><li id="menu-item-265d6cdc" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-265d6cdc menu-item-has-children"><a href="#string-objects" class="menu-item-link">String Objects<a href="#string-objects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-74b9d09" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-74b9d09"><a href="#string-objects-string-object" class="menu-item-link">String Object</a></li></ul></a></li><li id="menu-item-93cbc878" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-93cbc878 menu-item-has-children"><a href="#types" class="menu-item-link">Types<a href="#types" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6d762ede" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6d762ede"><a href="#types-types" class="menu-item-link">Types</a></li><li id="menu-item-5ceb8a24" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5ceb8a24"><a href="#types-types-by-project" class="menu-item-link">Types by Project</a></li><li id="menu-item-80900334" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-80900334"><a href="#types-type" class="menu-item-link">Type</a></li></ul></a></li><li id="menu-item-c078de41" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c078de41 menu-item-has-children"><a href="#userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-5950ba77" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5950ba77"><a href="#userpreferences-userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences-userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3cfae82e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3cfae82e"><a href="#userpreferences-userpreferences-get" class="menu-item-link">Show my preferences</a></li><li id="menu-item-89a1840d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-89a1840d"><a href="#userpreferences-userpreferences-patch" class="menu-item-link">Update UserPreferences</a></li></ul></a></li></ul></a></li><li id="menu-item-de01fc4e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-de01fc4e menu-item-has-children"><a href="#users" class="menu-item-link">Users<a href="#users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-8bc0a67b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8bc0a67b"><a href="#users-user" class="menu-item-link">User<a href="#users-user" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-71a606c6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-71a606c6"><a href="#users-user-get" class="menu-item-link">View user</a></li><li id="menu-item-40dd852" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-40dd852"><a href="#users-user-patch" class="menu-item-link">Update user</a></li><li id="menu-item-fe6d9df2" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fe6d9df2"><a href="#users-user-delete" class="menu-item-link">Delete user</a></li></ul></a></li><li id="menu-item-b462335a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b462335a"><a href="#users-user-account-locking" class="menu-item-link">User Account Locking<a href="#users-user-account-locking" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-ce120903" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ce120903"><a href="#users-user-account-locking-post" class="menu-item-link">Set Lock</a></li><li id="menu-item-451d7f33" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-451d7f33"><a href="#users-user-account-locking-delete" class="menu-item-link">Remove Lock</a></li></ul></a></li><li id="menu-item-7472e1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7472e1"><a href="#users-user-schema" class="menu-item-link">User Schema</a></li><li id="menu-item-d07790c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d07790c"><a href="#users-user-edit-form" class="menu-item-link">User Edit Form</a></li><li id="menu-item-1e8eddac" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1e8eddac"><a href="#users-users" class="menu-item-link">Users<a href="#users-users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-2feefd33" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2feefd33"><a href="#users-users-get" class="menu-item-link">List Users</a></li><li id="menu-item-33b306f6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-33b306f6"><a href="#users-users-post" class="menu-item-link">Create User</a></li></ul></a></li><li id="menu-item-4930c9bb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4930c9bb"><a href="#users-user-create-form" class="menu-item-link">User Create Form</a></li></ul></a></li><li id="menu-item-199af1a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-199af1a menu-item-has-children"><a href="#versions" class="menu-item-link">Versions<a href="#versions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-7dc28c6b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7dc28c6b"><a href="#versions-versions-by-project" class="menu-item-link">Versions by Project</a></li><li id="menu-item-7ba5503" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7ba5503"><a href="#versions-version" class="menu-item-link">Version</a></li></ul></a></li><li id="menu-item-bf9532e6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bf9532e6 menu-item-has-children"><a href="#work-packages" class="menu-item-link">Work Packages<a href="#work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0cee6d92" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0cee6d92"><a href="#work-packages-work-package" class="menu-item-link">Work Package<a href="#work-packages-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-1d992d98" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1d992d98"><a href="#work-packages-work-package-get" class="menu-item-link">View Work Package</a></li><li id="menu-item-a9947127" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a9947127"><a href="#work-packages-work-package-patch" class="menu-item-link">Edit Work Package</a></li><li id="menu-item-555472b7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-555472b7"><a href="#work-packages-work-package-delete" class="menu-item-link">Delete Work Package</a></li></ul></a></li><li id="menu-item-d01c3ce3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d01c3ce3"><a href="#work-packages-work-package-schema" class="menu-item-link">Work Package Schema</a></li><li id="menu-item-b666e9d1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b666e9d1"><a href="#work-packages-work-package-edit-form" class="menu-item-link">Work Package Edit Form</a></li><li id="menu-item-a0ac9911" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a0ac9911"><a href="#work-packages-work-packages" class="menu-item-link">Work Packages<a href="#work-packages-work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-c807dbde" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c807dbde"><a href="#work-packages-work-packages-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-e8736466" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e8736466"><a href="#work-packages-work-packages-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-305809dd" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-305809dd"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-fa289448" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fa289448"><a href="#work-packages-work-packages-by-project" class="menu-item-link">Work Packages by Project<a href="#work-packages-work-packages-by-project" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-eea25718" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-eea25718"><a href="#work-packages-work-packages-by-project-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-9f218c7d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9f218c7d"><a href="#work-packages-work-packages-by-project-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-b50a2066" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b50a2066"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-8b28f916" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8b28f916"><a href="#work-packages-relations" class="menu-item-link">Relations<a href="#work-packages-relations" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-04a29c4c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-04a29c4c"><a href="#work-packages-relations-post" class="menu-item-link">Create Relation</a></li><li id="menu-item-d62f67ae" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d62f67ae"><a href="#work-packages-relations-get" class="menu-item-link">List relations</a></li></ul></a></li><li id="menu-item-3219be89" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3219be89"><a href="#work-packages-work-package-relation-form" class="menu-item-link">Work Package Relation Form</a></li><li id="menu-item-263170ad" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-263170ad"><a href="#work-packages-watchers" class="menu-item-link">Watchers<a href="#work-packages-watchers" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-1d89f27" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1d89f27"><a href="#work-packages-watchers-get" class="menu-item-link">List watchers</a></li><li id="menu-item-3a8faf7f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3a8faf7f"><a href="#work-packages-watchers-post" class="menu-item-link">Add watcher</a></li></ul></a></li><li id="menu-item-e16bf3d9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e16bf3d9"><a href="#work-packages-remove-watcher" class="menu-item-link">Remove Watcher</a></li><li id="menu-item-26de77" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-26de77"><a href="#work-packages-available-relation-candidates" class="menu-item-link">Available relation candidates</a></li><li id="menu-item-8af8588e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8af8588e"><a href="#work-packages-available-watchers" class="menu-item-link">Available Watchers</a></li><li id="menu-item-7ace755f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-7ace755f"><a href="#work-packages-available-projects" class="menu-item-link">Available Projects</a></li><li id="menu-item-d0cdc5eb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d0cdc5eb"><a href="#work-packages-revisions" class="menu-item-link">Revisions</a></li><li id="menu-item-1aea9f98" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1aea9f98"><a href="#work-packages-work-package-activities" class="menu-item-link">Work Package activities<a href="#work-packages-work-package-activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-52e264fd" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-52e264fd"><a href="#work-packages-work-package-activities-get" class="menu-item-link">List work package activities</a></li><li id="menu-item-1d2315cc" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1d2315cc"><a href="#work-packages-work-package-activities-post" class="menu-item-link">Comment work package</a></li></ul></a></li><li id="menu-item-d65fe9a4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d65fe9a4"><a href="#work-packages-available-assignees" class="menu-item-link">Available Assignees</a></li><li id="menu-item-9b1e208f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9b1e208f"><a href="#work-packages-available-responsibles" class="menu-item-link">Available Responsibles</a></li></ul></a></li></ul></div><div class="col-md-8"><div id="op-api-content"><div><header><div class="page-header"><h1 id="top">OpenProject API v3</h1></div></header><div class="description"></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="general">General&nbsp;<a href="#general"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>This is the current <strong>DRAFT</strong> of the specification for OpenProject APIv3.</p>
+</style></head><body><div class="container"><div class="row"><div class="col-md-3"><ul id="op-api-menu" class="menu"><li id="menu-item-36dacab1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-36dacab1"><a href="#general" class="menu-item-link">General</a></li><li id="menu-item-4da93d71" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4da93d71"><a href="#basic-objects" class="menu-item-link">Basic Objects</a></li><li id="menu-item-5b5435b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5b5435b menu-item-has-children"><a href="#collections" class="menu-item-link">Collections<a href="#collections" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-fc7b27d9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fc7b27d9"><a href="#collections-offset-based-pagination" class="menu-item-link">Offset based pagination</a></li><li id="menu-item-e111864a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e111864a"><a href="#collections-cursor-based-pagination" class="menu-item-link">Cursor based pagination</a></li><li id="menu-item-44d6cad4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-44d6cad4"><a href="#collections-aggregations" class="menu-item-link">Aggregations</a></li></ul></a></li><li id="menu-item-add7bcb4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-add7bcb4 menu-item-has-children"><a href="#activities" class="menu-item-link">Activities<a href="#activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-92a8183e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-92a8183e"><a href="#activities-activity" class="menu-item-link">Activity<a href="#activities-activity" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-5a203be1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5a203be1"><a href="#activities-activity-get" class="menu-item-link">View activity</a></li><li id="menu-item-2f042cf6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2f042cf6"><a href="#activities-activity-patch" class="menu-item-link">Update activity</a></li></ul></a></li></ul></a></li><li id="menu-item-05a5f2ad" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-05a5f2ad menu-item-has-children"><a href="#attachments" class="menu-item-link">Attachments<a href="#attachments" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f3a1f251" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f3a1f251"><a href="#attachments-attachment" class="menu-item-link">Attachment<a href="#attachments-attachment" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-f8937c1d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f8937c1d"><a href="#attachments-attachment-get" class="menu-item-link">View attachment</a></li><li id="menu-item-38a0c096" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-38a0c096"><a href="#attachments-attachment-delete" class="menu-item-link">Delete attachment</a></li></ul></a></li><li id="menu-item-19efa389" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-19efa389"><a href="#attachments-attachments-by-work-package" class="menu-item-link">Attachments by work package<a href="#attachments-attachments-by-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-2c598fd4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2c598fd4"><a href="#attachments-attachments-by-work-package-get" class="menu-item-link">List attachments</a></li><li id="menu-item-83f49a34" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-83f49a34"><a href="#attachments-attachments-by-work-package-post" class="menu-item-link">Add attachment</a></li></ul></a></li></ul></a></li><li id="menu-item-b7d1d076" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-b7d1d076 menu-item-has-children"><a href="#categories" class="menu-item-link">Categories<a href="#categories" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-c1fb3762" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c1fb3762"><a href="#categories-categories-by-project" class="menu-item-link">Categories by Project</a></li><li id="menu-item-505b4cca" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-505b4cca"><a href="#categories-category" class="menu-item-link">Category</a></li></ul></a></li><li id="menu-item-e5913e18" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e5913e18 menu-item-has-children"><a href="#configuration" class="menu-item-link">Configuration<a href="#configuration" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-49582329" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-49582329"><a href="#configuration-configuration" class="menu-item-link">Configuration</a></li></ul></a></li><li id="menu-item-725a9ed8" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-725a9ed8 menu-item-has-children"><a href="#forms" class="menu-item-link">Forms<a href="#forms" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-5e8dba6d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5e8dba6d"><a href="#forms-example-form" class="menu-item-link">Example Form</a></li></ul></a></li><li id="menu-item-0e4f204f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0e4f204f menu-item-has-children"><a href="#priorities" class="menu-item-link">Priorities<a href="#priorities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6f4c1991" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6f4c1991"><a href="#priorities-priorities" class="menu-item-link">Priorities</a></li><li id="menu-item-43c91eb3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-43c91eb3"><a href="#priorities-priority" class="menu-item-link">Priority</a></li></ul></a></li><li id="menu-item-8d3155d7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8d3155d7 menu-item-has-children"><a href="#projects" class="menu-item-link">Projects<a href="#projects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-2977368" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2977368"><a href="#projects-project" class="menu-item-link">Project</a></li><li id="menu-item-de758aec" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-de758aec"><a href="#projects-projects-by-version" class="menu-item-link">Projects by version</a></li><li id="menu-item-c8e4d98a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c8e4d98a"><a href="#projects-work-package-columns" class="menu-item-link">Work Package Columns</a></li></ul></a></li><li id="menu-item-986a27f7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-986a27f7 menu-item-has-children"><a href="#queries" class="menu-item-link">Queries<a href="#queries" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-5e2dcf06" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5e2dcf06"><a href="#queries-query" class="menu-item-link">Query</a></li><li id="menu-item-548c6001" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-548c6001"><a href="#queries-star-query" class="menu-item-link">Star Query</a></li><li id="menu-item-f74e6531" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f74e6531"><a href="#queries-unstar-query" class="menu-item-link">Unstar Query</a></li></ul></a></li><li id="menu-item-6e204741" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6e204741 menu-item-has-children"><a href="#relations" class="menu-item-link">Relations<a href="#relations" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-df1402be" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-df1402be"><a href="#relations-relation" class="menu-item-link">Relation<a href="#relations-relation" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3148282" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3148282"><a href="#relations-relation-get" class="menu-item-link">View Relation</a></li><li id="menu-item-e27b76ac" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e27b76ac"><a href="#relations-relation-patch" class="menu-item-link">Edit Relation</a></li><li id="menu-item-fb58832e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fb58832e"><a href="#relations-relation-delete" class="menu-item-link">Delete Relation</a></li></ul></a></li><li id="menu-item-e37df0cf" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e37df0cf"><a href="#relations-relation-schema" class="menu-item-link">Relation schema</a></li><li id="menu-item-23717ee6" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-23717ee6"><a href="#relations-relation-schema-for-type" class="menu-item-link">Relation schema for type</a></li><li id="menu-item-043ff42d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-043ff42d"><a href="#relations-relations" class="menu-item-link">Relations</a></li><li id="menu-item-1ec1be0a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1ec1be0a"><a href="#relations-relation-edit-form" class="menu-item-link">Relation edit form</a></li></ul></a></li><li id="menu-item-2f501bd7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2f501bd7 menu-item-has-children"><a href="#previewing" class="menu-item-link">Previewing<a href="#previewing" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-25e3c663" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-25e3c663"><a href="#previewing-textile" class="menu-item-link">Textile</a></li><li id="menu-item-5d341e4f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5d341e4f"><a href="#previewing-plain-text" class="menu-item-link">Plain Text</a></li></ul></a></li><li id="menu-item-c7444e5" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c7444e5 menu-item-has-children"><a href="#revisions" class="menu-item-link">Revisions<a href="#revisions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-76c02fe9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-76c02fe9"><a href="#revisions-revision" class="menu-item-link">Revision</a></li></ul></a></li><li id="menu-item-764fe2be" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-764fe2be menu-item-has-children"><a href="#root" class="menu-item-link">Root<a href="#root" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-de0bfaf4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-de0bfaf4"><a href="#root-root" class="menu-item-link">Root</a></li></ul></a></li><li id="menu-item-5027adfb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5027adfb menu-item-has-children"><a href="#schemas" class="menu-item-link">Schemas<a href="#schemas" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6db01983" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6db01983"><a href="#schemas-example-schema" class="menu-item-link">Example Schema</a></li></ul></a></li><li id="menu-item-760988e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-760988e menu-item-has-children"><a href="#statuses" class="menu-item-link">Statuses<a href="#statuses" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-56fe3244" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-56fe3244"><a href="#statuses-statuses" class="menu-item-link">Statuses</a></li><li id="menu-item-89272b1a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-89272b1a"><a href="#statuses-status" class="menu-item-link">Status</a></li></ul></a></li><li id="menu-item-e1086a05" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e1086a05 menu-item-has-children"><a href="#string-objects" class="menu-item-link">String Objects<a href="#string-objects" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-a245645d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a245645d"><a href="#string-objects-string-object" class="menu-item-link">String Object</a></li></ul></a></li><li id="menu-item-dde3b5f3" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-dde3b5f3 menu-item-has-children"><a href="#types" class="menu-item-link">Types<a href="#types" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-35418948" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-35418948"><a href="#types-types" class="menu-item-link">Types</a></li><li id="menu-item-727f352b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-727f352b"><a href="#types-types-by-project" class="menu-item-link">Types by Project</a></li><li id="menu-item-a9f84c14" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-a9f84c14"><a href="#types-type" class="menu-item-link">Type</a></li></ul></a></li><li id="menu-item-4ee49232" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4ee49232 menu-item-has-children"><a href="#userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-4fc8416c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4fc8416c"><a href="#userpreferences-userpreferences" class="menu-item-link">UserPreferences<a href="#userpreferences-userpreferences" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-c8c7e7c4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c8c7e7c4"><a href="#userpreferences-userpreferences-get" class="menu-item-link">Show my preferences</a></li><li id="menu-item-5aa5744b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5aa5744b"><a href="#userpreferences-userpreferences-patch" class="menu-item-link">Update UserPreferences</a></li></ul></a></li></ul></a></li><li id="menu-item-5380658" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5380658 menu-item-has-children"><a href="#users" class="menu-item-link">Users<a href="#users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-3cc6e31a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-3cc6e31a"><a href="#users-user" class="menu-item-link">User<a href="#users-user" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-084efeeb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-084efeeb"><a href="#users-user-get" class="menu-item-link">View user</a></li><li id="menu-item-d8803e7e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d8803e7e"><a href="#users-user-patch" class="menu-item-link">Update user</a></li><li id="menu-item-8ad0117b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8ad0117b"><a href="#users-user-delete" class="menu-item-link">Delete user</a></li></ul></a></li><li id="menu-item-852d7eb4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-852d7eb4"><a href="#users-user-account-locking" class="menu-item-link">User Account Locking<a href="#users-user-account-locking" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-17c141b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-17c141b"><a href="#users-user-account-locking-post" class="menu-item-link">Set Lock</a></li><li id="menu-item-ac4338a9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ac4338a9"><a href="#users-user-account-locking-delete" class="menu-item-link">Remove Lock</a></li></ul></a></li><li id="menu-item-e102725f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e102725f"><a href="#users-users" class="menu-item-link">Users<a href="#users-users" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-ffc978ed" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ffc978ed"><a href="#users-users-get" class="menu-item-link">List Users</a></li><li id="menu-item-e8e529b9" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-e8e529b9"><a href="#users-users-post" class="menu-item-link">Create User</a></li></ul></a></li></ul></a></li><li id="menu-item-09167118" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-09167118 menu-item-has-children"><a href="#versions" class="menu-item-link">Versions<a href="#versions" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-cc46fa61" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-cc46fa61"><a href="#versions-versions-by-project" class="menu-item-link">Versions by Project</a></li><li id="menu-item-d30e8194" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d30e8194"><a href="#versions-version" class="menu-item-link">Version</a></li></ul></a></li><li id="menu-item-1342f2f1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-1342f2f1 menu-item-has-children"><a href="#work-packages" class="menu-item-link">Work Packages<a href="#work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-d4db7df1" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d4db7df1"><a href="#work-packages-work-package" class="menu-item-link">Work Package<a href="#work-packages-work-package" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-6959c0e4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6959c0e4"><a href="#work-packages-work-package-get" class="menu-item-link">View Work Package</a></li><li id="menu-item-d512a48f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d512a48f"><a href="#work-packages-work-package-patch" class="menu-item-link">Edit Work Package</a></li><li id="menu-item-d7315b76" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-d7315b76"><a href="#work-packages-work-package-delete" class="menu-item-link">Delete Work Package</a></li></ul></a></li><li id="menu-item-5bf9403a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-5bf9403a"><a href="#work-packages-work-package-schema" class="menu-item-link">Work Package Schema</a></li><li id="menu-item-24592b62" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-24592b62"><a href="#work-packages-work-package-edit-form" class="menu-item-link">Work Package Edit Form</a></li><li id="menu-item-8e5e0f6d" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-8e5e0f6d"><a href="#work-packages-work-packages" class="menu-item-link">Work Packages<a href="#work-packages-work-packages" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0dc0bc2e" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0dc0bc2e"><a href="#work-packages-work-packages-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-9d721791" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-9d721791"><a href="#work-packages-work-packages-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-4a07a4a" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-4a07a4a"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-298d92eb" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-298d92eb"><a href="#work-packages-work-packages-by-project" class="menu-item-link">Work Packages by Project<a href="#work-packages-work-packages-by-project" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-ee11cf4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-ee11cf4"><a href="#work-packages-work-packages-by-project-get" class="menu-item-link">List Work Packages</a></li><li id="menu-item-f706542" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f706542"><a href="#work-packages-work-packages-by-project-post" class="menu-item-link">Create Work Package</a></li></ul></a></li><li id="menu-item-85a6f609" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-85a6f609"><a href="#work-packages-work-package-create-form" class="menu-item-link">Work Package Create Form</a></li><li id="menu-item-f2c62925" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f2c62925"><a href="#work-packages-relations" class="menu-item-link">Relations<a href="#work-packages-relations" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-0c493af7" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-0c493af7"><a href="#work-packages-relations-post" class="menu-item-link">Create Relation</a></li><li id="menu-item-2a5a3685" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2a5a3685"><a href="#work-packages-relations-get" class="menu-item-link">List relations</a></li></ul></a></li><li id="menu-item-05874dd" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-05874dd"><a href="#work-packages-work-package-relation-form" class="menu-item-link">Work Package Relation Form</a></li><li id="menu-item-94f60911" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-94f60911"><a href="#work-packages-watchers" class="menu-item-link">Watchers<a href="#work-packages-watchers" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-acc073de" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-acc073de"><a href="#work-packages-watchers-get" class="menu-item-link">List watchers</a></li><li id="menu-item-de486b2b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-de486b2b"><a href="#work-packages-watchers-post" class="menu-item-link">Add watcher</a></li></ul></a></li><li id="menu-item-617265ff" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-617265ff"><a href="#work-packages-remove-watcher" class="menu-item-link">Remove Watcher</a></li><li id="menu-item-c82c820b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-c82c820b"><a href="#work-packages-available-relation-candidates" class="menu-item-link">Available relation candidates</a></li><li id="menu-item-27d7c00c" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-27d7c00c"><a href="#work-packages-available-watchers" class="menu-item-link">Available Watchers</a></li><li id="menu-item-f147ce47" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-f147ce47"><a href="#work-packages-available-projects" class="menu-item-link">Available Projects</a></li><li id="menu-item-2802f774" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2802f774"><a href="#work-packages-revisions" class="menu-item-link">Revisions</a></li><li id="menu-item-fa0832f" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-fa0832f"><a href="#work-packages-work-package-activities" class="menu-item-link">Work Package activities<a href="#work-packages-work-package-activities" data-toggle="dropdown" class="dropdown-toggle toggle-open-menu"><i class="icon icon-arrow-down1"></i><i class="icon icon-arrow-up1"></i></a><ul class="dropdown-menu"><li id="menu-item-002f7007" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-002f7007"><a href="#work-packages-work-package-activities-get" class="menu-item-link">List work package activities</a></li><li id="menu-item-6086ff9b" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-6086ff9b"><a href="#work-packages-work-package-activities-post" class="menu-item-link">Comment work package</a></li></ul></a></li><li id="menu-item-bcd345c4" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-bcd345c4"><a href="#work-packages-available-assignees" class="menu-item-link">Available Assignees</a></li><li id="menu-item-2bdc6d94" class="menu-item menu-item-type-post_type menu-item-object-page dropdown menu-item-2bdc6d94"><a href="#work-packages-available-responsibles" class="menu-item-link">Available Responsibles</a></li></ul></a></li></ul></div><div class="col-md-8"><div id="op-api-content"><div><header><div class="page-header"><h1 id="top">OpenProject API v3</h1></div></header><div class="description"></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="general">General&nbsp;<a href="#general"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><p>This is the current <strong>DRAFT</strong> of the specification for OpenProject APIv3.</p>
 <p>Please note that everything in this document might be <strong>subject to change</strong> in a future version of OpenProject. We intend to keep this specification
 as accurate as possible, however as long as the APIv3 is not in a stable state it is possible that there are intermediary differences between
 this specification and the real implementation. While we try to only specify what we want to keep, it might also happen that parts of this
@@ -4118,14 +4118,9 @@ Reasons are:</p>
 <td>locked; <strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
-<td style="text-align:center">update</td>
-<td>Updates the user’s attributes.</td>
-<td><strong>Permission</strong>: Administrator unless the API user updates itself</td>
-</tr>
-<tr>
 <td style="text-align:center">updateImmediately</td>
 <td>Updates the user’s attributes.</td>
-<td><strong>Permission</strong>: Administrator unless the API user updates itself</td>
+<td><strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
 <td style="text-align:center">delete</td>
@@ -4150,13 +4145,6 @@ Reasons are:</p>
 <td style="text-align:center">self</td>
 <td>This user</td>
 <td>User</td>
-<td>not null</td>
-<td>READ</td>
-</tr>
-<tr>
-<td style="text-align:center">schema</td>
-<td>Schema describing the user</td>
-<td>Schema</td>
 <td>not null</td>
 <td>READ</td>
 </tr>
@@ -4189,7 +4177,7 @@ Reasons are:</p>
 <td>String</td>
 <td>unique, 256 max length</td>
 <td>READ / WRITE</td>
-<td><strong>Permission</strong>: Administrator unless user updates itself</td>
+<td><strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
 <td style="text-align:center">firstName</td>
@@ -4197,7 +4185,7 @@ Reasons are:</p>
 <td>String</td>
 <td>30 max length</td>
 <td>READ / WRITE</td>
-<td><strong>Permission</strong>: Administrator unless user updates itself</td>
+<td><strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
 <td style="text-align:center">lastName</td>
@@ -4205,7 +4193,7 @@ Reasons are:</p>
 <td>String</td>
 <td>30 max length</td>
 <td>READ / WRITE</td>
-<td><strong>Permission</strong>: Administrator unless user updates itself</td>
+<td><strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
 <td style="text-align:center">name</td>
@@ -4221,7 +4209,7 @@ Reasons are:</p>
 <td>String</td>
 <td>unique, 60 max length</td>
 <td>READ / WRITE</td>
-<td>E-Mail address not hidden, <strong>Permission</strong>: Administrator unless user updates itself</td>
+<td>E-Mail address not hidden, <strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
 <td style="text-align:center">admin</td>
@@ -4253,7 +4241,7 @@ Reasons are:</p>
 <td>String</td>
 <td>ISO 639-1</td>
 <td>READ / WRITE</td>
-<td><strong>Permission</strong>: Administrator unless user updates itself</td>
+<td><strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
 <td style="text-align:center">password</td>
@@ -4261,7 +4249,7 @@ Reasons are:</p>
 <td>String</td>
 <td></td>
 <td>WRITE</td>
-<td><strong>Permission</strong>: Administrator unless user updates itself</td>
+<td><strong>Permission</strong>: Administrator</td>
 </tr>
 <tr>
 <td style="text-align:center">createdAt</td>
@@ -4300,7 +4288,7 @@ Reasons are:</p>
 <p>Due to data privacy, the user’s properties are limited to reveal as little about the user as possible. Thus <code>login</code>, <code>firstName</code>, <code>lastName</code>, <code>language</code>, <code>createdAt</code> and <code>updatedAt</code> are hidden for all users except for admins or the user themselves.</p>
 <p>Please note that custom fields are not yet supported by the api although the backend supports them.</p>
 <h4 id="users-user">User&nbsp;<a href="#users-user"><i class="fa fa-link"></i></a></h4><section id="users-user-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View user</span></div><div style="float:left"><a href="#users-user-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>User id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#bf78c231ff536974ad86d1b6b1c3d9f9" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="bf78c231ff536974ad86d1b6b1c3d9f9" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#1c7d7a4570c47181e71ca870c58035c2" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="1c7d7a4570c47181e71ca870c58035c2" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -4315,10 +4303,6 @@ Reasons are:</p>
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
-            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
@@ -4327,10 +4311,7 @@ Reasons are:</p>
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
-        }
-    </span>}</span>,
+    }</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
@@ -4358,7 +4339,7 @@ When calling this endpoint the client provides a single object, containing at le
   "<span class="hljs-attribute">lastName</span>": <span class="hljs-value"><span class="hljs-string">"Wurst"</span></span>,
   "<span class="hljs-attribute">admin</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
   "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#bb7209bb7976375e507904c30d5cbe1d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="bb7209bb7976375e507904c30d5cbe1d" class="list-group-item panel-collapse collapse"><h5>Body</h5><pre><code>{
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#04e682e5afc4d0012f80b449b960dc93" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="04e682e5afc4d0012f80b449b960dc93" class="list-group-item panel-collapse collapse"><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -4373,10 +4354,6 @@ When calling this endpoint the client provides a single object, containing at le
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
-            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
@@ -4385,10 +4362,7 @@ When calling this endpoint the client provides a single object, containing at le
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
-        }
-    </span>}</span>,
+    }</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
@@ -4452,7 +4426,7 @@ When calling this endpoint the client provides a single object, containing at le
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist."</span>
 </span>}</code></pre></li></ul></section><h4 id="users-user-account-locking">User Account Locking&nbsp;<a href="#users-user-account-locking"><i class="fa fa-link"></i></a></h4><section id="users-user-account-locking-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Set Lock</span></div><div style="float:left"><a href="#users-user-account-locking-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}/lock</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>User id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#04aaf71bb7b58888bff36f7be91bc4b6" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="04aaf71bb7b58888bff36f7be91bc4b6" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#041a81cc8a4affd1478ffce6db287ce4" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="041a81cc8a4affd1478ffce6db287ce4" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -4467,10 +4441,6 @@ When calling this endpoint the client provides a single object, containing at le
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
-            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
@@ -4479,10 +4449,7 @@ When calling this endpoint the client provides a single object, containing at le
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
-        }
-    </span>}</span>,
+    }</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
@@ -4512,7 +4479,7 @@ When calling this endpoint the client provides a single object, containing at le
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist."</span>
 </span>}</code></pre></li></ul></section><section id="users-user-account-locking-delete" class="panel panel-danger"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">Remove Lock</span></div><div style="float:left"><a href="#users-user-account-locking-delete" class="btn btn-xs btn-danger">DELETE</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}/lock</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>User id</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#1cbd9923d4e51a7df89c3f39f7ae7281" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="1cbd9923d4e51a7df89c3f39f7ae7281" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#1c2e441776ea4fe58fb2705393876d7b" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="1c2e441776ea4fe58fb2705393876d7b" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -4527,10 +4494,6 @@ When calling this endpoint the client provides a single object, containing at le
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
-            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
@@ -4539,10 +4502,7 @@ When calling this endpoint the client provides a single object, containing at le
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
-        }
-    </span>}</span>,
+    }</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
@@ -4567,234 +4527,6 @@ When calling this endpoint the client provides a single object, containing at le
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to unlock the account of this user."</span>
 </span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>404</code></strong><a data-toggle="collapse" data-target="#39afef2b13fdd00b6973398f563b9c70" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="39afef2b13fdd00b6973398f563b9c70" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the user does not exist.</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified user does not exist."</span>
-</span>}</code></pre></li></ul></section><h4 id="users-user-schema">User Schema&nbsp;<a href="#users-user-schema"><i class="fa fa-link"></i></a></h4><section id="users-user-schema-get" class="panel panel-info"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">View User Schema</span></div><div style="float:left"><a href="#users-user-schema-get" class="btn btn-xs btn-primary">GET</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/schema</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#57ff5721363f82843a447d9380be576d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="57ff5721363f82843a447d9380be576d" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
-    <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Schema"</span>,
-    <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"self"</span>: <span class="hljs-collection">{ <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/schema"</span> }</span>
-    }</span>,
-
-    <span class="hljs-string">"id"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Id"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"Integer"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-    }</span>,
-    <span class="hljs-string">"login"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Login"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"maxlength"</span>: <span class="hljs-number">256</span>
-    }</span>,
-    <span class="hljs-string">"firstName"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"First name"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
-    }</span>,
-    <span class="hljs-string">"lastName"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Last name"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
-    }</span>,
-    <span class="hljs-string">"name"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Name"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-    }</span>,
-    <span class="hljs-string">"email"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Email"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-        <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">60</span>
-    }</span>,
-    <span class="hljs-string">"admin"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Administrator"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-    }</span>,
-    <span class="hljs-string">"avatar"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Avatar"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"Url"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>,
-    }</span>,
-    <span class="hljs-string">"status"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Status"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-    }</span>
-    <span class="hljs-string">"language"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Language"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
-    }</span>,
-    <span class="hljs-string">"password"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Password"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
-    }</span>,
-    <span class="hljs-string">"createdAt"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Created at"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-    }</span>,
-    <span class="hljs-string">"updatedAt"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Updated at"</span>,
-        <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
-        <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-    }</span>
-}</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#a856f6c5535522ef4934fbf0cccaa311" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="a856f6c5535522ef4934fbf0cccaa311" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the user lacks permissions to view the schema.
-<strong>Required permission</strong> The user needs to be locked in if the installation is configured to pervent anonymous access</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to view the user schema."</span>
-</span>}</code></pre></li></ul></section><h4 id="users-user-edit-form">User Edit Form&nbsp;<a href="#users-user-edit-form"><i class="fa fa-link"></i></a></h4><p>This endpoint returns a form to allow a guided modification of an existing user.</p>
-<p>For more details and all possible responses see the general specification of <a href="#forms">Forms</a>.</p>
-<section id="users-user-edit-form-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">User Edit Form</span></div><div style="float:left"><a href="#users-user-edit-form-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/{id}/form</code></div></div><ul class="list-group"><li class="list-group-item bg-default"><strong>Parameters</strong></li><li class="list-group-item"><dl class="dl-horizontal"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>ID of the user being modified</p>
-</dd></dl></li></ul><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#d740a45c56c501eedaec640f564fb30d" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="d740a45c56c501eedaec640f564fb30d" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
-    <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"self"</span>: <span class="hljs-collection">{ <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/form"</span> }</span>,
-        <span class="hljs-string">"validate"</span>: <span class="hljs-collection">{
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/form"</span>,
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
-        }</span>,
-        <span class="hljs-string">"commit"</span>: <span class="hljs-collection">{
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users"</span>,
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
-        }</span>
-    }</span>,
-
-    <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Form"</span>,
-
-    <span class="hljs-string">"_embedded"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"payload"</span>: <span class="hljs-collection">{
-           <span class="hljs-string">"login"</span>: <span class="hljs-string">"h.wurst"</span>,
-           <span class="hljs-string">"email"</span>: <span class="hljs-string">"h.wurst@openproject.com"</span>,
-           <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Hans"</span>,
-           <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Wurst"</span>,
-           <span class="hljs-string">"admin"</span>: <span class="hljs-literal">false</span>,
-           <span class="hljs-string">"language"</span>: <span class="hljs-string">"de"</span>,
-           <span class="hljs-string">"status"</span>: <span class="hljs-string">"active"</span>,
-           <span class="hljs-string">"password"</span>: <span class="hljs-string">"hunter5"</span>
-        }</span>,
-        <span class="hljs-string">"schema"</span>: <span class="hljs-collection">{
-          <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Schema"</span>,
-          <span class="hljs-string">"id"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Id"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Integer"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>,
-          <span class="hljs-string">"login"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Login"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-string">"maxlength"</span>: <span class="hljs-number">256</span>
-          }</span>,
-          <span class="hljs-string">"firstName"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"First name"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
-          }</span>,
-          <span class="hljs-string">"lastName"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Last name"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
-          }</span>,
-          <span class="hljs-string">"name"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Name"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>,
-          <span class="hljs-string">"email"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Email"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">60</span>
-          }</span>,
-          <span class="hljs-string">"admin"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Administrator"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-          }</span>,
-          <span class="hljs-string">"avatar"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Avatar"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Url"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>,
-          }</span>,
-          <span class="hljs-string">"status"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Status"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>
-          <span class="hljs-string">"language"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Language"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"allowedValues"</span>: <span class="hljs-collection">[
-                <span class="hljs-string">"en"</span>,
-                <span class="hljs-string">"fr"</span>,
-                <span class="hljs-string">"de"</span>
-              ]</span>
-          }</span>,
-          <span class="hljs-string">"password"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Password"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
-          }</span>,
-          <span class="hljs-string">"createdAt"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Created at"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>,
-          <span class="hljs-string">"updatedAt"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Updated at"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>,
-          <span class="hljs-string">"customField5"</span> <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Retired"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
-          }</span>
-        }</span>
-        <span class="hljs-string">"validationErrors"</span>: <span class="hljs-collection">{
-            <span class="hljs-string">"subject"</span>: <span class="hljs-collection">{
-                <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Error"</span>,
-                <span class="hljs-string">"errorIdentifier"</span>: <span class="hljs-string">"urn:openproject-org:api:v3:errors:BadExampleError"</span>,
-                <span class="hljs-string">"message"</span>: <span class="hljs-string">"For the purpose of this example we need a validation error. The remainder of the response pretends there were no errors."</span>
-            }</span>
-        }</span>
-    }</span>
-}</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#53054cf2e61c4bb8dd0c1ee30e5efeb9" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="53054cf2e61c4bb8dd0c1ee30e5efeb9" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
-<p><strong>Required permission:</strong> Administrator or logged in user editing her/himself</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to edit the specified user."</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>404</code></strong><a data-toggle="collapse" data-target="#ac958d1d2e25565c1e5561422ec0d926" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="ac958d1d2e25565c1e5561422ec0d926" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the user does not exist or the client does not have sufficient permissions to see it.</p>
-<p><strong>Required permission</strong> The user needs to be locked in if the installation is configured to pervent anonymous access</p>
 </div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
@@ -4898,7 +4630,7 @@ When calling this endpoint the client provides a single object, containing at le
   "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"h.wurst@openproject.com"</span></span>,
   "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"Hanz"</span></span>,
   "<span class="hljs-attribute">status</span>": <span class="hljs-value"><span class="hljs-string">"invited"</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>201</code></strong><a data-toggle="collapse" data-target="#72cc43a906888607c62eb8eb1d4d13b4" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="72cc43a906888607c62eb8eb1d4d13b4" class="list-group-item panel-collapse collapse"><h5>Body</h5><pre><code>{
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>201</code></strong><a data-toggle="collapse" data-target="#1ef76a5ee041afe6db77c3fb1d51055a" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="1ef76a5ee041afe6db77c3fb1d51055a" class="list-group-item panel-collapse collapse"><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -4913,10 +4645,6 @@ When calling this endpoint the client provides a single object, containing at le
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
-            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
@@ -4925,10 +4653,7 @@ When calling this endpoint the client provides a single object, containing at le
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
-        }
-    </span>}</span>,
+    }</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
@@ -4964,143 +4689,6 @@ When calling this endpoint the client provides a single object, containing at le
       "<span class="hljs-attribute">attribute</span>": <span class="hljs-value"><span class="hljs-string">"email"</span>
     </span>}
   </span>}
-</span>}</code></pre></li></ul></section><h4 id="users-user-create-form">User Create Form&nbsp;<a href="#users-user-create-form"><i class="fa fa-link"></i></a></h4><p>This endpoint returns a form to allow a guided creation of a new user.
-The returned form will be pre-filled with default values for every property, if available.</p>
-<p>For more details and all possible responses see the general specification of <a href="#forms">Forms</a>.</p>
-<section id="users-user-create-form-post" class="panel panel-success"><div class="panel-heading"><div style="float:right"><span style="text-transform: lowercase">User Create Form</span></div><div style="float:left"><a href="#users-user-create-form-post" class="btn btn-xs btn-success">POST</a></div><div style="overflow:hidden" class="panel-heading-code"><code>/api/v3/users/form</code></div></div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#e5fc8037df4aa73e905a1fd51194cd29" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="e5fc8037df4aa73e905a1fd51194cd29" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code><span class="hljs-collection">{
-    <span class="hljs-string">"_links"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"self"</span>: <span class="hljs-collection">{ <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/form"</span> }</span>,
-        <span class="hljs-string">"validate"</span>: <span class="hljs-collection">{
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/form"</span>,
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
-        }</span>,
-        <span class="hljs-string">"commit"</span>: <span class="hljs-collection">{
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users"</span>,
-            <span class="hljs-string">"method"</span>: <span class="hljs-string">"POST"</span>
-        }</span>
-    }</span>,
-
-    <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Form"</span>,
-
-    <span class="hljs-string">"_embedded"</span>: <span class="hljs-collection">{
-        <span class="hljs-string">"payload"</span>: <span class="hljs-collection">{
-           <span class="hljs-string">"login"</span>: <span class="hljs-string">"h.wurst"</span>,
-           <span class="hljs-string">"email"</span>: <span class="hljs-string">"h.wurst@openproject.com"</span>,
-           <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Hans"</span>,
-           <span class="hljs-string">"lastName"</span>: <span class="hljs-string">"Wurst"</span>,
-           <span class="hljs-string">"admin"</span>: <span class="hljs-literal">false</span>,
-           <span class="hljs-string">"language"</span>: <span class="hljs-string">"de"</span>,
-           <span class="hljs-string">"status"</span>: <span class="hljs-string">"active"</span>,
-           <span class="hljs-string">"password"</span>: <span class="hljs-string">"hunter5"</span>
-        }</span>,
-        <span class="hljs-string">"schema"</span>: <span class="hljs-collection">{
-          <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Schema"</span>,
-          <span class="hljs-string">"id"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Id"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Integer"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>,
-          <span class="hljs-string">"login"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Login"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-string">"maxlength"</span>: <span class="hljs-number">256</span>
-          }</span>,
-          <span class="hljs-string">"firstName"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"First name"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
-          }</span>,
-          <span class="hljs-string">"lastName"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Last name"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">30</span>
-          }</span>,
-          <span class="hljs-string">"name"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Name"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>,
-          <span class="hljs-string">"email"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Email"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"required"</span> <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"minLength"</span>: <span class="hljs-number">1</span>,
-              <span class="hljs-string">"maxLength"</span>: <span class="hljs-number">60</span>
-          }</span>,
-          <span class="hljs-string">"admin"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Administrator"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-          }</span>,
-          <span class="hljs-string">"avatar"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Avatar"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Url"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>,
-          }</span>,
-          <span class="hljs-string">"status"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Status"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>,
-              <span class="hljs-string">"allowedValues"</span>: <span class="hljs-collection">[
-                <span class="hljs-string">"active"</span>,
-                <span class="hljs-string">"invited"</span>,
-              ]</span>
-          }</span>
-          <span class="hljs-string">"language"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Language"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>,
-              <span class="hljs-string">"allowedValues"</span>: <span class="hljs-collection">[
-                <span class="hljs-string">"en"</span>,
-                <span class="hljs-string">"fr"</span>,
-                <span class="hljs-string">"de"</span>
-              ]</span>
-          }</span>,
-          <span class="hljs-string">"password"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Password"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"String"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
-          }</span>,
-          <span class="hljs-string">"createdAt"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Created at"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>,
-          <span class="hljs-string">"updatedAt"</span>: <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Updated at"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"DateTime"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">false</span>
-          }</span>,
-          <span class="hljs-string">"customField5"</span> <span class="hljs-collection">{
-              <span class="hljs-string">"name"</span>: <span class="hljs-string">"Retired"</span>,
-              <span class="hljs-string">"type"</span>: <span class="hljs-string">"Boolean"</span>,
-              <span class="hljs-string">"writable"</span>: <span class="hljs-literal">true</span>
-          }</span>
-        }</span>
-        <span class="hljs-string">"validationErrors"</span>: <span class="hljs-collection">{
-            <span class="hljs-string">"subject"</span>: <span class="hljs-collection">{
-                <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Error"</span>,
-                <span class="hljs-string">"errorIdentifier"</span>: <span class="hljs-string">"urn:openproject-org:api:v3:errors:BadExampleError"</span>,
-                <span class="hljs-string">"message"</span>: <span class="hljs-string">"For the purpose of this example we need a validation error. The remainder of the response pretends there were no errors."</span>
-            }</span>
-        }</span>
-    }</span>
-}</span></code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>403</code></strong><a data-toggle="collapse" data-target="#595887c7b17a3c914926a7a55b7bf3dd" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="595887c7b17a3c914926a7a55b7bf3dd" class="list-group-item panel-collapse collapse"><div class="description"><p>Returned if the client does not have sufficient permissions.</p>
-<p><strong>Required permission:</strong> Administrator</p>
-</div><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
-  "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:MissingPermission"</span></span>,
-  "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"You are not allowed to create new users."</span>
 </span>}</code></pre></li></ul></section></div></div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="versions">Versions&nbsp;<a href="#versions"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h2 id="header-linked-properties-30">Linked Properties <a class="permalink" href="#header-linked-properties-30" aria-hidden="true">¶</a></h2>
 <table>
 <thead>
@@ -7368,7 +6956,7 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
   "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span>
   </span>}
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#37959f193ece119deb72fef29487175a" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="37959f193ece119deb72fef29487175a" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#212ff42ff38d15cea455c873b3eeb349" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="212ff42ff38d15cea455c873b3eeb349" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -7383,10 +6971,6 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
-            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
@@ -7395,10 +6979,7 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
-        }
-    </span>}</span>,
+    }</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
@@ -7410,7 +6991,7 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
     "<span class="hljs-attribute">language</span>": <span class="hljs-value"><span class="hljs-string">"en"</span></span>,
     "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
     "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
-</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>201</code></strong><a data-toggle="collapse" data-target="#f3710ed247eff2d95c414359df9593c7" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="f3710ed247eff2d95c414359df9593c7" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
+</span>}</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>201</code></strong><a data-toggle="collapse" data-target="#2e988825a2923df864ed3a605326b392" class="pull-right collapsed"><span class="closed">Show</span><span class="open">Hide</span></a></li><li id="2e988825a2923df864ed3a605326b392" class="list-group-item panel-collapse collapse"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span><br></code></pre><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">self</span>": <span class="hljs-value">{
@@ -7425,10 +7006,6 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/lock"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">update</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1/form"</span></span>,
-            "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"POST"</span>
-        </span>}</span>,
         "<span class="hljs-attribute">updateImmediately</span>": <span class="hljs-value">{
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"PATCH"</span>
@@ -7437,10 +7014,7 @@ In case the user was already watching the work package an <code>HTTP 200</code> 
             "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/1"</span></span>,
             "<span class="hljs-attribute">method</span>": <span class="hljs-value"><span class="hljs-string">"DELETE"</span>
         </span>}</span>,
-        "<span class="hljs-attribute">schema</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/users/schema"</span></span>,
-        }
-    </span>}</span>,
+    }</span>,
     "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">login</span>": <span class="hljs-value"><span class="hljs-string">"j.sheppard"</span></span>,
     "<span class="hljs-attribute">firstName</span>": <span class="hljs-value"><span class="hljs-string">"John"</span></span>,
