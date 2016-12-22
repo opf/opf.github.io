@@ -2826,14 +2826,27 @@ applicable for the other relations.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified relation type does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="relations-relations" class="resource"><h3 class="resource-heading">Relations <a href="#relations-relations" class="permalink">&nbsp;&para;</a></h3><div id="relations-relations-get" class="action get"><h4 class="action-heading"><div class="name">List Relations</div><a href="#relations-relations-get" class="method get">GET</a><code class="uri">/api/v3/relations{?offset,pageSize,filters,sortBy}</code></h4><p>Lists all relations according to the given (optional, logically conjunctive) filters and ordered by ID.
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="relations-relations" class="resource"><h3 class="resource-heading">Relations <a href="#relations-relations" class="permalink">&nbsp;&para;</a></h3><div id="relations-relations-get" class="action get"><h4 class="action-heading"><div class="name">List Relations</div><a href="#relations-relations-get" class="method get">GET</a><code class="uri">/api/v3/relations{?filters,sortBy}</code></h4><p>Lists all relations according to the given (optional, logically conjunctive) filters and ordered by ID.
 The response only includes relations between work packages which the user is allowed to see.</p>
-<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations?<span class="hljs-attribute">offset=</span><span class="hljs-literal">5</span>&<span class="hljs-attribute">pageSize=</span><span class="hljs-literal">20</span>&<span class="hljs-attribute">filters=</span><span class="hljs-literal">[{ "from": { "operator": "=", "values": 42 }" }]</span>&<span class="hljs-attribute">sortBy=</span><span class="hljs-literal">[["type", "asc"]]</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>0</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>5</span></span><p>Page number inside the requested collection</p>
-</dd><dt>pageSize</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>20</span></span><p>Number of elements to display per page</p>
-</dd><dt>filters</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[{ &quot;from&quot;: { &quot;operator&quot;: &quot;=&quot;, &quot;values&quot;: 42 }&quot; }]</span></span><p>JSON specifying filter conditions.
-Accepts the same format as returned by the <a href="#queries">queries</a> endpoint. Valid fields to filter by are:
-<code>from</code> (ID of work package from which the filtered relations emanates), <code>to</code> (ID of work package to which this related points),
-<code>involved</code> (ID of either the <code>from</code> or the <code>to</code> work package.), <code>type</code> (The type of relation to filter by, e.g. “follows”)</p>
+<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/relations?<span class="hljs-attribute">filters=</span><span class="hljs-literal">[{ "from": { "operator": "=", "values": 42 }" }]</span>&<span class="hljs-attribute">sortBy=</span><span class="hljs-literal">[["type", "asc"]]</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>filters</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[{ &quot;from&quot;: { &quot;operator&quot;: &quot;=&quot;, &quot;values&quot;: 42 }&quot; }]</span></span><p>JSON specifying filter conditions.
+Accepts the same format as returned by the <a href="#queries">queries</a> endpoint. Valid fields to filter by are:</p>
+<ul>
+<li>
+<p>id - ID of relation</p>
+</li>
+<li>
+<p>from - ID of work package from which the filtered relations emanates.</p>
+</li>
+<li>
+<p>to - ID of work package to which this related points.</p>
+</li>
+<li>
+<p>involved - ID of either the <code>from</code> or the <code>to</code> work package.</p>
+</li>
+<li>
+<p>type - The type of relation to filter by, e.g. “follows”.</p>
+</li>
+</ul>
 </dd><dt>sortBy</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[[&quot;type&quot;, &quot;asc&quot;]]</span></span><p>JSON specifying sort criteria.
 Accepts the same format as returned by the <a href="#queries">queries</a> endpoint.</p>
 </dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -7676,7 +7689,7 @@ not just the current user.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 21 Dec 2016</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 22 Dec 2016</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
