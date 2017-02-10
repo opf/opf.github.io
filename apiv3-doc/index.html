@@ -5910,6 +5910,14 @@ a version. That’s why a 404 is returned here, even if a 403 might be more appr
 <td></td>
 </tr>
 <tr>
+<td style="text-align:center">ancestors</td>
+<td>Array of all visible ancestors of the work package, with the root node being the first element</td>
+<td>Collection</td>
+<td>not null</td>
+<td>READ</td>
+<td><strong>Permission</strong> view work packages</td>
+</tr>
+<tr>
 <td style="text-align:center">attachments</td>
 <td>The files attached to this work package</td>
 <td>Collection</td>
@@ -5948,6 +5956,14 @@ a version. That’s why a 404 is returned here, even if a 403 might be more appr
 <td></td>
 <td>READ / WRITE</td>
 <td></td>
+</tr>
+<tr>
+<td style="text-align:center">children</td>
+<td>Array of all visible children of the work package</td>
+<td>Collection</td>
+<td>not null</td>
+<td>READ</td>
+<td><strong>Permission</strong> view work packages</td>
 </tr>
 <tr>
 <td style="text-align:center">priority</td>
@@ -6314,6 +6330,20 @@ the human readable name of custom fields.</em></p>
         "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Write API documentation"</span>
       </span>}
     ]</span>,
+    "<span class="hljs-attribute">ancestors</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1290"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Root node of hierarchy"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1291"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Intermediate node of hierarchy"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1298"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"nisi eligendi officiis eos delectus quis voluptas dolores"</span>
+      </span>}
+    ]</span>,
     "<span class="hljs-attribute">timeEntries</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/work_packages/1528/time_entries"</span></span>,
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"text/html"</span></span>,
@@ -6491,6 +6521,20 @@ not just the current user.</p>
       {
         "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1529"</span></span>,
         "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Write API documentation"</span>
+      </span>}
+    ]</span>,
+    "<span class="hljs-attribute">ancestors</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1290"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Root node of hierarchy"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1291"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Intermediate node of hierarchy"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1298"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"nisi eligendi officiis eos delectus quis voluptas dolores"</span>
       </span>}
     ]</span>,
     "<span class="hljs-attribute">timeEntries</span>": <span class="hljs-value">{
@@ -7029,6 +7073,20 @@ not just the current user.</p>
         "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Write API documentation"</span>
       </span>}
     ]</span>,
+    "<span class="hljs-attribute">ancestors</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1290"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Root node of hierarchy"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1291"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Intermediate node of hierarchy"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1298"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"nisi eligendi officiis eos delectus quis voluptas dolores"</span>
+      </span>}
+    ]</span>,
     "<span class="hljs-attribute">timeEntries</span>": <span class="hljs-value">{
       "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/work_packages/1528/time_entries"</span></span>,
       "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"text/html"</span></span>,
@@ -7407,6 +7465,20 @@ not just the current user.</p>
       {
         "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1529"</span></span>,
         "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Write API documentation"</span>
+      </span>}
+    ]</span>,
+    "<span class="hljs-attribute">ancestors</span>": <span class="hljs-value">[
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1290"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Root node of hierarchy"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1291"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"Intermediate node of hierarchy"</span>
+      </span>},
+      {
+        "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/1298"</span></span>,
+        "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"nisi eligendi officiis eos delectus quis voluptas dolores"</span>
       </span>}
     ]</span>,
     "<span class="hljs-attribute">timeEntries</span>": <span class="hljs-value">{
@@ -8604,7 +8676,7 @@ not just the current user.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 09 Feb 2017</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 10 Feb 2017</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
