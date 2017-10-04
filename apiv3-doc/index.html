@@ -9299,7 +9299,6 @@ the human readable name of custom fields.</em></p>
   "<span class="hljs-attribute">dueDate</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">estimatedTime</span>": <span class="hljs-value"><span class="hljs-string">"PT2H"</span></span>,
   "<span class="hljs-attribute">percentageDone</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-  "<span class="hljs-attribute">parentId</span>": <span class="hljs-value"><span class="hljs-number">1298</span></span>,
   "<span class="hljs-attribute">customField1</span>": <span class="hljs-value"><span class="hljs-string">"Foo"</span></span>,
   "<span class="hljs-attribute">customField2</span>": <span class="hljs-value"><span class="hljs-number">42</span></span>,
   "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-08-29T12:40:53Z"</span></span>,
@@ -9320,9 +9319,13 @@ by the <code>GET</code> request this change originates from.</p>
 Note that this controls notifications for all users interested in changes to the work package (e.g. watchers, author and assignee),
 not just the current user.</p>
 </dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-    "<span class="hljs-attribute">lockVersion</span>": <span class="hljs-value"><span class="hljs-number">13</span></span>,
-    "<span class="hljs-attribute">subject</span>": <span class="hljs-value"><span class="hljs-string">"Lorem"</span>
-    <span class="hljs-string">"parentId"</span>: <span class="hljs-string">"42"</span>
+  "<span class="hljs-attribute">lockVersion</span>": <span class="hljs-value"><span class="hljs-number">13</span></span>,
+  "<span class="hljs-attribute">subject</span>": <span class="hljs-value"><span class="hljs-string">"Lorem"</span></span>,
+  "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">parent</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">href</span>": <span class="hljs-value"><span class="hljs-string">"/api/v3/work_packages/42"</span>
+    </span>}
+  </span>}
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"WorkPackage"</span></span>,
   "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
@@ -9492,7 +9495,6 @@ not just the current user.</p>
   "<span class="hljs-attribute">dueDate</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">estimatedTime</span>": <span class="hljs-value"><span class="hljs-string">"PT2H"</span></span>,
   "<span class="hljs-attribute">percentageDone</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-  "<span class="hljs-attribute">parentId</span>": <span class="hljs-value"><span class="hljs-number">1298</span></span>,
   "<span class="hljs-attribute">customField1</span>": <span class="hljs-value"><span class="hljs-string">"Foo"</span></span>,
   "<span class="hljs-attribute">customField2</span>": <span class="hljs-value"><span class="hljs-number">42</span></span>,
   "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-08-29T12:40:53Z"</span></span>,
@@ -10043,7 +10045,6 @@ not just the current user.</p>
   "<span class="hljs-attribute">dueDate</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">estimatedTime</span>": <span class="hljs-value"><span class="hljs-string">"PT2H"</span></span>,
   "<span class="hljs-attribute">percentageDone</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-  "<span class="hljs-attribute">parentId</span>": <span class="hljs-value"><span class="hljs-number">1298</span></span>,
   "<span class="hljs-attribute">customField1</span>": <span class="hljs-value"><span class="hljs-string">"Foo"</span></span>,
   "<span class="hljs-attribute">customField2</span>": <span class="hljs-value"><span class="hljs-number">42</span></span>,
   "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-08-29T12:40:53Z"</span></span>,
@@ -10437,7 +10438,6 @@ not just the current user.</p>
   "<span class="hljs-attribute">dueDate</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">estimatedTime</span>": <span class="hljs-value"><span class="hljs-string">"PT2H"</span></span>,
   "<span class="hljs-attribute">percentageDone</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-  "<span class="hljs-attribute">parentId</span>": <span class="hljs-value"><span class="hljs-number">1298</span></span>,
   "<span class="hljs-attribute">customField1</span>": <span class="hljs-value"><span class="hljs-string">"Foo"</span></span>,
   "<span class="hljs-attribute">customField2</span>": <span class="hljs-value"><span class="hljs-number">42</span></span>,
   "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-08-29T12:40:53Z"</span></span>,
@@ -11609,7 +11609,7 @@ not just the current user.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 03 Oct 2017</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 04 Oct 2017</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
