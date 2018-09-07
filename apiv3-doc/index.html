@@ -1023,8 +1023,11 @@ PNG file data
         <span class="hljs-string">"author"</span>: {
             <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/1"</span>
         },
+        <span class="hljs-string">"staticDownloadLocation"</span>: {
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/attachments/1/download"</span>
+        }
         <span class="hljs-string">"downloadLocation"</span>: {
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1/download"</span>
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/some/remote/aws/url/image.png"</span>
         }
     },
     <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
@@ -1087,8 +1090,11 @@ Reasons are:</p>
         <span class="hljs-string">"author"</span>: {
             <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/1"</span>
         },
+        <span class="hljs-string">"staticDownloadLocation"</span>: {
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/attachments/1/download"</span>
+        }
         <span class="hljs-string">"downloadLocation"</span>: {
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1/download"</span>
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/some/remote/aws/url/image.png"</span>
         }
     },
     <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
@@ -1692,8 +1698,11 @@ PNG file data
         <span class="hljs-string">"author"</span>: {
             <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/users/1"</span>
         },
+        <span class="hljs-string">"staticDownloadLocation"</span>: {
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/api/v3/attachments/1/download"</span>
+        }
         <span class="hljs-string">"downloadLocation"</span>: {
-            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/attachments/1/download"</span>
+            <span class="hljs-string">"href"</span>: <span class="hljs-string">"/some/remote/aws/url/image.png"</span>
         }
     },
     <span class="hljs-string">"id"</span>: <span class="hljs-number">1</span>,
@@ -3694,6 +3703,13 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td>READ</td>
 </tr>
 <tr>
+<td style="text-align:center">highlightingMode</td>
+<td>Which highlighting mode should the table have?</td>
+<td>String</td>
+<td>none, inline, status, priority</td>
+<td>READ</td>
+</tr>
+<tr>
 <td style="text-align:center">showHierarchies</td>
 <td>Should the hierarchy mode be enabled?</td>
 <td>Boolean</td>
@@ -3775,8 +3791,8 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
       ]
     </span>}
   </span>}</code></pre>
-<div id="queries-query" class="resource"><h3 class="resource-heading">Query <a href="#queries-query" class="permalink">&nbsp;&para;</a></h3><div id="queries-query-get" class="action get"><h4 class="action-heading"><div class="name">View query</div><a href="#queries-query-get" class="method get">GET</a><code class="uri">/api/v3/queries/{id}{?offset,pageSize,filters,sortBy,groupBy,showSums,timelineVisible,timelineLabels,showHierarchies}</code></h4><p>Retreive an individual query as identified by the id parameter. Then end point accepts a number of parameters that can be used to override the resources’ persisted parameters.</p>
-<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/queries/<span class="hljs-attribute" title="id">1</span>?<span class="hljs-attribute">offset=</span><span class="hljs-literal">25</span>&<span class="hljs-attribute">pageSize=</span><span class="hljs-literal">25</span>&<span class="hljs-attribute">filters=</span><span class="hljs-literal">[{ "assignee": { "operator": "=", "values": ["1", "5"] }" }]</span>&<span class="hljs-attribute">sortBy=</span><span class="hljs-literal">[["status", "asc"]]</span>&<span class="hljs-attribute">groupBy=</span><span class="hljs-literal">status</span>&<span class="hljs-attribute">showSums=</span><span class="hljs-literal">true</span>&<span class="hljs-attribute">timelineVisible=</span><span class="hljs-literal">true</span>&<span class="hljs-attribute">timelineLabels=</span><span class="hljs-literal">{}</span>&<span class="hljs-attribute">showHierarchies=</span><span class="hljs-literal">true</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Query id</p>
+<div id="queries-query" class="resource"><h3 class="resource-heading">Query <a href="#queries-query" class="permalink">&nbsp;&para;</a></h3><div id="queries-query-get" class="action get"><h4 class="action-heading"><div class="name">View query</div><a href="#queries-query-get" class="method get">GET</a><code class="uri">/api/v3/queries/{id}{?offset,pageSize,filters,sortBy,groupBy,showSums,timelineVisible,timelineLabels,highlightingMode,showHierarchies}</code></h4><p>Retreive an individual query as identified by the id parameter. Then end point accepts a number of parameters that can be used to override the resources’ persisted parameters.</p>
+<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname"></span>/api/v3/queries/<span class="hljs-attribute" title="id">1</span>?<span class="hljs-attribute">offset=</span><span class="hljs-literal">25</span>&<span class="hljs-attribute">pageSize=</span><span class="hljs-literal">25</span>&<span class="hljs-attribute">filters=</span><span class="hljs-literal">[{ "assignee": { "operator": "=", "values": ["1", "5"] }" }]</span>&<span class="hljs-attribute">sortBy=</span><span class="hljs-literal">[["status", "asc"]]</span>&<span class="hljs-attribute">groupBy=</span><span class="hljs-literal">status</span>&<span class="hljs-attribute">showSums=</span><span class="hljs-literal">true</span>&<span class="hljs-attribute">timelineVisible=</span><span class="hljs-literal">true</span>&<span class="hljs-attribute">timelineLabels=</span><span class="hljs-literal">{}</span>&<span class="hljs-attribute">highlightingMode=</span><span class="hljs-literal">inline</span>&<span class="hljs-attribute">showHierarchies=</span><span class="hljs-literal">true</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>integer</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>Query id</p>
 </dd><dt>filters</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>[{ &quot;assignee&quot;: { &quot;operator&quot;: &quot;=&quot;, &quot;values&quot;: [&quot;1&quot;, &quot;5&quot;] }&quot; }]</span></span><p>JSON specifying filter conditions. The filters provided as parameters are not applied to the query but are instead used to override the query’s persisted filters. All filters also accepted by the work packages endpoint are accepted.</p>
 </dd><dt>offset</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>1</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Page number inside the queries’ result collection of work packages.</p>
 </dd><dt>pageSize</dt><dd><code>integer</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>25</span></span><p>Number of elements to display per page for the queries’ result collection of work packages.</p>
@@ -3785,6 +3801,7 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 </dd><dt>showSums</dt><dd><code>boolean</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>false</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>true</span></span><p>Indicates whether properties should be summed up if they support it. The showSums parameter is applied to the to the querie’s result collection of work packages overriding the query’s persisted sums property.</p>
 </dd><dt>timelineVisible</dt><dd><code>boolean</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>false</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>true</span></span><p>Indicates whether the timeline should be shown.</p>
 </dd><dt>timelineLabels</dt><dd><code>object</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>{}</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>{}</span></span><p>Overridden labels in the timeline view</p>
+</dd><dt>highlightingMode</dt><dd><code>object</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>inline</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>inline</span></span><p>Highlighting mode for the table view.</p>
 </dd><dt>showHierarchies</dt><dd><code>boolean</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-info default"><strong>Default:&nbsp;</strong><span>true</span></span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>true</span></span><p>Indicates whether the hierarchy mode should be enabled.</p>
 </dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Query"</span></span>,
@@ -4168,6 +4185,7 @@ Note that it is only allowed to provide properties or links supporting the <stro
   "<span class="hljs-attribute">timelineVisible</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
   "<span class="hljs-attribute">timelineZoomLevel</span>": <span class="hljs-value"><span class="hljs-string">"days"</span></span>,
   "<span class="hljs-attribute">timelineLabels</span>": <span class="hljs-value">{}</span>,
+  "<span class="hljs-attribute">highlightingMode</span>": <span class="hljs-value"><span class="hljs-string">"inline"</span></span>,
   "<span class="hljs-attribute">showHierarchies</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
   "<span class="hljs-attribute">starred</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
   "<span class="hljs-attribute">_embedded</span>": <span class="hljs-value">{
@@ -5238,6 +5256,13 @@ The returned form will be pre-filled with default values for every property, if 
   "<span class="hljs-attribute">timelineLabels</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"QueryTimelineLabels"</span></span>,
     "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Timeline labels"</span></span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">hasDefault</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">highlightingMode</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"String"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Highlighting mode"</span></span>,
     "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
     "<span class="hljs-attribute">hasDefault</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
@@ -12833,7 +12858,7 @@ not just the current user.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 31 Aug 2018</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 07 Sep 2018</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
