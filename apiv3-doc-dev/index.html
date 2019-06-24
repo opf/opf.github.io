@@ -5913,6 +5913,20 @@ That’s why a 404 is returned here, even if a 403 might be more appropriate.</e
 <td></td>
 <td>READ</td>
 </tr>
+<tr>
+<td style="text-align:center">createdAt</td>
+<td>Time of creation</td>
+<td>DateTime</td>
+<td>not null</td>
+<td>READ</td>
+</tr>
+<tr>
+<td style="text-align:center">updatedAt</td>
+<td>Time of the most recent change to the query</td>
+<td>DateTime</td>
+<td>not null</td>
+<td>READ</td>
+</tr>
 </tbody>
 </table>
 <p>A query that is not assigned to a project (<code>&quot;project&quot;: null</code>) is called a global query. Global queries filter work packages regardless of the project they are assigned to. As such, a different set of filters exists for those queries.</p>
@@ -5994,6 +6008,8 @@ All filters also accepted by the work packages endpoint are accepted. If no filt
   <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Query"</span>,
   <span class="hljs-string">"id"</span>: <span class="hljs-number">9</span>,
   <span class="hljs-string">"name"</span>: <span class="hljs-string">"fdsfdsfdsf"</span>,
+  <span class="hljs-string">"createdAt"</span>: <span class="hljs-string">"2015-03-20T12:56:56Z"</span>,
+  <span class="hljs-string">"updatedAt"</span>: <span class="hljs-string">"2015-05-20T18:16:53Z"</span>,
   <span class="hljs-string">"filters"</span>: [
     {
       <span class="hljs-string">"_type"</span>: <span class="hljs-string">"StatusQueryFilter"</span>,
@@ -6147,6 +6163,8 @@ Note that it is only allowed to provide properties or links supporting the <stro
   <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Query"</span>,
   <span class="hljs-string">"id"</span>: <span class="hljs-number">9</span>,
   <span class="hljs-string">"name"</span>: <span class="hljs-string">"fdsfdsfdsf"</span>,
+  <span class="hljs-string">"createdAt"</span>: <span class="hljs-string">"2015-03-20T12:56:56Z"</span>,
+  <span class="hljs-string">"updatedAt"</span>: <span class="hljs-string">"2015-05-20T18:16:53Z"</span>,
   <span class="hljs-string">"filters"</span>: [
     {
       <span class="hljs-string">"_type"</span>: <span class="hljs-string">"StatusQueryFilter"</span>,
@@ -6630,6 +6648,8 @@ All filters also accepted by the work packages endpoint are accepted. If no filt
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Query"</span></span>,
   "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">9</span></span>,
   "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"fdsfdsfdsf"</span></span>,
+  "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2015-03-20T12:56:56Z"</span></span>,
+  "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2015-05-20T18:16:53Z"</span></span>,
   "<span class="hljs-attribute">filters</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"StatusQueryFilter"</span></span>,
@@ -6789,6 +6809,8 @@ All filters also accepted by the work packages endpoint are accepted. If no filt
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Query"</span></span>,
   "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">9</span></span>,
   "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"fdsfdsfdsf"</span></span>,
+  "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2015-03-20T12:56:56Z"</span></span>,
+  "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2015-05-20T18:16:53Z"</span></span>,
   "<span class="hljs-attribute">filters</span>": <span class="hljs-value">[
     {
       "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"StatusQueryFilter"</span></span>,
@@ -6948,7 +6970,15 @@ All filters also accepted by the work packages endpoint are accepted. If no filt
 Accepts the same format as returned by the <a href="#queries">queries</a> endpoint.
 Currently supported filters are:</p>
 <ul>
-<li>project: filters queries by the project they are assigned to. If the project filter is passed with the <code>!*</code> (not any) operator, global queries are returned.</li>
+<li>
+<p>project: filters queries by the project they are assigned to. If the project filter is passed with the <code>!*</code> (not any) operator, global queries are returned.</p>
+</li>
+<li>
+<p>id: filters queries based on their id</p>
+</li>
+<li>
+<p>updated_at: filters queries based on the last time they where updated</p>
+</li>
 </ul>
 </dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/hal+json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">_links</span>": <span class="hljs-value">{
@@ -6965,6 +6995,8 @@ Currently supported filters are:</p>
         "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Query"</span></span>,
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">9</span></span>,
         "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"fdsfdsfdsf"</span></span>,
+        "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2015-03-20T12:56:56Z"</span></span>,
+        "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2015-05-20T18:16:53Z"</span></span>,
         "<span class="hljs-attribute">filters</span>": <span class="hljs-value">[
           {
             "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"StatusQueryFilter"</span></span>,
@@ -7116,6 +7148,8 @@ Note that it is only allowed to provide properties or links supporting the write
   <span class="hljs-string">"_type"</span>: <span class="hljs-string">"Query"</span>,
   <span class="hljs-string">"id"</span>: <span class="hljs-number">9</span>,
   <span class="hljs-string">"name"</span>: <span class="hljs-string">"fdsfdsfdsf"</span>,
+  <span class="hljs-string">"createdAt"</span>: <span class="hljs-string">"2015-03-20T12:56:56Z"</span>,
+  <span class="hljs-string">"updatedAt"</span>: <span class="hljs-string">"2015-05-20T18:16:53Z"</span>,
   <span class="hljs-string">"filters"</span>: [
     {
       <span class="hljs-string">"_type"</span>: <span class="hljs-string">"StatusQueryFilter"</span>,
@@ -7409,6 +7443,20 @@ The returned form will be pre-filled with default values for every property, if 
     "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">255</span>
   </span>}</span>,
+  "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"DateTime"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Created on"</span></span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">hasDefault</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"DateTime"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Updated on"</span></span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">hasDefault</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
   "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
     "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
@@ -7687,6 +7735,20 @@ The returned form will be pre-filled with default values for every property, if 
     "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
     "<span class="hljs-attribute">minLength</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
     "<span class="hljs-attribute">maxLength</span>": <span class="hljs-value"><span class="hljs-number">255</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"DateTime"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Created on"</span></span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">hasDefault</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"DateTime"</span></span>,
+    "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Updated on"</span></span>,
+    "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+    "<span class="hljs-attribute">hasDefault</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+    "<span class="hljs-attribute">writable</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
   </span>}</span>,
   "<span class="hljs-attribute">user</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"User"</span></span>,
@@ -16276,7 +16338,7 @@ not just the current user.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 23 Jun 2019</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 24 Jun 2019</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
