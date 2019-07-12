@@ -5506,7 +5506,7 @@ Currently supported filters are:</p>
 <tr>
 <td style="text-align:center">description</td>
 <td></td>
-<td>String</td>
+<td>Formattable</td>
 <td></td>
 <td>READ</td>
 </tr>
@@ -5566,7 +5566,14 @@ Currently supported filters are:</p>
     "id": 1,
     "identifier": "project_identifier",
     "name": "Project example",
-    "description": "Lorem ipsum dolor sit amet",
+    "description": {
+        "format": "markdown",
+        "raw": "Lorem **ipsum** dolor sit amet",
+        "html": "<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem <span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>ipsum<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span> dolor sit amet<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>"
+    },
+    "description": {
+      "raw": "Lorem ipsum dolor sit amet",
+      "markdown"gt
     "createdAt": "2014-05-21T08:51:20Z",
     "updatedAt": "2014-05-21T08:51:20Z",
     "customField123": 123
@@ -5622,7 +5629,11 @@ Currently supported filters are:</p>
         <span class="hljs-string">"id"</span>: <span class="hljs-number">6</span>,
         <span class="hljs-string">"identifier"</span>: <span class="hljs-string">"a_project"</span>,
         <span class="hljs-string">"name"</span>: <span class="hljs-string">"A project"</span>,
-        <span class="hljs-string">"description"</span>: <span class="hljs-string">"Eveniet molestias omnis quis aut qui eum adipisci."</span>,
+        <span class="hljs-string">"description"</span>: {
+            <span class="hljs-string">"format"</span>: <span class="hljs-string">"markdown"</span>,
+            <span class="hljs-string">"raw"</span>: <span class="hljs-string">"Lorem **ipsum** dolor sit amet"</span>,
+            <span class="hljs-string">"html"</span>: <span class="hljs-string">"&lt;p&gt;Lorem &lt;strong&gt;ipsum&lt;/strong&gt; dolor sit amet&lt;/p&gt;"</span>
+        },
         <span class="hljs-string">"createdAt"</span>: <span class="hljs-string">"2015-07-06T13:28:14+00:00"</span>,
         <span class="hljs-string">"updatedAt"</span>: <span class="hljs-string">"2015-10-01T09:55:02+00:00"</span>,
         <span class="hljs-string">"type"</span>: <span class="hljs-string">"Customer Project"</span>
@@ -5652,7 +5663,11 @@ Currently supported filters are:</p>
         <span class="hljs-string">"id"</span>: <span class="hljs-number">14</span>,
         <span class="hljs-string">"identifier"</span>: <span class="hljs-string">"another_project"</span>,
         <span class="hljs-string">"name"</span>: <span class="hljs-string">"Another project"</span>,
-        <span class="hljs-string">"description"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-string">"description"</span>: {
+            <span class="hljs-string">"format"</span>: <span class="hljs-string">"markdown"</span>,
+            <span class="hljs-string">"raw"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-string">"html"</span>: <span class="hljs-string">""</span>
+        },
         <span class="hljs-string">"createdAt"</span>: <span class="hljs-string">"2016-02-29T12:50:20+00:00"</span>,
         <span class="hljs-string">"updatedAt"</span>: <span class="hljs-string">"2016-02-29T12:50:20+00:00"</span>,
         <span class="hljs-string">"type"</span>: <span class="hljs-literal">null</span>
@@ -5691,7 +5706,11 @@ but are also limited to the projects that the current user is allowed to see.</p
         "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
         "<span class="hljs-attribute">identifier</span>": <span class="hljs-value"><span class="hljs-string">"project_identifier"</span></span>,
         "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Project example"</span></span>,
-        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Lorem ipsum dolor sit amet"</span></span>,
+        "<span class="hljs-attribute">description</span>": <span class="hljs-value">{
+          "<span class="hljs-attribute">format</span>": <span class="hljs-value"><span class="hljs-string">"markdown"</span></span>,
+          "<span class="hljs-attribute">raw</span>": <span class="hljs-value"><span class="hljs-string">"Lorem **ipsum** dolor sit amet"</span></span>,
+          "<span class="hljs-attribute">html</span>": <span class="hljs-value"><span class="hljs-string">"&lt;p&gt;Lorem &lt;strong&gt;ipsum&lt;/strong&gt; dolor sit amet&lt;/p&gt;"</span>
+        </span>}</span>,
         "<span class="hljs-attribute">createdAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span></span>,
         "<span class="hljs-attribute">updatedAt</span>": <span class="hljs-value"><span class="hljs-string">"2014-05-21T08:51:20Z"</span>
       </span>}
@@ -16338,7 +16357,7 @@ not just the current user.</p>
   "<span class="hljs-attribute">_type</span>": <span class="hljs-value"><span class="hljs-string">"Error"</span></span>,
   "<span class="hljs-attribute">errorIdentifier</span>": <span class="hljs-value"><span class="hljs-string">"urn:openproject-org:api:v3:errors:NotFound"</span></span>,
   "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"The specified project does not exist."</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 11 Jul 2019</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 12 Jul 2019</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
