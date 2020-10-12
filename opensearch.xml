@@ -1,0 +1,10 @@
+<!-- Enables searching from the URL bar https://www.algolia.com/doc/tutorials/search-ui/ux-patterns/search-from-the-url-bar/ -->
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>OpenProject Documentation</ShortName>
+  <Description>Documentation for OpenProject Community, Enterprise Edition, and Cloud Edition.</Description>
+  <Url type="text/html" method="get" template="https://docs.openproject.org/search/?q={searchTerms}"/>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <Image height="32" width="32" type="image/x-icon">https://docs.openproject.org/favicon.ico</Image>
+  <moz:SearchForm>https://docs.openproject.org/search/</moz:SearchForm>
+</OpenSearchDescription>

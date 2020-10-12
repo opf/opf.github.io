@@ -1,35 +1,354 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Index of Documentation for OpenProject</title>
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200">
-<style>
-body {
-  font-family: 'Roboto' sans-serif !important;
-  padding: 10px;
-}
-h1,
-h2 {
-  font-family: 'Raleway' sans-serif !important;
-}
-h1 a, h2 a {
-  display: none;
-}
-h1, .h1 {
-  font-size: 36px;
-}
-h1, .h1, h2, .h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-h1:hover a, h2:hover a {
-  display: inline;
-}
-a[data-target] {
-  cursor: pointer;
-</style>
-<body>
-<h1>Available Documentations for OpenProject</h1>
-<ul>
-  <li><p><a href="./apiv3-doc/">API V3 documentation (current stable release)</a></li>
-  <li><p><a href="./apiv3-doc-dev/">API V3 documentation (<strong>development</strong> branch)</a></li>
-</ul>
-</body>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      prefix="og: http://ogp.me/ns#">
+  <head>
+
+    <link href="/stylesheets/site-f3fa844b.css" rel="stylesheet" />
+    
+<meta charset="utf-8">
+
+  <title>OpenProject Documentation & Help</title>
+
+  <meta name="description" content="Help & documentation for OpenProject Community, Enterprise Edition, Cloud Edition: getting started, user guide, installation & operations guide, upgrade guide, development guide, API documentation, release notes.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="docsearch:language" content="en" />
+
+
+<!-- Algolia Searching from the URL bar https://www.algolia.com/doc/tutorials/search-ui/ux-patterns/search-from-the-url-bar/ -->
+<link href='/opensearch.xml' rel='search' title='Search through OpenProject Docs' type='application/opensearchdescription+xml'>
+
+<link href="/images/favicon.ico" rel="shortcut icon" type="image/ico" />
+
+<link href="/images/apple-touch-icon-120x120-85402ebf.png" rel="apple-touch-icon" type="image/png" sizes="120x120" />
+
+
+
+  </head>
+  <body class="index landing">
+
+    <div id="cookie-warning">
+  This website uses cookies to ensure you get the best experience on our website.
+  <a href="https://www.openproject.org/data-privacy-and-security/" target="_blank">More Information</a>.
+  <a class="cookie-warning--submit fa fa-times"></a>
+</div>
+
+      <div class="landing-header-top--container">
+  <div class="landing-header-top" id="landing-header-bar">
+    <a class="header-link logo-container flex-container justify-center align-center" href="/">
+      <img src="/images/openproject-logo-white-0c8866c4.svg" class="logo hidden-for-mobile" alt="Openproject logo white" />
+      <img src="/images/openproject-logo-white-small-7e35a862.svg" class="logo hidden-for-desktop" alt="Openproject logo white small" />
+      <div class="header--separator hidden-for-mobile"></div>
+      <div class="header--help-text hidden-for-mobile">Docs</div>
+    </a>
+    <nav class="landing-header--button-group">
+      
+      <a href="https://openproject.com/"
+         target="_blank"
+         title="About OpenProject"
+         class="header-link">
+        About OpenProject
+      </a>
+      <a href="https://start.openproject.com/"
+         target="_blank"
+         title="Get started for FREE"
+         class="landing-header--btn landing-header--get-started-btn animated">
+        Get started for FREE
+      </a>
+      <a href="https://www.openproject.org/signin/"
+         target="_blank"
+         title="Sign in"
+         class="landing-header--btn landing-header--signin-btn animated">
+         <i class="fa fa-lock" aria-hidden="true"></i>
+         Sign in
+      </a>
+  <!--    <a class="header-link nav-item flex-container justify-center align-center"-->
+  <!--       href="">-->
+  <!--      <p>(English)</p>-->
+  <!--    </a>-->
+  <!--    <a class="header-link nav-item flex-container justify-center align-center"-->
+  <!--      href="">-->
+  <!--      <p>(Deutsch)</p>-->
+  <!--    </a>-->
+    </nav>
+  </div>
+</div>
+
+  <div class="landing-header flex-container flex-column justify-center align-center">
+    <h1>Hello, how can we help you?</h1>
+    <div class="search--container" itemscope itemtype="http://schema.org/WebSite">
+      <meta itemprop="url" content="https://finnlabs.github.io/openproject-docs"/>
+      <form id="search-form" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+        <meta itemprop="target" content="https://docs.openproject.org/search/?q={q}"/>
+        <div class="input-container">
+          <img src="/images/icon_search-1865296e.svg" alt="Icon search" />
+          <input itemprop="query-input" type="text" name="q" class="docsearch" placeholder="Enter your search term here ..." autofocus required/>
+        </div>
+        <input type="submit" style="visibility: hidden; position:absolute;"/>
+      </form>
+      <div class="landing-header--powered-by-algolia">
+        <img src="/images/search-by-algolia-dark-background-8dbcb31f.svg" alt="Search by algolia dark background" />
+      </div>
+    </div>
+  </div>
+  <div class="row topic--background">
+  <ul class="main-topics" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/getting-started">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+              <div class="topic--badge -green">
+                First steps
+              </div>
+            <img src="/images/products/getting-started-58195ed6.svg" alt="Getting started" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">Getting started</h2>
+              <p class="topic--info center">Learn about the first steps </br>with OpenProject</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/user-guide">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+              <div class="topic--badge -red">
+                All features
+              </div>
+            <img src="/images/products/user-guide-c95038e8.svg" alt="User guide" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">User guide</h2>
+              <p class="topic--info center">In-depth guide of all features </br>in OpenProject</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/system-admin-guide">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+            <img src="/images/products/system-admin-guide-229fe831.svg" alt="System Admin guide" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">System Admin guide</h2>
+              <p class="topic--info center">Learn how to configure your </br>OpenProject</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/cloud-edition-guide">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+            <img src="/images/products/openproject-cloud-edition-8c19d8cd.svg" alt="Cloud Edition guide" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">Cloud Edition guide</h2>
+              <p class="topic--info center">Manage your OpenProject </br>Cloud Edition</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/enterprise-edition-guide">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+            <img src="/images/products/openproject-enterprise-edition-08123e1a.svg" alt="Enterprise Edition guide" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">Enterprise Edition guide</h2>
+              <p class="topic--info center">Manage your OpenProject </br>Enterprise Edition</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/installation-and-operations">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+            <img src="/images/products/installation-operations-02983909.svg" alt="Installation and operations guide" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">Installation and operations guide</h2>
+              <p class="topic--info center">Find out how to install </br>and operate OpenProject</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/release-notes">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+            <img src="/images/products/release-notes-7a231f12.svg" alt="Release Notes" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">Release Notes</h2>
+              <p class="topic--info center">See the latest changes </br>in OpenProject</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/development">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+            <img src="/images/products/development-guide-a3b5c439.svg" alt="Development" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">Development</h2>
+              <p class="topic--info center">Learn about how to contribute </br>to OpenProject</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a itemprop="url" href="https://docs.openproject.org/api">
+          <div class="topic--wrapper wrapper flex-container flex-column">
+            <img src="/images/products/api-docs-ff3b8f3b.svg" alt="API" class="line logo" />
+            <div class="topic-info">
+              <h2 class="topic--header" itemprop="name">API</h2>
+              <p class="topic--info center">Learn about the API </br>powering OpenProject</p>
+            </div>
+          </div>
+        </a>
+      </li>
+  </ul>
+</div>
+<div class="row popular-topics--background">
+  <div class="popular-topics">
+    <h1>Most popular topics</h1>
+    <div class="popular-topics--container">
+      <div class="popular-topics--item">
+        <a href="/installation-and-operations">
+          <header>Installing OpenProject</header>
+          <div>
+            <p>
+              Learn how to download and install OpenProject on your own servers.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="popular-topics--item">
+        <a href="https://openproject.org/enterprise-edition#premium-features">
+          <header>Premium features</header>
+          <div>
+            <p>
+              Find out about the OpenProject premium features to boost your project management.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="popular-topics--item">
+        <a href="https://openproject.org/hosting">
+          <header>OpenProject hosting</header>
+          <div>
+            <p>
+              Get started easily with OpenProject hosting from the experts.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="popular-topics--item">
+        <a href="https://openproject.org/pricing#support">
+          <header>Support</header>
+          <div>
+            <p>
+              Find out how to get maintenance and support for OpenProject in your organization.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="footer--container">
+  <footer class=footer>
+    <div class='animated'>
+      <div class="footer--links-container row justify-content-center">
+        <div class='col-12 col-sm-6 col-md-3 col-lg-3 col-lg-offset-2 footer-link-holder'>
+          <h3 class=footer-link-title>Blog</h3>
+          <ul class='animated footer-links'>
+            <li><a href="https://www.openproject.org/trello-alternative/" target="_blank">Why OpenProject is the better Trello alternative for Enterprises</a></li>
+            <li><a href="https://www.openproject.org/openproject-9-new-scrum-agile-board-view/" target="_blank">OpenProject 9: new Scrum and Agile Boards</a></li>
+            <li><a href="https://www.openproject.org/step-by-step-guide-boards-for-scrum-and-agile-project-management/" target="_blank">How to get started with Agile Boards</a></li>
+            <li><a href="https://www.openproject.org/synchronize-excel-openproject/" target="_blank">How to synchronize your Excel Sheet with OpenProject</a></li>
+            <li><a href="https://www.openproject.org/jira-alternative/" target="_blank">OpenProject: open source alternative to Jira</a></li>
+            <li><a href="https://www.openproject.org/openproject-collaborative-excel-alternative-project-management/" target="_blank">OpenProject: open source Excel alternative</a></li>
+          </ul>
+        </div>
+        <div class='col-12 col-sm-6 col-md-3 col-lg-3 footer-link-holder'>
+          <h3 class=footer-link-title>Pricing</h3>
+          <ul class='animated footer-links'>
+            <li><a href="https://www.openproject.org/enterprise-edition/" target="_blank">Enterprise Edition</a></li>
+            <li><a href="https://www.openproject.org/hosting/" target="_blank">Hosting</a></li>
+            <li><a href="https://www.openproject.org/pricing/#support" target="_blank">Maintenance and support</a></li>
+            <li><a href="https://www.openproject.org/training-and-consulting/" target="_blank">Training and consulting</a></li>
+            <li><a href="https://www.openproject.org/training-and-consulting/#certification" target="_blank">OpenProject Certification</a></li>
+            <li><a href="https://www.openproject.org/contact-us/" target="_blank">Custom Development</a></li>
+            <li><a href="https://www.openproject.org/reseller-program/" target="_blank">Reseller Program</a></li>
+          </ul>
+        </div>
+        <div class='col-12 col-sm-6 col-md-3 col-lg-3 footer-link-holder'>
+          <h3 class=footer-link-title>Project Management</h3>
+          <ul class='animated footer-links'>
+            <li><a href="https://www.openproject.org/collaboration-software-features/timeline-project-management/"" target="_blank">Gantt chards | Timeline management</a></li>
+            <li><a href="https://www.openproject.org/scrum-agile-boards/" target="_blank">Boards for Kanban and Agile Project Management</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/task-management-software/" target="_blank">Task management | Issue tracking</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/scrum-agile-project-management/" target="_blank">Agile project management and Scrum</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/time-tracking-software/" target="_blank">Time tracking, Cost reporting and Budgeting</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/bug-tracking-software/" target="_blank">Bug tracking</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/product-roadmap-software/" target="_blank">Product roadmap and release planning</a></li>
+          </ul>
+        </div>
+        <div class='col-12 col-sm-6 col-md-3 col-lg-3 footer-link-holder'>
+          <h3 class=footer-link-title>About us</h3>
+          <ul class='animated footer-links'>
+            <li><a href="https://www.openproject.org/gdpr-compliance/" target="_blank">GDPR | Security and data privacy statement</a></li>
+            <li><a href="https://www.openproject.org/about-us/what-our-users-say/" target="_blank">What our users say</a></li>
+            <li><a href="https://www.openproject.org/about-us/career/" target="_blank">Career</a></li>
+            <li><a href="https://www.openproject.org/newsletter/" target="_blank">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer--separator"></div>
+
+    <div class="footer--generic-line-container">
+      <div class="link-container footer-links">
+        <a class="generic-link" href="https://www.openproject.org/contact-us/" target="_blank">
+          Contact us
+        </a>
+        <a class="generic-link" href="https://www.openproject.org/legal-notice/" target="_blank">
+          Legal notice
+        </a>
+        <a class="generic-link" href="https://www.openproject.org/terms-of-service/" target="_blank">
+          Terms of Service
+        </a>
+        <a class="generic-link" href="https://www.openproject.org/data-privacy-and-security/" target="_blank">
+          Data privacy
+        </a>
+      </div>
+
+      <div class="footer--separator hidden-for-desktop"></div>
+
+      <div class="footer-social-media">
+        <a class="social-media-link"  href="https://twitter.com/openproject" target="_blank">
+          <img src="/images/social-media/twitter_logo_white-fdec5b01.png" alt="Twitter logo white" />
+        </a>
+        <a class="social-media-link"  href="https://www.facebook.com/openprojectfoundation" target="_blank">
+          <img src="/images/social-media/facebook_logo-a1016461.png" alt="Facebook logo" />
+        </a>
+        <a class="social-media-link"  href="https://github.com/opf/openproject" target="_blank">
+          <img src="/images/social-media/github_logo-5740f0d2.png" alt="Github logo" />
+        </a>
+        <a class="social-media-link"  href="https://www.youtube.com/c/OpenProjectCommunity" target="_blank">
+          <img src="/images/social-media/youtube_logo-b81fcb2b.png" alt="Youtube logo" />
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        © 2020 - OpenProject. All rights reserved.
+        <br/>
+          <a href="https://github.com/opf/openproject/commit/f1419d1e9515077b9a3a5bf44dfa6d1fb6372c5a">Build f1419d1e</a>
+          9 minutes
+          ago
+      </div>
+    </div>
+
+  </footer>
+</div>
+
+    <script src="/javascripts/site-bae9dda7.js"></script>
+  </body>
 </html>

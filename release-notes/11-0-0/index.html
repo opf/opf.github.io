@@ -1,0 +1,3274 @@
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      prefix="og: http://ogp.me/ns#">
+  <head>
+
+    <link href="/stylesheets/site-f3fa844b.css" rel="stylesheet" />
+    
+<meta charset="utf-8">
+
+  <title>OpenProject 11.0.0 | OpenProject Help & Documentation</title>
+
+  <meta name="description" content="Help & documentation for OpenProject Community, Enterprise Edition, Cloud Edition: getting started, user guide, installation & operations guide, upgrade guide, development guide, API documentation, release notes.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="docsearch:language" content="en" />
+
+
+<!-- Algolia Searching from the URL bar https://www.algolia.com/doc/tutorials/search-ui/ux-patterns/search-from-the-url-bar/ -->
+<link href='/opensearch.xml' rel='search' title='Search through OpenProject Docs' type='application/opensearchdescription+xml'>
+
+<link href="/images/favicon.ico" rel="shortcut icon" type="image/ico" />
+
+<link href="/images/apple-touch-icon-120x120-85402ebf.png" rel="apple-touch-icon" type="image/png" sizes="120x120" />
+
+
+
+  </head>
+  <body class="release-notes release-notes_11-0-0 release-notes_11-0-0_index ">
+
+    <div id="cookie-warning">
+  This website uses cookies to ensure you get the best experience on our website.
+  <a href="https://www.openproject.org/data-privacy-and-security/" target="_blank">More Information</a>.
+  <a class="cookie-warning--submit fa fa-times"></a>
+</div>
+
+      <div class="header">
+  <div class="header--element-container flex-container align-center">
+    <a class="nav-toggle hidden-for-desktop">
+      <i class="fa fa-bars" aria-hidden="true" data-gl-class-toggle="active" data-target=".nav-wrapper"></i>
+      <i class="fa fa-times" aria-hidden="true" data-gl-class-toggle="active" data-target=".nav-wrapper"></i>
+    </a>
+    <a class="header-link logo-container flex-container justify-center align-center" href="https://docs.openproject.org/">
+      <img src="/images/openproject-logo-white-0c8866c4.svg" class="logo" alt="Openproject logo white" />
+      <div class="header--separator hidden-for-mobile"></div>
+      <div class="header--help-text hidden-for-mobile">Docs</div>
+    </a>
+      <form id="search-form">
+        <i class="fa fa-search hidden-for-desktop" aria-hidden="true" data-gl-class-toggle="active" data-target=".header--element-container"></i>
+        <i class="fa fa-arrow-left hidden-for-desktop" aria-hidden="true" data-gl-class-toggle="active" data-target=".header--element-container"></i>
+        <input type="text" name="q" class="docsearch-input docsearch" placeholder="Search our docs" required/>
+        <input type="submit" style="visibility: hidden; position:absolute;" />
+      </form>
+  </div>
+  <nav class="landing-header--button-group landing-header--on-page">
+    
+    <a href="https://openproject.com/"
+       target="_blank"
+       title="About OpenProject"
+       class="header-link">
+      About OpenProject
+    </a>
+    <a href="https://start.openproject.com/"
+       target="_blank"
+       title="Get started for FREE"
+       class="landing-header--btn landing-header--get-started-btn animated">
+      Get started for FREE
+    </a>
+    <a href="https://www.openproject.org/signin/"
+       target="_blank"
+       title="Sign in"
+       class="landing-header--btn landing-header--signin-btn animated">
+      <i class="fa fa-lock" aria-hidden="true"></i>
+      Sign in
+    </a>
+  </nav>
+</div>
+
+  <div class="wrapper">
+  <div class="container-fluid px-0 d-flex">
+    <div class="nav-wrapper">
+      <aside id="global-nav" class="global-nav d-block d-lg-flex justify-content-none justify-content-lg-end">
+        <nav class="global-nav-content">
+  <div class="mobile--landing-items">
+    <a href="https://openproject.com/"
+       target="_blank"
+       title="About OpenProject"
+       class="mobile--landing-item ">
+      About OpenProject
+    </a>
+    <a href="https://start.openproject.com/"
+       target="_blank"
+       title="Get started for FREE"
+       class="mobile--landing-item">
+      Get started for FREE
+    </a>
+    <a href="https://www.openproject.org/signin/"
+       target="_blank"
+       title="Sign in to OpenProject"
+       class="mobile--landing-item">
+      Sign in to OpenProject
+    </a>
+    <hr/>
+  </div>
+  <!-- nav sections -->
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/getting-started">
+          Getting Started
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-getting-started"></div>
+      </span>
+
+        <div class="collapse " id="nav-children-getting-started">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/openproject-introduction">
+                Introduction to OpenProject
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-introduction-to-openproject"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/sign-in-registration">
+                Sign in and registration
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-sign-in-and-registration"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/projects">
+                Projects
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-projects"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/invite-members">
+                Invite members
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-invite-members"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/work-packages-introduction">
+                Work packages introduction
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-work-packages-introduction"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/gantt-chart-introduction">
+                Gantt charts introduction
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-gantt-charts-introduction"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/boards-introduction">
+                Agile Boards introduction
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-agile-boards-introduction"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/my-account">
+                My Account
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-my-account"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/getting-started/my-page">
+                My Page
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-my-page"></div>
+          </span>
+
+
+        </div>
+    </div>
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/user-guide">
+          User Guide
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-user-guide"></div>
+      </span>
+
+        <div class="collapse " id="nav-children-user-guide">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/start-page">
+                Start page
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-start-page"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/project-overview">
+                Project overview
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-project-overview"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/activity">
+                Activity
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-activity"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/roadmap">
+                Roadmap
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-roadmap"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/work-packages">
+                Work packages
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-work-packages"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-work-packages">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/work-packages/work-package-views">
+                      Work packages views
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/work-packages/create-work-package">
+                      Create work packages
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/work-packages/edit-work-package">
+                      Edit Work packages
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/work-packages/copy-move-delete">
+                      Copy, move, delete work packages
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/work-packages/work-package-table-configuration">
+                      Configure work package table
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/work-packages/exporting">
+                      Exporting
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/work-packages/work-package-relations-hierarchies">
+                      Work package relations and hierarchies
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/gantt-chart">
+                Gantt charts
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-gantt-charts"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-gantt-charts">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/gantt-chart/scheduling">
+                      Automatic and Manual Scheduling
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/agile-boards">
+                Agile boards
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-agile-boards"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/backlogs-scrum">
+                Backlogs (Scrum)
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-backlogs-scrum"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-backlogs-scrum">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/backlogs-scrum/work-with-backlogs">
+                      Backlogs view
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/backlogs-scrum/manage-sprints">
+                      Manage sprints
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/backlogs-scrum/taskboard">
+                      Taskboard view
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/calendar">
+                Calendar
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-calendar"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/news">
+                News
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-news"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/forums">
+                Forums
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-forums"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/wiki">
+                Wiki
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-wiki"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-wiki">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/wiki/create-edit-wiki">
+                      Create and edit wiki
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/wiki/wiki-menu">
+                      Wiki project menu
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/wiki/more-wiki-functions">
+                      More wiki functions
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/time-and-costs">
+                Time and costs
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-time-and-costs"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-time-and-costs">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/time-and-costs/time-tracking">
+                      Time tracking
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/time-and-costs/cost-tracking">
+                      Cost tracking
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/time-and-costs/time-tracking/toggl-integration">
+                      Toggl integration
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/time-and-costs/reporting">
+                      Time and cost reporting
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/budgets">
+                Budgets
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-budgets"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/documents">
+                Documents
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-documents"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/meetings">
+                Meetings
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-meetings"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/repository">
+                Repository
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-repository"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/members">
+                Manage members
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-manage-members"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/projects">
+                Manage projects
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-manage-projects"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-manage-projects">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/project-information">
+                      Project information
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/modules">
+                      Modules
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/work-package-types">
+                      Work package types
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/custom-fields">
+                      Custom fields
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/versions">
+                      Versions
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings">
+                      Project settings
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/work-package-categories">
+                      Work package categories
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/repository">
+                      Repository
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/activities-time-tracking">
+                      Time tracking activities
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/projects/project-settings/backlogs-settings">
+                      Backlogs settings
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/integrations">
+                Integrations
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-integrations"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-integrations">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/user-guide/integrations/Excel Synchronization">
+                      Excel synchronization
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/keyboard-shortcuts-access-keys">
+                Keyboard Shortcuts and Access Keys
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-keyboard-shortcuts-and-access-keys"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/user-guide/wysiwyg">
+                Rich text editor
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-rich-text-editor"></div>
+          </span>
+
+
+        </div>
+    </div>
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/system-admin-guide">
+          System Admin Guide
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-system-admin-guide"></div>
+      </span>
+
+        <div class="collapse " id="nav-children-system-admin-guide">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/users-permissions">
+                Users & Permissions
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-users-permissions"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-users-permissions">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/users-permissions/settings">
+                      User settings
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/users-permissions/users">
+                      Manage users
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/users-permissions/groups">
+                      Groups
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/users-permissions/roles-permissions">
+                      Roles & Permissions
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/users-permissions/avatars">
+                      Avatars
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/manage-work-packages">
+                Work packages
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-work-packages"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-work-packages">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/manage-work-packages/work-package-settings">
+                      Settings
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/manage-work-packages/work-package-types">
+                      Types
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/manage-work-packages/work-package-status">
+                      Status
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/manage-work-packages/work-package-workflows">
+                      Workflows
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/manage-work-packages/custom-actions">
+                      Custom actions
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/manage-work-packages/attribute-help-texts">
+                      Attribute Help Texts
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/custom-fields">
+                Custom fields
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-custom-fields"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-custom-fields">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/custom-fields/custom-fields-projects">
+                      Custom fields for projects
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/attribute-help-texts">
+                Attribute help texts
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-attribute-help-texts"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/enumerations">
+                Enumerations
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-enumerations"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/system-settings">
+                System settings
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-system-settings"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-system-settings">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/system-settings/general-settings">
+                      General settings
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/system-settings/display-settings">
+                      Language and display settings
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/system-settings/project-system-settings">
+                      Project system settings
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/system-settings/repositories">
+                      Repositories settings
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/system-settings/api-settings">
+                      API settings
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/email">
+                Email
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-email"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/authentication">
+                Authentication
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-authentication"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-authentication">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/authentication-settings">
+                      Settings
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/oauth-applications">
+                      OAuth applications
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/kerberos">
+                      Kerberos
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/openid-providers">
+                      OpenID providers
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/saml">
+                      SAML single sign-on
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/two-factor-authentication">
+                      Two-factor authentication
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/recaptcha">
+                      reCAPTCHA
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/ldap-authentication">
+                      LDAP authentication
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/system-admin-guide/authentication/ldap-authentication/ldap-group-synchronization">
+                      LDAP group synchronization
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/announcement">
+                Announcement
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-announcement"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/design">
+                Design
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-design"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/colors">
+                Colors
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-colors"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/time-and-costs">
+                Time and costs
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-time-and-costs"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/backlogs">
+                Backlogs
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-backlogs"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/plugins">
+                Plugins
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-plugins"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/github-integration">
+                Github Integration
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-github-integration"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/webhooks">
+                Webhooks
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-webhooks"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/system-admin-guide/information">
+                Information
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-information"></div>
+          </span>
+
+
+        </div>
+    </div>
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/cloud-edition-guide">
+          Cloud Edition Guide
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-cloud-edition-guide"></div>
+      </span>
+
+        <div class="collapse " id="nav-children-cloud-edition-guide">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/cloud-edition-guide/create-trial-installation">
+                Create trial installation
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-create-trial-installation"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/cloud-edition-guide/sign-in">
+                Sign in
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-sign-in"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/cloud-edition-guide/invoices-and-billing-history">
+                Invoices and billing history
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-invoices-and-billing-history"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/cloud-edition-guide/manage-subscription">
+                Manage subscription
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-manage-subscription"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/cloud-edition-guide/book-cloud-edition">
+                Subscribe
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-subscribe"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/cloud-edition-guide/backups">
+                Backups
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-backups"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/cloud-edition-guide/support">
+                Support
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-support"></div>
+          </span>
+
+
+        </div>
+    </div>
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/enterprise-edition-guide">
+          Enterprise Edition Guide
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-enterprise-edition-guide"></div>
+      </span>
+
+        <div class="collapse " id="nav-children-enterprise-edition-guide">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/enterprise-edition-guide/enterprise-trial">
+                Enterprise Edition trial
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-enterprise-edition-trial"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/enterprise-edition-guide/activate-enterprise-edition">
+                Activate the Enterprise Edition
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-activate-the-enterprise-edition"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/enterprise-edition-guide/support">
+                Support
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-support"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-support">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/enterprise-edition-guide/support/installation-support">
+                      Installation support
+                    </a>
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/installation-and-operations">
+          Installation & Upgrade Guides
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-installation-upgrade-guides"></div>
+      </span>
+
+        <div class="collapse " id="nav-children-installation-upgrade-guides">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/installation-and-operations/system-requirements">
+                System requirements
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-system-requirements"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/installation-and-operations/installation">
+                Installation
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-installation"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-installation">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/installation/packaged">
+                      Packages
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/installation/docker">
+                      Docker
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/installation/univention">
+                      Univention App Center
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/installation/misc">
+                      Other
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/installation-and-operations/operation">
+                Operation
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-operation"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-operation">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/operation/reconfiguring">
+                      (Re)configuring
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/operation/backing-up">
+                      Backing up
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/operation/restoring">
+                      Restoring
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/operation/upgrading">
+                      Upgrading
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/operation/monitoring">
+                      Monitoring & Logs
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/operation/control">
+                      Process control
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/operation/faq">
+                      FAQ
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/installation-and-operations/configuration">
+                Advanced configuration
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-advanced-configuration"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-advanced-configuration">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/configuration/environment">
+                      Environment variables
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/configuration/ssl">
+                      Configuring SSL
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/configuration/outbound-emails">
+                      Configuring outbound emails
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/configuration/incoming-emails">
+                      Configuring inbound emails
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/configuration/database">
+                      Configuring a custom database server
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/configuration/server">
+                      Configuring a custom web server
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/configuration/repositories">
+                      Repository Integration in OpenProject
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/configuration/plugins">
+                      Adding plugins
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/installation-and-operations/misc">
+                Other
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-other"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-other">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/misc/custom-openid-connect-providers">
+                      Custom OpenID Connect providers
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/misc/time-entries-corrupted-by-10-4">
+                      Fixing time entries corrupted by upgrading to 10.4.0
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/misc/upgrading-older-openproject-versions">
+                      Migrating from an old MySQL database
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/misc/docker-postgresql-migration">
+                      Migrating your Docker OpenProject database to PostgreSQL
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/misc/packaged-postgresql-migration">
+                      Migrating your packaged OpenProject database to PostgreSQL
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/misc/migration">
+                      Migrating your packaged OpenProject installation to another environment
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/installation-and-operations/misc/textile-migration">
+                      OpenProject Textile to Markdown migration
+                    </a>
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/release-notes">
+          Release notes
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-release-notes"></div>
+      </span>
+
+        <div class="collapse show" id="nav-children-release-notes">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 active" href="/release-notes/11-0-0">
+                11.0.0
+              </a>
+            <div class=" active" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-11-0-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-6-5">
+                10.6.5
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-6-5"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-6-4">
+                10.6.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-6-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-6-3">
+                10.6.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-6-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-6-2">
+                10.6.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-6-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-6-1">
+                10.6.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-6-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-6-0">
+                10.6.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-6-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-5-1">
+                10.5.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-5-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-5-0">
+                10.5.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-5-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-4-1">
+                10.4.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-4-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-4-0">
+                10.4.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-4-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-3-1">
+                10.3.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-3-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-3-0">
+                10.3.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-3-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-2-2">
+                10.2.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-2-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-2-1">
+                10.2.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-2-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-2-0">
+                10.2.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-2-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-1-0">
+                10.1.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-1-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-0-2">
+                10.0.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-0-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-0-1">
+                10.0.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-0-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/10-0-0">
+                10.0.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-10-0-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/9-0-3">
+                9.0.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-9-0-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/9-0-4">
+                9.0.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-9-0-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/9-0-2">
+                9.0.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-9-0-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/9-0-1">
+                9.0.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-9-0-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/9-0-0">
+                9.0.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-9-0-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-3-2">
+                8.3.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-3-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-3-1">
+                8.3.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-3-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-3-0">
+                8.3.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-3-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-2-1">
+                8.2.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-2-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-2-0">
+                8.2.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-2-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-1-0">
+                8.1.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-1-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-0-2">
+                8.0.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-0-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-0-1">
+                8.0.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-0-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/8-0-0">
+                8.0.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-8-0-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-4-7">
+                7.4.7
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-4-7"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-4-6">
+                7.4.6
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-4-6"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-4-5">
+                7.4.5
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-4-5"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-4-4">
+                7.4.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-4-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-4-3">
+                7.4.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-4-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-4-2">
+                7.4.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-4-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-4-1">
+                7.4.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-4-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-4-0">
+                7.4.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-4-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-3-2">
+                7.3.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-3-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-3-1">
+                7.3.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-3-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-3-0">
+                7.3.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-3-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-2-3">
+                7.2.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-2-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-2-2">
+                7.2.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-2-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-2-1">
+                7.2.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-2-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-2-0">
+                7.2.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-2-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-1-0">
+                7.1.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-1-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-0-3">
+                7.0.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-0-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-0-2">
+                7.0.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-0-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-0-1">
+                7.0.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-0-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/7-0-0">
+                7.0.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-7-0-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-1-6">
+                6.1.6
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-1-6"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-1-5">
+                6.1.5
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-1-5"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-1-3">
+                6.1.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-1-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-1-4">
+                6.1.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-1-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-1-2">
+                6.1.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-1-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-1-1">
+                6.1.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-1-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-1-0">
+                6.1.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-1-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-0-5">
+                6.0.5
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-0-5"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-0-4">
+                6.0.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-0-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-20">
+                5.0.20
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-20"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-0-3">
+                6.0.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-0-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-0-2">
+                6.0.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-0-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-0-1">
+                6.0.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-0-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-19">
+                5.0.19
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-19"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-18">
+                5.0.18
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-18"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/6-0-0">
+                6.0.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-6-0-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-17">
+                5.0.17
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-17"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-16">
+                5.0.16
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-16"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-15">
+                5.0.15
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-15"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-14">
+                5.0.14
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-14"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-12">
+                5.0.12
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-12"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-13">
+                5.0.13
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-13"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-11">
+                5.0.11
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-11"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-10">
+                5.0.10
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-10"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-9">
+                5.0.9
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-9"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-8">
+                5.0.8
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-8"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-7">
+                5.0.7
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-7"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-6">
+                5.0.6
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-6"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-5">
+                5.0.5
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-5"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-4">
+                5.0.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-2">
+                5.0.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-3">
+                5.0.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-1">
+                5.0.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-9">
+                4.2.9
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-9"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-8">
+                4.2.8
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-8"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-7">
+                4.2.7
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-7"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/5-0-0">
+                5.0.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-5-0-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-6">
+                4.2.6
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-6"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-5">
+                4.2.5
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-5"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-1-4">
+                4.1.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-1-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-12">
+                4.0.12
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-12"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-4">
+                4.2.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-3">
+                4.2.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-2">
+                4.2.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-1">
+                4.2.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-2-0">
+                4.2.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-2-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-1-3">
+                4.1.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-1-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-11">
+                4.0.11
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-11"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-1-2">
+                4.1.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-1-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-1-1">
+                4.1.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-1-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-1-0">
+                4.1.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-1-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-10">
+                4.0.10
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-10"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-9">
+                4.0.9
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-9"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-8">
+                4.0.8
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-8"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-7">
+                4.0.7
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-7"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-6">
+                4.0.6
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-6"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-5">
+                4.0.5
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-5"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-17">
+                3.0.17
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-17"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-4">
+                4.0.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-2">
+                4.0.2
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-2"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-16">
+                3.0.16
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-16"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-0">
+                4.0.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-0"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/4-0-1">
+                4.0.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-4-0-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-15">
+                3.0.15
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-15"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-8">
+                3.0.8
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-8"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-13">
+                3.0.13
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-13"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-14">
+                3.0.14
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-14"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-12">
+                3.0.12
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-12"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-4">
+                3.0.4
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-4"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-1">
+                3.0.1
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-1"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-3">
+                3.0.3
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-3"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-11">
+                3.0.11
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-11"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/release-notes/3-0-0">
+                3.0.0
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-3-0-0"></div>
+          </span>
+
+
+        </div>
+    </div>
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/development">
+          Development
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-development"></div>
+      </span>
+
+        <div class="collapse " id="nav-children-development">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/product-development-handbook">
+                Product Development
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-product-development"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/accessibility-checklist">
+                Accessibility Checklist
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-accessibility-checklist"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/code-review-guidelines">
+                Code review guidelines
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-code-review-guidelines"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/create-omniauth-plugin">
+                Create an OmniAuth plugin
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-create-an-omniauth-plugin"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/create-openproject-plugin">
+                Create an OpenProject plugin
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-create-an-openproject-plugin"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/concepts">
+                Development concepts
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-development-concepts"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-development-concepts">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/application-architecture">
+                      Application architecture
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/hal-resources">
+                      HAL+JSON resources
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/infrastructure">
+                      Infrastructure overview
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/inline-editing">
+                      Inline editing
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/permissions">
+                      Permissions
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/queries">
+                      Queries
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/resource-changesets">
+                      Resource changesets
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/resource-schemas">
+                      Schemas
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/state-management">
+                      State management
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/development/concepts/translations">
+                      Translations
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/git-workflow">
+                Development workflow
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-development-workflow"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/translate-openproject">
+                Help translate OpenProject to your language
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-help-translate-openproject-to-your-language"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/development-environment-ubuntu">
+                OpenProject development Setup on Debian / Ubuntu
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-openproject-development-setup-on-debian-ubuntu"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/development-environment-osx">
+                OpenProject development Setup on Mac OS X
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-openproject-development-setup-on-mac-os-x"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/development-environment-docker">
+                OpenProject development setup via docker
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-openproject-development-setup-via-docker"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/release-process">
+                Release process
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-release-process"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/report-a-bug">
+                Report a bug
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-report-a-bug"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/security">
+                Statement on Security
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-statement-on-security"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/submit-feature-idea">
+                Submit a feature idea
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-submit-a-feature-idea"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/development/running-tests">
+                Testing OpenProject
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-testing-openproject"></div>
+          </span>
+
+
+        </div>
+    </div>
+
+
+    <div class="global-nav-section">
+      <span class="global-nav-block-top nav-link">
+        <a class="global-nav-link level-0 " href="/api">
+          API documentation
+        </a>
+        <div class="section-title collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-children-api-documentation"></div>
+      </span>
+
+        <div class="collapse " id="nav-children-api-documentation">
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/api/introduction">
+                Introduction
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-introduction"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/api/example">
+                Example
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-example"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/api/basic-objects">
+                Basic Objects
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-basic-objects"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/api/group-objects">
+                Collections
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-collections"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/api/forms">
+                Forms
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-forms"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/api/filters">
+                Filters
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-filters"></div>
+          </span>
+
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/api/endpoints">
+                Endpoints
+              </a>
+            <div class="collapse-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-endpoints"></div>
+          </span>
+
+            <div class="collapse " id="nav-sub-children-endpoints">
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/activities">
+                      Activities
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/attachments">
+                      Attachments
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/budgets">
+                      Budgets
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/categories">
+                      Categories
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/configuration">
+                      Configuration
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/custom-options">
+                      Custom Objects
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/custom-actions">
+                      Custom actions
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/documents">
+                      Documents
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/grids">
+                      Grids
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/groups">
+                      Groups
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/help_texts">
+                      Help texts
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/members">
+                      Memberships
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/news">
+                      News
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/posts">
+                      Posts
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/render">
+                      Previewing
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/principals">
+                      Principals
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/priorities">
+                      Priorities
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/projects">
+                      Projects
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/queries">
+                      Queries
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/relations">
+                      Relations
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/revisions">
+                      Revisions
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/roles">
+                      Roles
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/root">
+                      Root
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/schemas">
+                      Schemas
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/statuses">
+                      Statuses
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/time_entries">
+                      Time Entries
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/types">
+                      Types
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/user-preferences">
+                      UserPreferences
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/users">
+                      Users
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/versions">
+                      Versions
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/wiki_pages">
+                      Wiki Pages
+                    </a>
+                </span>
+                <span class="nav-link">
+                    <a class="global-nav-link level-2 " href="/api/endpoints/work-packages">
+                      Work Packages
+                    </a>
+                </span>
+            </div>
+
+          <span class="global-nav-cat nav-link">
+              <a class="global-nav-link level-1 " href="/api/bcf-rest-api">
+                BCF REST API
+              </a>
+            <div class=" collapsed" data-toggle="collapse" aria-expanded="false" data-target="#nav-sub-children-bcf-rest-api"></div>
+          </span>
+
+
+        </div>
+    </div>
+</nav>
+
+      </aside>
+      <button type="button" class="btn nav-toggle hidden-for-mobile" data-gl-class-toggle="active" data-target=".nav-wrapper">
+        <span class="arrow"></span>
+        <span class="arrow"></span>
+        <div class="label">Collapse sidebar</div>
+      </button>
+    </div>
+    <div class="main class js-main-wrapper has-toc">
+          <ul class="breadcrumbs">
+                <li class="breadcrumb"><a href="/">Getting started</a></li>
+                <li class="breadcrumb"><a href="/release-notes/">Release Notes</a></li>
+                <li class="breadcrumb">OpenProject 11.0.0</li>
+          </ul>
+      <div id="doc-nav" class="doc-nav has-toc">
+        <a class="toc-collapse" role="button" data-toggle="collapse" href="#markdown-toc" aria-expanded="true" aria-controls="markdown-toc"></a>
+      </div>
+      <div class="article-content js-article-content"
+           role="main"
+           itemscope
+           itemprop="mainContentOfPage">
+        <h1 id="openproject-1100">OpenProject 11.0.0</h1>
+
+<p>We released <a href="https://community.openproject.com/versions/1429">OpenProject 11.0.0</a>.</p>
+
+<p>This new release will bring all sorts of features that will improve  classical as well as agile project management. We have implemented a top-down scheduling which introduces the option to schedule tasks  manually in OpenProject. Also, we have done a lot of improvements to the agile boards, e.g. to create a work breakdown structure for your projects. Furthermore, we have developed project templates as well as  better project portfolio management.</p>
+
+<p>As always, the release contains many more improvements and bug fixes and we recommend updating to the newest version promptly.</p>
+
+<p><img src="/release-notes/11-0-0/openproject-11-0-release-blog-ecd0c632.jpg" alt="openproject-11-0-release-blog" /></p>
+
+<h2 id="top-down-project-scheduling-with-new-manual-planning-mode">Top-down project scheduling with new manual planning mode</h2>
+
+<p>Top-down scheduling enables the project team to define all tasks  involved in a project, starting with a fixed start and finish date, and  breaking it down into smaller work packages. The new manual scheduling  mode in OpenProject allows to set a start and finish date of the parent  without being affected by the start and finish dates of its children.  You can now plan a project top-down without knowing all tasks at the  start of the project.</p>
+
+<p><img src="/release-notes/11-0-0/top-down-scheduling-9425aacf.png" alt="top-down-scheduling" /></p>
+
+<p>Moving a child element in the manual scheduling mode will not move  the dates of the parent element. It will now indicate the scheduling  differences with a blue or red bracket underneath (e.g. when a child is  shorter or longer than the parent phase). Also, we have added a grey background on hover to indicate the parent-child-relationships.</p>
+
+<p>Now, in OpenProject you can rely on both, top-down and bottom-up planning or even a combination of both. The approach you choose depends  on your specific planning goal.</p>
+
+<p><img src="/release-notes/11-0-0/Top-down-scheduling-340cdac5.gif" alt="Top-down-scheduling" /></p>
+
+<h2 id="flexible-agile-boards-give-you-more-options-premium-feature">Flexible agile boards give you more options (premium feature)</h2>
+
+<p>New action board types as well as further improvements to the boards allow you even better agile project management.</p>
+
+<h3 id="wbs-work-breakdown-structure-boards">WBS (work-breakdown-structure) boards</h3>
+
+<p>Now, you can create a work breakdown structure for your project by adding parent-child-elements as a board. Select the parent work packages from the list and create a board with all corresponding children work packages.</p>
+
+<p><img src="/release-notes/11-0-0/wbs-boards-0f76629c.png" alt="wbs-boards" /></p>
+
+<h3 id="agile-boards-for-subprojects">Agile boards for subprojects</h3>
+
+<p>Also, project hierarchies can now be displayed in the boards, e.g. to distribute tasks between subprojects. Subprojects can be selected as lists in a board from the parent project, the corresponding work packages from the respective subproject will appear underneath.</p>
+
+<p><img src="/release-notes/11-0-0/subproject-boards-312491b7.png" alt="subproject-boards" /></p>
+
+<h3 id="new-boards-creation-screen-to-select-different-board-types">New boards creation screen to select different board types</h3>
+
+<p>Furthermore, we have implemented more improvements to the agile  boards, such as a better board creation modal. It is now much easier to  choose a new board from the available options.</p>
+
+<p><img src="/release-notes/11-0-0/boards-creation-modal-ea3dad88.png" alt="boards-creation-modal" /></p>
+
+<h3 id="cards-with-details-view-in-boards">Cards with details view in boards</h3>
+
+<p>To get more information about the cards in a board and to enable  quick and easy updates of all work package attributes incl. custom  fields, we have enabled a split-screen view also for the boards view.  The new split screen view can be enabled via the info icon on the cards.</p>
+
+<p><img src="/release-notes/11-0-0/boards-split-screen-0b589d69.png" alt="boards-split-screen" /></p>
+
+<h2 id="project-templates-for-easy-project-creation">Project templates for easy project creation</h2>
+
+<p>The new project templates allow you to create projects based on predefined templates. When setting up a project you can define whether this project should be used as a project template. You will then have the possibility to select a predefined project template when creating a new project which already includes all configurations, e.g. assignee, project plan, work breakdown structure.</p>
+
+<p><img src="/release-notes/11-0-0/project-templates-creation-7234273e.png" alt="project-templates-creation" /></p>
+
+<h2 id="improved-project-portfolio-management">Improved project portfolio management</h2>
+
+<p>The configuration of the “view all projects” page now enables better project portfolio management. You can configure the “view all projects”  list to show relevant project information for all projects, e.g. add custom fields for projects and remove columns which are not needed. With the link to the Gantt charts view you can directly open a global work  packages view for all projects, configured to your needs, e.g. to show all milestones across all projects.</p>
+
+<p><img src="/release-notes/11-0-0/project-portfolio-management-15205e36.png" alt="project-portfolio-management" /></p>
+
+<h2 id="harmonization-of-the-time-and-costs-modules">Harmonization of the time and costs modules</h2>
+
+<p>Tracking spent time and costs is now much easier with the improved and harmonized modules for time and cost reporting. The modules <em>Time tracking</em> and <em>Cost reporting</em> have been combined. Whenever you want to track time and/or costs in a project, the new module <em>Time and costs</em> needs to be activated in the project settings. It automatically adds the time tracking and cost reporting functionality to the project.</p>
+
+<p>The <em>Budgets</em> module will remain unchanged and additionally enables project budgets to be tracked.</p>
+
+<p><img src="/release-notes/11-0-0/time-and-costs-module-f45f2dd4.png" alt="time-and-costs-module" /></p>
+
+<h2 id="improvements-of-the-wysiwyg-editor">Improvements of the WYSIWYG editor</h2>
+
+<p>We have again added many improvements to the WYSIWYG editor, i.e. for wiki pages or the work packages description. For example, you can now adjust the image size in the editor.</p>
+
+<p><img src="/release-notes/11-0-0/resize-imagesshort-1be0595a.gif" alt="resize-imagesshort" /></p>
+
+<p>Additionally, it is now possible to add macros to insert project or work packages attributes to the wiki or work package description.</p>
+
+<h2 id="attribute-help-texts-for-projects-premium-feature">Attribute help texts for projects (premium feature)</h2>
+
+<p>We have now also expanded the attribute help texts for projects. You can define help text for all project attributes, such as status or accountable or any custom field for projects. A small question mark icon will appear behind the attribute in order to make the entry of this  information easier and eliminate errors.</p>
+
+<p><img src="/release-notes/11-0-0/project-help-texts-269105b0.png" alt="project-help-texts" /></p>
+
+<h2 id="copy-boards-and-project-dashboards">Copy boards and project dashboards</h2>
+
+<p>Boards and project dashboards can now also be copied when copying a project. This enables you to set up a default project and copy it to set up a new project.</p>
+
+<h2 id="as-always-theres-much-more">As always,…… there’s much more!</h2>
+
+<p>There are lots and lots of new things we packed into 11.0 to tell you about.</p>
+
+<h3 id="all-bug-fixes-and-changes-in-110">All bug fixes and changes in 11.0</h3>
+
+<ul>
+  <li>Fixed: Journal data is not removed upon work package deletion [<a href="https://community.openproject.com/wp/22048">#22048</a>]</li>
+  <li>Fixed: warning when data will be discarded [<a href="https://community.openproject.com/wp/25683">#25683</a>]</li>
+  <li>Fixed: WYSIWYG editor incorrectly interprets underscores in function names as italics [<a href="https://community.openproject.com/wp/28889">#28889</a>]</li>
+  <li>Fixed: The cost reports plugin is hidden unless the time tracking module is active [<a href="https://community.openproject.com/wp/30350">#30350</a>]</li>
+  <li>Fixed: Position of work package attribute changes when starting editing [<a href="https://community.openproject.com/wp/31614">#31614</a>]</li>
+  <li>Fixed: Work package no longer included in filter “Estimated time: none” when removing value for Estimated time [<a href="https://community.openproject.com/wp/32111">#32111</a>]</li>
+  <li>Fixed: Custom action lists archived projects as options [<a href="https://community.openproject.com/wp/32131">#32131</a>]</li>
+  <li>Fixed: Wrong display of work package widgets on project overview [<a href="https://community.openproject.com/wp/32457">#32457</a>]</li>
+  <li>Fixed: News create - undefined method `journaled_attributes’ for nil:NilClass: [<a href="https://community.openproject.com/wp/33038">#33038</a>]</li>
+  <li>Fixed: OP 10.4.x: Wrong message “Installation is already using MySQL, skipping postgres addon” [<a href="https://community.openproject.com/wp/33066">#33066</a>]</li>
+  <li>Fixed: Cannot create plugins [<a href="https://community.openproject.com/wp/33213">#33213</a>]</li>
+  <li>Fixed: Cannot drag &amp; drop work package outside of currently displayed browser window [<a href="https://community.openproject.com/wp/33247">#33247</a>]</li>
+  <li>Fixed: No default order for time entry api [<a href="https://community.openproject.com/wp/33328">#33328</a>]</li>
+  <li>Fixed: Add-list modal of version board is sometimes empty [<a href="https://community.openproject.com/wp/33346">#33346</a>]</li>
+  <li>Fixed: Mails do not respect OS dark mode [<a href="https://community.openproject.com/wp/33382">#33382</a>]</li>
+  <li>Fixed: Unit cost for units &lt; 1 are off by order of magnitude [<a href="https://community.openproject.com/wp/33383">#33383</a>]</li>
+  <li>Fixed: Overview activity does not update automatically in split screen [<a href="https://community.openproject.com/wp/33405">#33405</a>]</li>
+  <li>Fixed: Date fields of closed work packages are highlighted red [<a href="https://community.openproject.com/wp/33457">#33457</a>]</li>
+  <li>Fixed: Filter get lost after deleting search string from text filter [<a href="https://community.openproject.com/wp/33465">#33465</a>]</li>
+  <li>Fixed: Printing the wrong value in the report [<a href="https://community.openproject.com/wp/33496">#33496</a>]</li>
+  <li>Fixed: Selected board in the left sidebar loses color highligthing [<a href="https://community.openproject.com/wp/33514">#33514</a>]</li>
+  <li>Fixed: Unsolicited logout on community.openproject.com every day  [<a href="https://community.openproject.com/wp/33575">#33575</a>]</li>
+  <li>Fixed: Image removed from work package description when adding image to comment [<a href="https://community.openproject.com/wp/33578">#33578</a>]</li>
+  <li>Fixed: No German translation for Cost reports [<a href="https://community.openproject.com/wp/33584">#33584</a>]</li>
+  <li>Fixed: Type Form Configuration Not Saved [<a href="https://community.openproject.com/wp/33592">#33592</a>]</li>
+  <li>Fixed: ATOM feed link for all activities is not created as intended [<a href="https://community.openproject.com/wp/33650">#33650</a>]</li>
+  <li>Fixed: Mark priority as mandatory and remove “empty” option [<a href="https://community.openproject.com/wp/33678">#33678</a>]</li>
+  <li>Fixed: Work packages missing/duplicates when displayed on several pages [<a href="https://community.openproject.com/wp/33679">#33679</a>]</li>
+  <li>Fixed: Remapping oauth users fails if email or login contains upper case letters [<a href="https://community.openproject.com/wp/33687">#33687</a>]</li>
+  <li>Fixed: wiki after navigate on item in sidebar, the sidebar reset to top and lose the view of focus item [<a href="https://community.openproject.com/wp/33690">#33690</a>]</li>
+  <li>Fixed: Autologin breaks in conjunction with auth stages (e.g. consent, 2FA, recaptcha) [<a href="https://community.openproject.com/wp/33696">#33696</a>]</li>
+  <li>Fixed: Back button does not work when coming from Boards [<a href="https://community.openproject.com/wp/33747">#33747</a>]</li>
+  <li>Fixed: Missing padding in “Log time” widget [<a href="https://community.openproject.com/wp/33749">#33749</a>]</li>
+  <li>Fixed: Users can set the default work package status to read-only [<a href="https://community.openproject.com/wp/33750">#33750</a>]</li>
+  <li>Fixed: “New Board” modal is missing a header text [<a href="https://community.openproject.com/wp/33753">#33753</a>]</li>
+  <li>Fixed: WP still shown after deleting it [<a href="https://community.openproject.com/wp/33756">#33756</a>]</li>
+  <li>Fixed: Errors on project custom values are not displayed upon saving a project [<a href="https://community.openproject.com/wp/33766">#33766</a>]</li>
+  <li>Fixed: Cannot create user through API with auth_source, but no password [<a href="https://community.openproject.com/wp/33869">#33869</a>]</li>
+  <li>Fixed: Another error during form configuration  [<a href="https://community.openproject.com/wp/33892">#33892</a>]</li>
+  <li>Fixed: Parent’s due date can be edited in automatic scheduling mode [<a href="https://community.openproject.com/wp/33901">#33901</a>]</li>
+  <li>Fixed: Cost report layout broken [<a href="https://community.openproject.com/wp/33910">#33910</a>]</li>
+  <li>Fixed: Work package graph displays unnecessary scrollbar [<a href="https://community.openproject.com/wp/33911">#33911</a>]</li>
+  <li>Fixed: Custom action button not removed when condition is no longer met [<a href="https://community.openproject.com/wp/33912">#33912</a>]</li>
+  <li>Fixed: Inconsistent upper and lower case in “Remaing Hours” when compared with “Estimated time” [<a href="https://community.openproject.com/wp/33927">#33927</a>]</li>
+  <li>Fixed: Documents layout broken [<a href="https://community.openproject.com/wp/33930">#33930</a>]</li>
+  <li>Fixed: Problem with watchers  [<a href="https://community.openproject.com/wp/33936">#33936</a>]</li>
+  <li>Fixed: Selected dates in date picker not higlighted across months [<a href="https://community.openproject.com/wp/33957">#33957</a>]</li>
+  <li>Fixed: ScrollIntoView previous element  [<a href="https://community.openproject.com/wp/33966">#33966</a>]</li>
+  <li>Fixed: Users without permissions can see budgets in work package dropdown / internal error [<a href="https://community.openproject.com/wp/33981">#33981</a>]</li>
+  <li>Fixed: Work package on edge not shown correctly / cannot be edited [<a href="https://community.openproject.com/wp/33982">#33982</a>]</li>
+  <li>Fixed: Budgets module shown for users without permission “View budgets” [<a href="https://community.openproject.com/wp/33983">#33983</a>]</li>
+  <li>Fixed: Impossible to deactivate a project through the API [<a href="https://community.openproject.com/wp/33987">#33987</a>]</li>
+  <li>Fixed: Hide resizer when the wp detail page is shown in full view  [<a href="https://community.openproject.com/wp/33988">#33988</a>]</li>
+  <li>Fixed: Changes in widget titles are not saved sometime [<a href="https://community.openproject.com/wp/33998">#33998</a>]</li>
+  <li>Fixed: Cannot copy projects with user CF [<a href="https://community.openproject.com/wp/34000">#34000</a>]</li>
+  <li>Fixed: “An internal error has occurred” displayed when file size exceeded on direct upload [<a href="https://community.openproject.com/wp/34016">#34016</a>]</li>
+  <li>Fixed: Drag and drop parent/child [<a href="https://community.openproject.com/wp/34021">#34021</a>]</li>
+  <li>Fixed: Gantt chart: phases doesn’t have background color on hover [<a href="https://community.openproject.com/wp/34074">#34074</a>]</li>
+  <li>Fixed: Gantt chart: children not allowed to move out of its parent’s date range  [<a href="https://community.openproject.com/wp/34076">#34076</a>]</li>
+  <li>Fixed: Filters does not accept user id for principal in API memberships [<a href="https://community.openproject.com/wp/34108">#34108</a>]</li>
+  <li>Fixed: Order of work packages in XLS, PDF, CSV export differs from order in OpenProject [<a href="https://community.openproject.com/wp/34112">#34112</a>]</li>
+  <li>Fixed: Checkboxes in table not displayed correctly in WYSIWYG editor [<a href="https://community.openproject.com/wp/34113">#34113</a>]</li>
+  <li>Fixed: Archived projects not available via the API [<a href="https://community.openproject.com/wp/34120">#34120</a>]</li>
+  <li>Fixed: Gantt chart: styles conflict between last active work package and hovered work package  [<a href="https://community.openproject.com/wp/34126">#34126</a>]</li>
+  <li>Fixed: Gantt charts: rows misaligned when scrolling to bottom [<a href="https://community.openproject.com/wp/34127">#34127</a>]</li>
+  <li>Fixed: Logged time is always one hour instead of the entered value [<a href="https://community.openproject.com/wp/34130">#34130</a>]</li>
+  <li>Fixed: Cost types: Unable to add a new cost type [<a href="https://community.openproject.com/wp/34144">#34144</a>]</li>
+  <li>Fixed: Cost Types: rate not saved when a new type is created  [<a href="https://community.openproject.com/wp/34145">#34145</a>]</li>
+  <li>Fixed: Time entry modal form can send form multiple times when clicked quickly several times [<a href="https://community.openproject.com/wp/34163">#34163</a>]</li>
+  <li>Fixed: I18n: Settings label not found in /settings/plugin/costs [<a href="https://community.openproject.com/wp/34188">#34188</a>]</li>
+  <li>Fixed: [all projects overview] Todo-list: checkboxes are preceded by bullets [<a href="https://community.openproject.com/wp/34190">#34190</a>]</li>
+  <li>Fixed: Quick filter not applied for externally configured queries [<a href="https://community.openproject.com/wp/34239">#34239</a>]</li>
+  <li>Fixed: Gantt Chart: Back-end - Front-end discrepancies when dragging a work package produces an error [<a href="https://community.openproject.com/wp/34252">#34252</a>]</li>
+  <li>Fixed: Displaced datepicker for custom fields in the project dashboard [<a href="https://community.openproject.com/wp/34253">#34253</a>]</li>
+  <li>Fixed: “Undefined” shown when editing cost entry in “Log unit cost” screen [<a href="https://community.openproject.com/wp/34257">#34257</a>]</li>
+  <li>Fixed: All-in-one docker image on dev branch no longer works [<a href="https://community.openproject.com/wp/34272">#34272</a>]</li>
+  <li>Fixed: Error displayed when deleting work package with logged time [<a href="https://community.openproject.com/wp/34283">#34283</a>]</li>
+  <li>Fixed: Wiki side menu cuts of too high / doesn’t display bottom wiki pages [<a href="https://community.openproject.com/wp/34284">#34284</a>]</li>
+  <li>Fixed: Internal error when uploading attachment(s) to “Documents” module [<a href="https://community.openproject.com/wp/34285">#34285</a>]</li>
+  <li>Fixed: Two identical / very similar error message shown in custom field create screen [<a href="https://community.openproject.com/wp/34289">#34289</a>]</li>
+  <li>Fixed: Not possible to scroll page while move custom field in form configuration [<a href="https://community.openproject.com/wp/34290">#34290</a>]</li>
+  <li>Fixed: Date “null - null” shown when editing date of newly created work packages [<a href="https://community.openproject.com/wp/34291">#34291</a>]</li>
+  <li>Fixed: Typo and strange wording on board creation screen [<a href="https://community.openproject.com/wp/34292">#34292</a>]</li>
+  <li>Fixed: No translation / wrong translation for “Settings” [<a href="https://community.openproject.com/wp/34293">#34293</a>]</li>
+  <li>Fixed: Date picker in cost types settings (administration) opens in weird location [<a href="https://community.openproject.com/wp/34297">#34297</a>]</li>
+  <li>Fixed: Missing translations on copy project loading (and error) screen [<a href="https://community.openproject.com/wp/34298">#34298</a>]</li>
+  <li>Fixed: Budget positions disappear from budget when editing [<a href="https://community.openproject.com/wp/34299">#34299</a>]</li>
+  <li>Fixed: “Fixed date” in Budget not translated [<a href="https://community.openproject.com/wp/34300">#34300</a>]</li>
+  <li>Fixed: Wrong default settings for Gantt chart button in project list [<a href="https://community.openproject.com/wp/34312">#34312</a>]</li>
+  <li>Fixed: Work packages table: dropped element disappears when back-end error  [<a href="https://community.openproject.com/wp/34332">#34332</a>]</li>
+  <li>Fixed: Link to a particular activity doesn’t work [<a href="https://community.openproject.com/wp/34341">#34341</a>]</li>
+  <li>Fixed: Broken error message when creating task on backlogs page [<a href="https://community.openproject.com/wp/34345">#34345</a>]</li>
+  <li>Fixed: Date picker modal is cut off when switching from manual scheduling mode [<a href="https://community.openproject.com/wp/34346">#34346</a>]</li>
+  <li>Fixed: Quick flickering when opening date picker [<a href="https://community.openproject.com/wp/34347">#34347</a>]</li>
+  <li>Fixed: “Today” link in date picker is sometimes shown, sometimes not shown [<a href="https://community.openproject.com/wp/34348">#34348</a>]</li>
+  <li>Fixed: Internal error shown when uploading document to attribute help text (projects) [<a href="https://community.openproject.com/wp/34352">#34352</a>]</li>
+  <li>Fixed: Help text for custom fields (projects) not shown in project settings [<a href="https://community.openproject.com/wp/34353">#34353</a>]</li>
+  <li>Fixed: Date settings are not applied for date picker or calendar [<a href="https://community.openproject.com/wp/34356">#34356</a>]</li>
+  <li>Fixed: Unclear warning message displayed when filtered value for assignee board does not match any member [<a href="https://community.openproject.com/wp/34358">#34358</a>]</li>
+  <li>Fixed: Tasks added to subproject action board disappear automatically after adding [<a href="https://community.openproject.com/wp/34359">#34359</a>]</li>
+  <li>Fixed: Entry “Time and costs” not highlighted when selecting from side menu [<a href="https://community.openproject.com/wp/34373">#34373</a>]</li>
+  <li>Fixed: Project date custom fields takes a lot of space (more than other fields) [<a href="https://community.openproject.com/wp/34380">#34380</a>]</li>
+  <li>Fixed: Widget content is lost / widget collapsed (custom text) [<a href="https://community.openproject.com/wp/34381">#34381</a>]</li>
+  <li>Fixed: Default value of a custom field not passed [<a href="https://community.openproject.com/wp/34420">#34420</a>]</li>
+  <li>Fixed: Focus not set on project name when creating new project [<a href="https://community.openproject.com/wp/34424">#34424</a>]</li>
+  <li>Fixed: Low contrast for filter icon [<a href="https://community.openproject.com/wp/34425">#34425</a>]</li>
+  <li>Fixed: Broken success message shown when logging into OpenProject [<a href="https://community.openproject.com/wp/34427">#34427</a>]</li>
+  <li>Fixed: Project members not added when selecting multiple users from “Members” menu [<a href="https://community.openproject.com/wp/34428">#34428</a>]</li>
+  <li>Fixed: Assignee and author field cut off even though there is enough space [<a href="https://community.openproject.com/wp/34431">#34431</a>]</li>
+  <li>Fixed: When changing booked time entry, entry is no longer displayed in time and costs report [<a href="https://community.openproject.com/wp/34432">#34432</a>]</li>
+  <li>Fixed: Logged time cannot be changed once error message is shown [<a href="https://community.openproject.com/wp/34433">#34433</a>]</li>
+  <li>Fixed: Translation missing in Roadmap (time tracking) [<a href="https://community.openproject.com/wp/34434">#34434</a>]</li>
+  <li>Fixed: Date picker for version disconnected / border missing [<a href="https://community.openproject.com/wp/34435">#34435</a>]</li>
+  <li>Fixed: Date field for version cannot be set / edited from Backlogs page anymore [<a href="https://community.openproject.com/wp/34436">#34436</a>]</li>
+  <li>Fixed: Burndown chart not displayed (from backlogs or taskboard page) [<a href="https://community.openproject.com/wp/34437">#34437</a>]</li>
+  <li>Fixed: Text size on taskboard page too large [<a href="https://community.openproject.com/wp/34438">#34438</a>]</li>
+  <li>Fixed: Spacing on meeting page looks crammed [<a href="https://community.openproject.com/wp/34439">#34439</a>]</li>
+  <li>Fixed: Month / week toggler on calendar page is separated [<a href="https://community.openproject.com/wp/34440">#34440</a>]</li>
+  <li>Fixed: Text color (e.g. for news module on project overview page) is hard to read [<a href="https://community.openproject.com/wp/34441">#34441</a>]</li>
+  <li>Fixed: Added widgets on overview page are removed automatically on reload [<a href="https://community.openproject.com/wp/34442">#34442</a>]</li>
+  <li>Fixed: Wrong translation for “Update” in German [<a href="https://community.openproject.com/wp/34445">#34445</a>]</li>
+  <li>Fixed: Internal error when adding user to group [<a href="https://community.openproject.com/wp/34446">#34446</a>]</li>
+  <li>Fixed: Icon for SSO with Google not shown [<a href="https://community.openproject.com/wp/34458">#34458</a>]</li>
+  <li>Fixed: Missing background for backlog error messages [<a href="https://community.openproject.com/wp/34476">#34476</a>]</li>
+  <li>Fixed: Onboarding tour on edge broken [<a href="https://community.openproject.com/wp/34507">#34507</a>]</li>
+  <li>Fixed: Custom fields of type long text are wrongly formatted in project list [<a href="https://community.openproject.com/wp/34509">#34509</a>]</li>
+  <li>Fixed: Wrong default settings for Gantt chart query in project [<a href="https://community.openproject.com/wp/34511">#34511</a>]</li>
+  <li>Fixed: OpenProject Logo in header missing [<a href="https://community.openproject.com/wp/34529">#34529</a>]</li>
+  <li>Fixed: Cost report filtered by custom field list does return an empty list [<a href="https://community.openproject.com/wp/34530">#34530</a>]</li>
+  <li>Fixed: With global subproject filter disabled, subproject boards do not work [<a href="https://community.openproject.com/wp/34535">#34535</a>]</li>
+  <li>Fixed: Clicking with modifier on global search results no longer works [<a href="https://community.openproject.com/wp/34544">#34544</a>]</li>
+  <li>Fixed: Copying project with subproject board does not show error [<a href="https://community.openproject.com/wp/34550">#34550</a>]</li>
+  <li>Fixed: Deleted work packages don’t disappear in boards view [<a href="https://community.openproject.com/wp/34584">#34584</a>]</li>
+  <li>Fixed: time-delayed display of the second date when entering start date and finish date [<a href="https://community.openproject.com/wp/34586">#34586</a>]</li>
+  <li>Fixed: Error 500 when bulk-editing work packages [<a href="https://community.openproject.com/wp/34588">#34588</a>]</li>
+  <li>Fixed: Year almost hidden in date picker for version [<a href="https://community.openproject.com/wp/34590">#34590</a>]</li>
+  <li>Fixed: Onboarding tour broken in multiple places [<a href="https://community.openproject.com/wp/34597">#34597</a>]</li>
+  <li>Fixed: Google OpenID provider image not shown in login form [<a href="https://community.openproject.com/wp/34601">#34601</a>]</li>
+  <li>Changed: Allow PDFs to be inlined [<a href="https://community.openproject.com/wp/24343">#24343</a>]</li>
+  <li>Changed: Image size on Wiki [<a href="https://community.openproject.com/wp/24760">#24760</a>]</li>
+  <li>Changed: Project copying: Clarify which work packages are invalid and where not copied [<a href="https://community.openproject.com/wp/26366">#26366</a>]</li>
+  <li>Changed: Direct-to-S3 file uploads [<a href="https://community.openproject.com/wp/27157">#27157</a>]</li>
+  <li>Changed: Filter by budget in cost reports  [<a href="https://community.openproject.com/wp/29481">#29481</a>]</li>
+  <li>Changed: Add option to copy grids (boards, dashboards) [<a href="https://community.openproject.com/wp/30585">#30585</a>]</li>
+  <li>Changed: Add details view to boards view [<a href="https://community.openproject.com/wp/30918">#30918</a>]</li>
+  <li>Changed: Keep order of manually sorted work packages when copied to new project [<a href="https://community.openproject.com/wp/31317">#31317</a>]</li>
+  <li>Changed: Re-enable displaying of grouped sum rows [<a href="https://community.openproject.com/wp/31617">#31617</a>]</li>
+  <li>Changed: Rename the module Cost reports to Time and costs [<a href="https://community.openproject.com/wp/31728">#31728</a>]</li>
+  <li>Changed: Replace system settings tab by sub menu entries [<a href="https://community.openproject.com/wp/32051">#32051</a>]</li>
+  <li>Changed: Flexible width of edit field of widget title [<a href="https://community.openproject.com/wp/32176">#32176</a>]</li>
+  <li>Changed: Add scheduling mode to work package in back end (Database, Contracts, API) [<a href="https://community.openproject.com/wp/32877">#32877</a>]</li>
+  <li>Changed: Adhere to scheduling mode when scheduling [<a href="https://community.openproject.com/wp/32878">#32878</a>]</li>
+  <li>Changed: Display scheduling mode in work package list [<a href="https://community.openproject.com/wp/32879">#32879</a>]</li>
+  <li>Changed: Display scheduling mode in work package view (full &amp; split) [<a href="https://community.openproject.com/wp/32880">#32880</a>]</li>
+  <li>Changed: Show work package’s children duration bar on Gantt charts [<a href="https://community.openproject.com/wp/32881">#32881</a>]</li>
+  <li>Changed: New seed data for “Demo project” - work packages [<a href="https://community.openproject.com/wp/32882">#32882</a>]</li>
+  <li>Changed: Add descendant’s start/end date to work package representer [<a href="https://community.openproject.com/wp/32883">#32883</a>]</li>
+  <li>Changed: Add an option to add “Unassigned” column to assignee board [<a href="https://community.openproject.com/wp/33074">#33074</a>]</li>
+  <li>Changed: Remove “Schedule manually” attribute from work package form configuration [<a href="https://community.openproject.com/wp/33473">#33473</a>]</li>
+  <li>Changed: Update release teaser block [<a href="https://community.openproject.com/wp/33571">#33571</a>]</li>
+  <li>Changed: Allow sorting of project custom fields shown in “View all projects” [<a href="https://community.openproject.com/wp/33580">#33580</a>]</li>
+  <li>Changed: Allow setting dates of manually scheduled parent [<a href="https://community.openproject.com/wp/33609">#33609</a>]</li>
+  <li>Changed: Journalize scheduling mode changes [<a href="https://community.openproject.com/wp/33649">#33649</a>]</li>
+  <li>Changed: Make the project member invitation more appealing [<a href="https://community.openproject.com/wp/33654">#33654</a>]</li>
+  <li>Changed: Allow adding invited users to groups [<a href="https://community.openproject.com/wp/33657">#33657</a>]</li>
+  <li>Changed: Make tables scrollable with sticky header [<a href="https://community.openproject.com/wp/33674">#33674</a>]</li>
+  <li>Changed: Move “required disk storage” to the end of the projects table [<a href="https://community.openproject.com/wp/33675">#33675</a>]</li>
+  <li>Changed: Reduce complexity of boolean filters [<a href="https://community.openproject.com/wp/33677">#33677</a>]</li>
+  <li>Changed: Add “projects” to the global Modules menu [<a href="https://community.openproject.com/wp/33680">#33680</a>]</li>
+  <li>Changed: Extend Date picker to show two months next to each other [<a href="https://community.openproject.com/wp/33683">#33683</a>]</li>
+  <li>Changed: Extend Date picker to show “Today” link [<a href="https://community.openproject.com/wp/33684">#33684</a>]</li>
+  <li>Changed: Ability to filter views: Only show work packages from specified subproject, but not from father project [<a href="https://community.openproject.com/wp/33763">#33763</a>]</li>
+  <li>Changed: Custom help text for project attributes [<a href="https://community.openproject.com/wp/33830">#33830</a>]</li>
+  <li>Changed: Create subproject boards [<a href="https://community.openproject.com/wp/33864">#33864</a>]</li>
+  <li>Changed: Create subtasks boards [<a href="https://community.openproject.com/wp/33865">#33865</a>]</li>
+  <li>Changed: Fine tune the design of the new date picker for the automatic scheduling mode [<a href="https://community.openproject.com/wp/33882">#33882</a>]</li>
+  <li>Changed: Combine time and cost tracking and reporting module [<a href="https://community.openproject.com/wp/33918">#33918</a>]</li>
+  <li>Changed: Prevent losing dates when adding the first child work package to an automatically scheduled work package [<a href="https://community.openproject.com/wp/33925">#33925</a>]</li>
+  <li>Changed: Calculate work packages group sums in database so we can re-enable performant group sums [<a href="https://community.openproject.com/wp/33935">#33935</a>]</li>
+  <li>Changed: Re-Add ## and ### capability to OpenProject [<a href="https://community.openproject.com/wp/33962">#33962</a>]</li>
+  <li>Changed: Allow rescheduling of manually scheduled parent work package (clamps) in gantt view [<a href="https://community.openproject.com/wp/34014">#34014</a>]</li>
+  <li>Changed: http redirect_uri from localhost domain [<a href="https://community.openproject.com/wp/34025">#34025</a>]</li>
+  <li>Changed: Gantt chart: Make row’s background translucent when hovered [<a href="https://community.openproject.com/wp/34028">#34028</a>]</li>
+  <li>Changed: change icons for manual scheduling mode [<a href="https://community.openproject.com/wp/34058">#34058</a>]</li>
+  <li>Changed: Improve board creation modal [<a href="https://community.openproject.com/wp/34070">#34070</a>]</li>
+  <li>Changed: Hide derived (Start Finish) Date from work package forms [<a href="https://community.openproject.com/wp/34122">#34122</a>]</li>
+  <li>Changed: Extend search autocompleter with useful information [<a href="https://community.openproject.com/wp/34132">#34132</a>]</li>
+  <li>Changed: [all projects overview] (Add option to) show status-text in expanded view. [<a href="https://community.openproject.com/wp/34191">#34191</a>]</li>
+  <li>Changed: Map board subtasks columns when copying projects [<a href="https://community.openproject.com/wp/34238">#34238</a>]</li>
+  <li>Changed: Having meetings as a linkable resource [<a href="https://community.openproject.com/wp/34256">#34256</a>]</li>
+  <li>Changed: New seed data for demo project - boards [<a href="https://community.openproject.com/wp/34526">#34526</a>]</li>
+  <li>Epic: Switch between automatic and manual scheduling mode [<a href="https://community.openproject.com/wp/25624">#25624</a>]</li>
+  <li>Epic: Time tracking and cost control 2.0 [<a href="https://community.openproject.com/wp/32125">#32125</a>]</li>
+  <li>Epic: Wiki Macro functionality to allow retrieving work package and project attributes [<a href="https://community.openproject.com/wp/33648">#33648</a>]</li>
+  <li>Epic: Basic portfoliomanagement for project list [<a href="https://community.openproject.com/wp/34167">#34167</a>]</li>
+  <li>Epic: Project Templates [<a href="https://community.openproject.com/wp/34468">#34468</a>]</li>
+</ul>
+
+<h2 id="installation-and-updates">Installation and Updates</h2>
+
+<p>To use OpenProject 11.0 right away, create an instance and <a href="https://start.openproject.com/">test 14 days for free in the Cloud</a>.</p>
+
+<p>Prefer to run OpenProject 11.0 in your own infrastructure?
+Here you can find the <a href="../../installation-and-operations">Installation guidelines</a> for OpenProject.</p>
+
+<p>Want to upgrade from your self-managed Community version to try out the Enterprise premium features? <a href="https://www.openproject.org/enterprise-edition-upgrade-test-free/">Get a 14 days free trial token directly out of your current Community installation.</a></p>
+
+<p>Navigate to the -&gt; <em>Administration</em>-&gt; <em>Enterprise Edition</em> and request your trial token.</p>
+
+<h2 id="migrating-to-openproject-110">Migrating to OpenProject 11.0</h2>
+
+<p>Follow the <a href="../../installation-and-operations/operation/upgrading/">upgrade guide for the packaged installation or Docker installation</a> to update your OpenProject installation to OpenProject 11.0.</p>
+
+<p>We update the hosted OpenProject environments (Enterprise Cloud) automatically.</p>
+
+<h2 id="credits-and-contributions">Credits and contributions</h2>
+
+<p>Special thanks go to all OpenProject contributors without whom this release would not have been possible:</p>
+
+<ul>
+  <li>
+    <p>All the developers, designers, project managers who have contributed to OpenProject 11.0.</p>
+  </li>
+  <li>
+    <p>The City of Cologne for sponsoring some of the open source features and thus contributing them to the Community.</p>
+  </li>
+  <li>
+    <p>Every dedicated user who has created feature request, <a href="../../development/report-a-bug/">reported bugs</a> for 11.0 and also supported the community by asking and answering questions in the <a href="https://community.openproject.org/projects/openproject/boards">forum</a>.</p>
+  </li>
+  <li>
+    <p>All the engaged users who provided translations on <a href="https://crowdin.com/projects/opf">CrowdIn</a>.</p>
+  </li>
+  <li>
+    <p>Special thanks for reporting and finding bugs go to:</p>
+
+    <p>Marc Vollmer, Andy Shilton, Christian Forgács, L B, Gábor Sift, Thyago Sanabio, Daniel Narberhaus, Harpan Budi Santoso, Çağlar Yeşilyurt, Rajiv Ranjan Sinha, Freddy Trotin, xin meng, Kris M, schermi schermi, Nick Bailey, Adam Vanko, Hartwin Leen, Sergey Anikin, Petros Christopoulos, Oscar Meier, Matthias Laux, Carsten Klein, Dagyo Lee, Jonatan Zint, Gio @ Enuan, Peter Pof, Sergey Shalikin, Benoit PETIT-DEMOULIERE</p>
+  </li>
+</ul>
+
+<h2 id="whats-next">What’s next?</h2>
+
+<p>We are continuously developing new features and improvements for  OpenProject. If you’d like to preview what’s coming in the next release, be sure to check out our <a href="https://community.openproject.com/projects/openproject/work_packages?query_id=918">development roadmap</a>.</p>
+
+      </div>
+        <div class="comments">
+    <div class="comments-filter">
+      <h2 id="help-and-feedback">
+        Help and feedback
+        <a class="anchor" href="#help-and-feedback"></a>
+      </h2>
+      <div>
+        <!-- Nav tabs -->
+        <ul class="feedback-tabs nav nav-tabs" role="tablist">
+          <li role="presentation">
+            <a class="active" href="#get-help" aria-controls="get-help" role="tab" data-toggle="tab">
+              <i class="fa fa-question-circle" aria-hidden="true"></i>
+              GET <strong>HELP</strong>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#docs-feedback" aria-controls="docs-feedback" role="tab" data-toggle="tab">
+              <i class="fa fa-file-text-o" aria-hidden="true"></i>
+              <strong>DOCS</strong> FEEDBACK
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#product-feedback" aria-controls="product-feedback" role="tab" data-toggle="tab">
+              <i class="fa fa-commenting" aria-hidden="true"></i>
+              <strong>PRODUCT</strong> FEEDBACK
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#get-more-features" aria-controls="get-more-features" role="tab" data-toggle="tab">
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
+              GET MORE <strong>FEATURES</strong>
+            </a>
+          </li>
+        </ul>
+        <!-- Nav tabs -->
+
+        <!-- Tab panes -->
+        <div class="tab-content help-and-feedback--tabs">
+          <!-- get-help tab -->
+          <div role="tabpanel" class="tab-pane active" id="get-help">
+            <!-- search-row -->
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you <strong>did not find</strong> what you were looking for
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="trigger-search-button comments-holder btn btn-default" href="/" target="_blank">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  SEARCH THE DOCS
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you <strong>need help from the community</strong> or want to <strong>support others</strong>
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://community.openproject.com/projects/openproject/forums" target="_blank">
+                  <i class="fa fa-users" aria-hidden="true"></i>
+                  POST ON OPENPROJECT FORUM
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you are eligible for <strong>professional support</strong> and have more questions
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <p>
+                  <a role="button" class="comments-holder btn btn-default" href="https://www.openproject.org/contact-us/" target="_blank">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    REQUEST SUPPORT
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="docs-feedback">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you find an <strong>easily fixable error or need for improvement</strong> in the documentation for the stable release
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://github.com/opf/openproject/blob/release/11.0/docs/release-notes/11-0-0/README.md" target="_blank">
+                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  EDIT THIS PAGE
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you would like to <strong>suggest bigger updates or improvements</strong> to this documentation
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://www.openproject.org/development/report-a-bug/" target="_blank">
+                  <i class="fa fa-bug" aria-hidden="true"></i>
+                  CREATE AN ISSUE
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you want to contribute to <strong>translate this documentation to another language</strong>
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://crowdin.com/project/openproject" target="_blank">
+                  <i class="fa fa-language" aria-hidden="true"></i>
+                  TRANSLATE ON CROWDIN
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div role="tabpanel" class="tab-pane" id="product-feedback">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If there's something <strong>you don't like or understand</strong> about this feature
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://www.openproject.org/development/report-a-bug/" target="_blank">
+                  <i class="fa fa-bug" aria-hidden="true"></i>
+                  CREATE AN ISSUE
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you want to <strong>propose a new feature</strong> that OpenProject does not offer yet
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://www.openproject.org/development/submit-feature-idea/" target="_blank">
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                  SUBMIT FEATURE PROPOSAL
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>To further help OpenProject to <strong>shape and test new features</strong>
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://www.openproject.org/first-look/" target="_blank">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  JOIN BETA TESTING
+                </a>
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="get-more-features">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>To view OpenProject <strong>premium features</strong> and pricing
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://www.openproject.org/pricing/" target="_blank">
+                  <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                  VIEW PRICING PAGE
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you want to try all <strong>premium features</strong> in the <strong>OpenProject Cloud Edition</strong> 14 days for free
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://www.openproject.org/hosting/" target="_blank">
+                  <i class="fa fa-cloud" aria-hidden="true"></i>
+                  Free trial OpenProject Cloud Edition
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <p>If you want to <strong>try all premium features</strong> in your <strong>on premise Community installation</strong> 14 days for free
+                  <i class="fa fa-arrow-right black-icon" aria-hidden="true"></i>
+                </p>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a role="button" class="comments-holder btn btn-default" href="https://www.openproject.org/enterprise-edition/" target="_blank">
+                  <i class="fa fa-server" aria-hidden="true"></i>
+                  Free trial OpenProject Enterprise Edition (on premise)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+    <div class="content-overlay"></div>
+    <div class="clear"></div>
+  </div>
+ </div>
+
+
+    <div class="footer--container">
+  <footer class=footer>
+    <div class='animated'>
+      <div class="footer--links-container row justify-content-center">
+        <div class='col-12 col-sm-6 col-md-3 col-lg-3 col-lg-offset-2 footer-link-holder'>
+          <h3 class=footer-link-title>Blog</h3>
+          <ul class='animated footer-links'>
+            <li><a href="https://www.openproject.org/trello-alternative/" target="_blank">Why OpenProject is the better Trello alternative for Enterprises</a></li>
+            <li><a href="https://www.openproject.org/openproject-9-new-scrum-agile-board-view/" target="_blank">OpenProject 9: new Scrum and Agile Boards</a></li>
+            <li><a href="https://www.openproject.org/step-by-step-guide-boards-for-scrum-and-agile-project-management/" target="_blank">How to get started with Agile Boards</a></li>
+            <li><a href="https://www.openproject.org/synchronize-excel-openproject/" target="_blank">How to synchronize your Excel Sheet with OpenProject</a></li>
+            <li><a href="https://www.openproject.org/jira-alternative/" target="_blank">OpenProject: open source alternative to Jira</a></li>
+            <li><a href="https://www.openproject.org/openproject-collaborative-excel-alternative-project-management/" target="_blank">OpenProject: open source Excel alternative</a></li>
+          </ul>
+        </div>
+        <div class='col-12 col-sm-6 col-md-3 col-lg-3 footer-link-holder'>
+          <h3 class=footer-link-title>Pricing</h3>
+          <ul class='animated footer-links'>
+            <li><a href="https://www.openproject.org/enterprise-edition/" target="_blank">Enterprise Edition</a></li>
+            <li><a href="https://www.openproject.org/hosting/" target="_blank">Hosting</a></li>
+            <li><a href="https://www.openproject.org/pricing/#support" target="_blank">Maintenance and support</a></li>
+            <li><a href="https://www.openproject.org/training-and-consulting/" target="_blank">Training and consulting</a></li>
+            <li><a href="https://www.openproject.org/training-and-consulting/#certification" target="_blank">OpenProject Certification</a></li>
+            <li><a href="https://www.openproject.org/contact-us/" target="_blank">Custom Development</a></li>
+            <li><a href="https://www.openproject.org/reseller-program/" target="_blank">Reseller Program</a></li>
+          </ul>
+        </div>
+        <div class='col-12 col-sm-6 col-md-3 col-lg-3 footer-link-holder'>
+          <h3 class=footer-link-title>Project Management</h3>
+          <ul class='animated footer-links'>
+            <li><a href="https://www.openproject.org/collaboration-software-features/timeline-project-management/"" target="_blank">Gantt chards | Timeline management</a></li>
+            <li><a href="https://www.openproject.org/scrum-agile-boards/" target="_blank">Boards for Kanban and Agile Project Management</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/task-management-software/" target="_blank">Task management | Issue tracking</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/scrum-agile-project-management/" target="_blank">Agile project management and Scrum</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/time-tracking-software/" target="_blank">Time tracking, Cost reporting and Budgeting</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/bug-tracking-software/" target="_blank">Bug tracking</a></li>
+            <li><a href="https://www.openproject.org/collaboration-software-features/product-roadmap-software/" target="_blank">Product roadmap and release planning</a></li>
+          </ul>
+        </div>
+        <div class='col-12 col-sm-6 col-md-3 col-lg-3 footer-link-holder'>
+          <h3 class=footer-link-title>About us</h3>
+          <ul class='animated footer-links'>
+            <li><a href="https://www.openproject.org/gdpr-compliance/" target="_blank">GDPR | Security and data privacy statement</a></li>
+            <li><a href="https://www.openproject.org/about-us/what-our-users-say/" target="_blank">What our users say</a></li>
+            <li><a href="https://www.openproject.org/about-us/career/" target="_blank">Career</a></li>
+            <li><a href="https://www.openproject.org/newsletter/" target="_blank">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer--separator"></div>
+
+    <div class="footer--generic-line-container">
+      <div class="link-container footer-links">
+        <a class="generic-link" href="https://www.openproject.org/contact-us/" target="_blank">
+          Contact us
+        </a>
+        <a class="generic-link" href="https://www.openproject.org/legal-notice/" target="_blank">
+          Legal notice
+        </a>
+        <a class="generic-link" href="https://www.openproject.org/terms-of-service/" target="_blank">
+          Terms of Service
+        </a>
+        <a class="generic-link" href="https://www.openproject.org/data-privacy-and-security/" target="_blank">
+          Data privacy
+        </a>
+      </div>
+
+      <div class="footer--separator hidden-for-desktop"></div>
+
+      <div class="footer-social-media">
+        <a class="social-media-link"  href="https://twitter.com/openproject" target="_blank">
+          <img src="/images/social-media/twitter_logo_white-fdec5b01.png" alt="Twitter logo white" />
+        </a>
+        <a class="social-media-link"  href="https://www.facebook.com/openprojectfoundation" target="_blank">
+          <img src="/images/social-media/facebook_logo-a1016461.png" alt="Facebook logo" />
+        </a>
+        <a class="social-media-link"  href="https://github.com/opf/openproject" target="_blank">
+          <img src="/images/social-media/github_logo-5740f0d2.png" alt="Github logo" />
+        </a>
+        <a class="social-media-link"  href="https://www.youtube.com/c/OpenProjectCommunity" target="_blank">
+          <img src="/images/social-media/youtube_logo-b81fcb2b.png" alt="Youtube logo" />
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        © 2020 - OpenProject. All rights reserved.
+        <br/>
+          <a href="https://github.com/opf/openproject/commit/f1419d1e9515077b9a3a5bf44dfa6d1fb6372c5a">Build f1419d1e</a>
+          10 minutes
+          ago
+      </div>
+    </div>
+
+  </footer>
+</div>
+
+    <script src="/javascripts/site-bae9dda7.js"></script>
+  </body>
+</html>
